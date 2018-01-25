@@ -151,11 +151,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                6
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                3
+                4
                 <span>tags</span>
             </div>
         </div>
@@ -186,6 +186,146 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-바람직한-CSS-작성-방법" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/25/바람직한-CSS-작성-방법/">바람직한 CSS 작성 방법(지극히 주관적)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/25/바람직한-CSS-작성-방법/">
+            <time datetime="2018-01-25T06:05:26.000Z" itemprop="datePublished">2018-01-25</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/CSS/">CSS</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/CSS-selector/">CSS, selector</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>(참고 : 글쓴이의 주관적인 해석에 의해 작성된 것이며, 글 특성상 경어는 생략하도록 하겠습니다)</p>
+<p>요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해 질 수 있는 css 코드도 효과적인 관리가 가능하지만 바람직한 css를 작성하는 기본은 잊지 않아야 한다.<br>그럼 글쓴이의 경험에 의한 바람직한 css 작성 방법에 대해 알아보겠다.</p>
+<h2 id="내용이-중복되지-않도록-한다"><a href="#내용이-중복되지-않도록-한다" class="headerlink" title="내용이 중복되지 않도록 한다."></a>내용이 중복되지 않도록 한다.</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">.ico-kr&#123;</span><br><span class="line">    display:inline-block;</span><br><span class="line">    width:30px;</span><br><span class="line">    height:20px;</span><br><span class="line">    text-indent:-9999px;</span><br><span class="line">    background:url(‘./images/ico-flag.png’) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">.ico-en&#123;</span><br><span class="line">    display:inline-block;</span><br><span class="line">    width:30px;</span><br><span class="line">    height:20px;</span><br><span class="line">    text-indent:-9999px;</span><br><span class="line">    background:url(‘./images/ico-flag.png’) no-repeat 0 -20px;</span><br><span class="line">&#125;</span><br><span class="line">.ico-jp&#123;</span><br><span class="line">    display:inline-block;</span><br><span class="line">    width:30px;</span><br><span class="line">    height:20px;</span><br><span class="line">    text-indent:-9999px;</span><br><span class="line">    background:url(‘./images/ico-flag.png’) no-repeat 0 -40px;</span><br><span class="line">&#125;</span><br><span class="line">.ico-zh&#123;</span><br><span class="line">    display:inline-block;</span><br><span class="line">    width:30px;</span><br><span class="line">    height:20px;</span><br><span class="line">    text-indent:-9999px;</span><br><span class="line">    background:url(‘./images/ico-flag.png’) no-repeat 0 -60px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위와 같은 경우, 배경이미지 등 여러 내용이 동일함에도 불구하고 중복되어 사용되고 있다. 이중 클래스 등을 두어 공통 내용은 모아서 작성하고 값이 다른 배경이미지 위치만 각기 넣는 형태가 바람직하다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.ico-lang&#123;</span><br><span class="line">    display:inline-block;</span><br><span class="line">    width:30px;</span><br><span class="line">    height:20px;</span><br><span class="line">    text-indent:-9999px;</span><br><span class="line">    background-image:url(‘./images/ico-flag.png’);</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">ico-kr&#123;</span><br><span class="line">    background-position:0 0; // 기본 값이므로 생략 가능하다.</span><br><span class="line">&#125;</span><br><span class="line">ico-en&#123;</span><br><span class="line">    background-position:-20px 0;</span><br><span class="line">&#125;</span><br><span class="line">ico-jp&#123;</span><br><span class="line">    background-position:-40px 0;</span><br><span class="line">&#125;</span><br><span class="line">ico-zh&#123;</span><br><span class="line">    background-position:-60px 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="선택자를-너무-간결하거나-복잡하게-사용하지-않는다"><a href="#선택자를-너무-간결하거나-복잡하게-사용하지-않는다" class="headerlink" title="선택자를 너무 간결하거나 복잡하게 사용하지 않는다."></a>선택자를 너무 간결하거나 복잡하게 사용하지 않는다.</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 안좋은 예</span><br><span class="line">.box&#123;border:1px solid #ddd;&#125;</span><br><span class="line">.title&#123;font-size:1.2rem;&#125;</span><br><span class="line">.content .wrap .list .desc .item&#123;color:#f00;&#125;</span><br></pre></td></tr></table></figure>
+<p>선택자가 간결할 경우, 웹 사이트가 확장 됨에 따라 중첩된 선택이 일어나 의도하지 않은 변형이 일어날 확률이 현저히 많아진다. 반대로 너무 길어지게 되면 가독성이 안좋아지고, 코드의 일관성을 맞추기도 어려워진다.<br>위와 같은 경우, 각 요소의 첫 번째 선택자를 두 단어 이상 조합된 형태로 작성만 하여도 충분하다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.news-wrap .box&#123;border:1px solid #ddd;&#125;</span><br><span class="line">.sub-title&#123;font-size:1.2rem;&#125;</span><br><span class="line">.desc-area .item&#123;color:#f00;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="불필요한-사이즈값은-주지-않는다"><a href="#불필요한-사이즈값은-주지-않는다" class="headerlink" title="불필요한 사이즈값은 주지 않는다."></a>불필요한 사이즈값은 주지 않는다.</h2><p>요소의 성질을 잘 파악하지 못하는 경우 이러한 경우가 많이 발생한다. 블록요소로써 x축으로 이미 꽉 차는 형태인데도 불구하고 습관처럼 width:100%을 추가로 작성하는 경우가 있다. 또한 float 이나 position 이후 부모 요소의 높이가 잡히지 않는 이유로 height 속성을 남발하기도 한다. 이는 요소의 높이를 고정하게 되므로 문제가 될 소지가 다분하다.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjcu3o0nw000290plzw4wci2j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-계단-그리기" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -241,7 +381,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/24/계단-그리기/" data-id="cjcss8mes00029wplid0grzsz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/24/계단-그리기/" data-id="cjcu3o0o3000590pl8mka3bc8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -373,7 +513,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/22/배열-응용-두-점수를-비교하다/" data-id="cjcss8mez00059wplp77gpiwc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/22/배열-응용-두-점수를-비교하다/" data-id="cjcu3o0o4000690pll91oqj5l" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -504,7 +644,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/18/배열의-합을-구해보자/" data-id="cjcss8mf100069wpljrnsyzz5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/18/배열의-합을-구해보자/" data-id="cjcu3o0o6000790plitijys2k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -636,7 +776,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/15/dev/" data-id="cjcss8meo00019wplwfzba0om" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/15/dev/" data-id="cjcu3o0ns000190pl1ppxkwn6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -766,7 +906,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/12/hello-world/" data-id="cjcss8med00009wplish6tfh5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/12/hello-world/" data-id="cjcu3o0nm000090plffnrnzz3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -857,6 +997,25 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/01/25/바람직한-CSS-작성-방법/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/CSS/">CSS</a></p>
+                            <p class="item-title"><a href="/2018/01/25/바람직한-CSS-작성-방법/" class="title">바람직한 CSS 작성 방법(지극히 주관적)</a></p>
+                            <p class="item-date"><time datetime="2018-01-25T06:05:26.000Z" itemprop="datePublished">2018-01-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/01/24/계단-그리기/" class="thumbnail">
     
     
@@ -930,25 +1089,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/01/12/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/12/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2018-01-12T01:18:36.428Z" itemprop="datePublished">2018-01-12</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -958,7 +1098,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">3</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -967,7 +1107,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -976,7 +1116,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for-algorithms-반복문-알고리즘/">for, algorithms, 반복문, 알고리즘</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-selector/">CSS, selector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for-algorithms-반복문-알고리즘/">for, algorithms, 반복문, 알고리즘</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -985,7 +1125,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/array-algorithms-배열-알고리즘/" style="font-size: 20px;">array, algorithms, 배열, 알고리즘</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/for-algorithms-반복문-알고리즘/" style="font-size: 10px;">for, algorithms, 반복문, 알고리즘</a>
+            <a href="/tags/CSS-selector/" style="font-size: 10px;">CSS, selector</a> <a href="/tags/array-algorithms-배열-알고리즘/" style="font-size: 20px;">array, algorithms, 배열, 알고리즘</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/for-algorithms-반복문-알고리즘/" style="font-size: 10px;">for, algorithms, 반복문, 알고리즘</a>
         </div>
     </div>
 
