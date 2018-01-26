@@ -80,6 +80,7 @@ body {
   line-height: 1;
   color: #000;
   background: #fff;
+  word-break: keep-all;
 }
 ol,
 ul {
@@ -884,7 +885,7 @@ a.article-title:hover {
   clear: both;
 }
 .article-entry p {
-  text-align: justify;
+  /* text-align: justify; */
 }
 .article-entry p,
 .article-entry table {
