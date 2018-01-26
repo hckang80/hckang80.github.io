@@ -2103,7 +2103,6 @@ ol.toc {
   margin: 0px;
   display: block;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   padding: 15px 20px;
   font-size: 14px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
