@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-03-06T01:21:08.729Z</updated>
+  <updated>2018-03-08T04:54:42.221Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript 시작하기</title>
+    <link href="https://hckang80.github.io/2018/03/08/TypeScript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/"/>
+    <id>https://hckang80.github.io/2018/03/08/TypeScript-시작하기/</id>
+    <published>2018-03-08T04:52:37.000Z</published>
+    <updated>2018-03-08T04:54:42.221Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Typescript(이하 ts)의 장점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;React 등 사용영역이 점차 확대되고 있다.&lt;/li&gt;
+&lt;li&gt;타입을 지원하므로 다양한 도구의 지원를 받기가 좋아 생산성이
+        
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://hckang80.github.io/categories/javascript/"/>
+    
+    
+      <category term="typescript" scheme="https://hckang80.github.io/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>Sass 시작하기</title>
