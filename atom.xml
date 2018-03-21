@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-03-21T06:03:10.725Z</updated>
+  <updated>2018-03-21T06:11:36.632Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Angular 시작하기</title>
+    <link href="https://hckang80.github.io/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/"/>
+    <id>https://hckang80.github.io/2018/03/21/Angular-시작하기/</id>
+    <published>2018-03-21T06:10:15.000Z</published>
+    <updated>2018-03-21T06:11:36.632Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;AngularJS와의 차이점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MVC 개발에서 컴포넌트 기반 개발(CBD, Component Based Development)로 전환되었다.&lt;/li&gt;
+&lt;li&gt;one-way 바인딩을 지원하여
+        
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://hckang80.github.io/categories/javascript/"/>
+    
+    
+      <category term="angular" scheme="https://hckang80.github.io/tags/angular/"/>
+    
+  </entry>
   
   <entry>
     <title>웹 개발자가 알면 유용한 사이트 모음</title>
