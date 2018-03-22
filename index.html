@@ -229,7 +229,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><strong>AngularJS와의 차이점</strong></p>
+            <h2 id="Angular란"><a href="#Angular란" class="headerlink" title="Angular란?"></a>Angular란?</h2><p>구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째 버전은 AngularJS이 정식명칭이며, 2번째 버전이 Angular이다). 폴더 구조 셋팅 등 프로젝트 초기에 실행해야 하는 개발환경 셋팅을 모두 도와준다.</p>
+<p>###Angular의 특장점</p>
 <ul>
 <li>MVC 개발에서 컴포넌트 기반 개발(CBD, Component Based Development)로 전환되었다.</li>
 <li>one-way 바인딩을 지원하여 성능 이슈가 향상되었다.</li>
@@ -300,7 +301,7 @@ ga('send', 'pageview');
 </tbody>
 </table>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 인라인 HTML 템플릿을 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-template // html 파일이 생성되지 않는다.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 인라인 CSS를 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-style // css 파일이 생성되지 않는다.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 인라인 HTML 템플릿과 인라인 CSS를 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-template --inline-style // html, css 파일이 모두 생성되지 않는다.</span><br></pre></td></tr></table></figure>
-<p><strong>app.component.ts 기본 구조</strong></p>
+<p><strong>app.component.ts 기본 구조</strong> (루트 컴포넌트)</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 임포트 영역</span></span><br><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// @Component 데코레이터 영역</span></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-root'</span>,</span><br><span class="line">  templateUrl: <span class="string">'./app.component.html'</span>,</span><br><span class="line">  styleUrls: [<span class="string">'./app.component.css'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 컴포넌트 클래스 영역</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</span><br><span class="line">  title = <span class="string">'app'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         
@@ -440,7 +441,8 @@ ga('send', 'pageview');
 <p><img src="https://user-images.githubusercontent.com/7262465/37696203-520cc3a4-2d18-11e8-8f10-dcbc299a61db.png" alt="config.json 다운로드와 import 인터페이스"></p>
 <h2 id="4-http-lorempixel-com"><a href="#4-http-lorempixel-com" class="headerlink" title="4. http://lorempixel.com/"></a>4. <a href="http://lorempixel.com/" rel="external nofollow noopener noreferrer" target="_blank">http://lorempixel.com/</a></h2><p>더미(Dummy) 이미지를 제공하여 준다. 사이즈와 종류를 선택하여 원하는대로 생성이 가능하다.</p>
 <p><img src="https://user-images.githubusercontent.com/7262465/37317452-3dffe7fe-26a8-11e8-9131-2f7b9cba710e.png" alt="메인 화면"></p>
-<h2 id="5-https-placeholder-com"><a href="#5-https-placeholder-com" class="headerlink" title="5. https://placeholder.com/"></a>5. <a href="https://placeholder.com/" rel="external nofollow noopener noreferrer" target="_blank">https://placeholder.com/</a></h2><p>똑같이 더미(Dummy) 이미지를 제공하여주나, 회색배경에 사이즈를 표기한 형태로 제공한다.<br><img src="https://user-images.githubusercontent.com/7262465/37745669-6c13b446-2db9-11e8-883c-d85a14dfee93.png" alt=""></p>
+<h2 id="5-https-placeholder-com"><a href="#5-https-placeholder-com" class="headerlink" title="5. https://placeholder.com/"></a>5. <a href="https://placeholder.com/" rel="external nofollow noopener noreferrer" target="_blank">https://placeholder.com/</a></h2><p>똑같이 더미(Dummy) 이미지를 제공하여주나, 회색배경에 사이즈를 표기한 형태로 제공한다.</p>
+<p><img src="https://user-images.githubusercontent.com/7262465/37745669-6c13b446-2db9-11e8-883c-d85a14dfee93.png" alt=""></p>
 
         
         </div>
