@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>알고리즘 문제 풀이 - 계단 그리기 | HTML, CSS, Javascript, ETC</title>
+    <title>알고리즘 문제 풀이 - 야근 지수 | HTML, CSS, Javascript, ETC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="변수 n에 해당하는 줄수의 계단 형태를 만들어보자. 실행문1234567891011121314151617181920212223var n = 6;var i, j;var res = &apos;&apos;;for (i = 1; i &amp;lt;= n; i++) &amp;#123; // 6층 계단을 만들기 위한 기초 공사    var blank = &apos;&apos;;    var floor = &apos;&apos;;">
-<meta name="keywords" content="for, algorithms, 반복문, 알고리즘">
+    <meta name="description" content="회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업">
+<meta name="keywords" content="algorithms, 알고리즘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="알고리즘 문제 풀이 - 계단 그리기">
+<meta property="og:title" content="알고리즘 문제 풀이 - 야근 지수">
 <meta property="og:url" content="https://hckang80.github.io/2018/01/24/계단-그리기/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
-<meta property="og:description" content="변수 n에 해당하는 줄수의 계단 형태를 만들어보자. 실행문1234567891011121314151617181920212223var n = 6;var i, j;var res = &apos;&apos;;for (i = 1; i &amp;lt;= n; i++) &amp;#123; // 6층 계단을 만들기 위한 기초 공사    var blank = &apos;&apos;;    var floor = &apos;&apos;;">
+<meta property="og:description" content="회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://user-images.githubusercontent.com/7262465/35211598-7e19ef04-ff9a-11e7-8202-33ebd288076e.png">
-<meta property="og:updated_time" content="2018-02-01T04:56:30.143Z">
+<meta property="og:updated_time" content="2018-04-30T14:24:32.597Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="알고리즘 문제 풀이 - 계단 그리기">
-<meta name="twitter:description" content="변수 n에 해당하는 줄수의 계단 형태를 만들어보자. 실행문1234567891011121314151617181920212223var n = 6;var i, j;var res = &apos;&apos;;for (i = 1; i &amp;lt;= n; i++) &amp;#123; // 6층 계단을 만들기 위한 기초 공사    var blank = &apos;&apos;;    var floor = &apos;&apos;;">
+<meta name="twitter:title" content="알고리즘 문제 풀이 - 야근 지수">
+<meta name="twitter:description" content="회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/7262465/35211598-7e19ef04-ff9a-11e7-8202-33ebd288076e.png">
     
 
@@ -200,7 +200,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            알고리즘 문제 풀이 - 계단 그리기
+            알고리즘 문제 풀이 - 야근 지수
         </h1>
     
 
@@ -224,7 +224,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/for-algorithms-반복문-알고리즘/">for, algorithms, 반복문, 알고리즘</a>
+        <a class="tag-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a>
     </div>
 
                     </div>
@@ -235,9 +235,9 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>변수 n에 해당하는 줄수의 계단 형태를 만들어보자.</p>
-<h2 id="실행문"><a href="#실행문" class="headerlink" title="실행문"></a>실행문</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">var</span> i, j;</span><br><span class="line"><span class="keyword">var</span> res = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++) &#123; <span class="comment">// 6층 계단을 만들기 위한 기초 공사</span></span><br><span class="line">    <span class="keyword">var</span> blank = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">var</span> floor = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n - i; j++) &#123;</span><br><span class="line">        blank += <span class="string">' '</span>; <span class="comment">// 5 4 3 2 1 0 갯수 만큼 '여백'을 반복</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">        floor += <span class="string">'#'</span>; <span class="comment">// 1 2 3 4 5 6 갯수 만큼 '#'을 반복</span></span><br><span class="line">    &#125;</span><br><span class="line">    res += blank + floor + <span class="string">'\n'</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    1번째 라인 '     #\n'</span></span><br><span class="line"><span class="comment">    2번째 라인 '    ##\n'</span></span><br><span class="line"><span class="comment">    3번째 라인 '   ###\n'</span></span><br><span class="line"><span class="comment">    4번째 라인 '  ####\n'</span></span><br><span class="line"><span class="comment">    5번째 라인 ' #####\n'</span></span><br><span class="line"><span class="comment">    6번째 라인 '######\n'</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(res);</span><br></pre></td></tr></table></figure>
-<h2 id="출력값"><a href="#출력값" class="headerlink" title="출력값"></a>출력값</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     #</span><br><span class="line">    ##</span><br><span class="line">   ###</span><br><span class="line">  ####</span><br><span class="line"> #####</span><br><span class="line">######</span><br></pre></td></tr></table></figure>
+            <p>회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업량이 있을 때, noOvertime 함수를 제작하여 수민이의 야근 지수를 최소화 한 결과를 출력해 주세요. 예를 들어, N=4 일 때, 남은 일의 작업량이 [4, 3, 3] 이라면 야근 지수를 최소화하기 위해 일을 한 결과는 [2, 2, 2]가 되고 야근 지수는 22 + 22 + 22 = 12가 되어 12를 반환해 줍니다.</p>
+<p><strong>여기서 포인트는 가장 큰 숫자를 남은 시간만큼 반복하여 줄여주는 것이다.</strong></p>
+<h2 id="실행문"><a href="#실행문" class="headerlink" title="실행문"></a>실행문</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">noOvertime</span>(<span class="params">no, works</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> ( result &lt; no ) &#123;</span><br><span class="line">        works.sort(<span class="function">(<span class="params"> a, b </span>) =&gt;</span> b - a )[<span class="number">0</span>] -= <span class="number">1</span>; <span class="comment">// 일의 결과(배열)를 정렬하여 가장 큰 숫자를 1씩 감소시킨다.</span></span><br><span class="line">        result++;</span><br><span class="line">    &#125;</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line">    works.forEach( <span class="function"><span class="params">num</span> =&gt;</span> result += <span class="built_in">Math</span>.pow(num, <span class="number">2</span>)); <span class="comment">// 감소된 일의 결과를 제곱하여 더하면 끝</span></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">noOvertime(<span class="number">4</span>, [<span class="number">4</span>, <span class="number">3</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -488,7 +488,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for-algorithms-반복문-알고리즘/">for, algorithms, 반복문, 알고리즘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-development/">tools, development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-development/">tools, development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -497,7 +497,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CSS-Desirable-Simple-바람직한-간결한/" style="font-size: 10px;">CSS, Desirable, Simple, 바람직한, 간결한</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/array-algorithms-배열-알고리즘/" style="font-size: 20px;">array, algorithms, 배열, 알고리즘</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/for-algorithms-반복문-알고리즘/" style="font-size: 10px;">for, algorithms, 반복문, 알고리즘</a> <a href="/tags/tools-development/" style="font-size: 10px;">tools, development</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a>
+            <a href="/tags/CSS-Desirable-Simple-바람직한-간결한/" style="font-size: 10px;">CSS, Desirable, Simple, 바람직한, 간결한</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/algorithms-알고리즘/" style="font-size: 10px;">algorithms, 알고리즘</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/array-algorithms-배열-알고리즘/" style="font-size: 20px;">array, algorithms, 배열, 알고리즘</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/tools-development/" style="font-size: 10px;">tools, development</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a>
         </div>
     </div>
 

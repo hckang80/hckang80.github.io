@@ -151,11 +151,11 @@
   </entry>
   
   <entry>
-    <title>알고리즘 문제 풀이 - 계단 그리기</title>
+    <title>알고리즘 문제 풀이 - 야근 지수</title>
     <link href="https://hckang80.github.io/2018/01/24/%EA%B3%84%EB%8B%A8-%EA%B7%B8%EB%A6%AC%EA%B8%B0/"/>
     <id>https://hckang80.github.io/2018/01/24/계단-그리기/</id>
     <published>2018-01-24T08:02:54.000Z</published>
-    <updated>2018-02-01T04:56:30.143Z</updated>
+    <updated>2018-04-30T14:24:32.597Z</updated>
     
     <summary type="html">
     
@@ -163,8 +163,7 @@
       
         
         
-          &lt;p&gt;변수 n에 해당하는 줄수의 계단 형태를 만들어보자.&lt;/p&gt;
-&lt;h2 id=&quot;실행문&quot;&gt;&lt;a href=&quot;#실행문&quot; class=&quot;headerlink&quot; title=&quot;실행문&quot;&gt;&lt;/a&gt;실행문&lt;/h2&gt;&lt;figure class=&quot;highlight
+          &lt;p&gt;회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안
         
       
     
@@ -173,7 +172,7 @@
       <category term="javascript" scheme="https://hckang80.github.io/categories/javascript/"/>
     
     
-      <category term="for, algorithms, 반복문, 알고리즘" scheme="https://hckang80.github.io/tags/for-algorithms-%EB%B0%98%EB%B3%B5%EB%AC%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+      <category term="algorithms, 알고리즘" scheme="https://hckang80.github.io/tags/algorithms-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
     
   </entry>
   
