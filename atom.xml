@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-05-01T13:26:11.761Z</updated>
+  <updated>2018-05-01T13:28:44.315Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hckang80.github.io/2018/05/01/%EC%8B%9C%EC%A0%80%EC%95%94%ED%98%B8/"/>
     <id>https://hckang80.github.io/2018/05/01/시저암호/</id>
     <published>2018-05-01T13:23:15.000Z</published>
-    <updated>2018-05-01T13:26:11.761Z</updated>
+    <updated>2018-05-01T13:28:44.315Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,7 @@
       
         
         
-          &lt;p&gt;어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다.&lt;/p&gt;
-&lt;p&gt;A를 3만큼 밀면 D가 되고 z를 1만큼 밀면 a가 됩니다. 공백은 수정하지 않습니다.&lt;/p&gt;
-&lt;p&gt;보낼 문자열 s와
+          &lt;p&gt;어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다.&lt;br&gt;A를 3만큼 밀면 D가 되고 z를 1만큼 밀면 a가 됩니다. 공백은 수정하지 않습니다.&lt;br&gt;보낼 문자열 s와 얼마나 밀지
         
       
     
