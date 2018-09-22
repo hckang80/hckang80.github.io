@@ -307,4 +307,30 @@
     
   </entry>
   
+  <entry>
+    <title>Hexo 기본 사용법</title>
+    <link href="https://hckang80.github.io/2018/01/14/Hexo-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95/"/>
+    <id>https://hckang80.github.io/2018/01/14/Hexo-기본-사용법/</id>
+    <published>2018-01-14T05:16:50.000Z</published>
+    <updated>2018-09-22T05:43:44.738Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;로컬서버 실행하기&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="ETC" scheme="https://hckang80.github.io/categories/ETC/"/>
+    
+    
+      <category term="hexo" scheme="https://hckang80.github.io/tags/hexo/"/>
+    
+  </entry>
+  
 </feed>
