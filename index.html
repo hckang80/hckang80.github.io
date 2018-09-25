@@ -155,11 +155,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                13
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                10
+                11
                 <span>tags</span>
             </div>
         </div>
@@ -190,6 +190,149 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-lokalise를-이용한-다국어-적용기" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/09/25/lokalise를-이용한-다국어-적용기/">lokalise를 이용한 다국어 적용기</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/09/25/lokalise를-이용한-다국어-적용기/">
+            <time datetime="2018-09-25T08:01:18.000Z" itemprop="datePublished">2018-09-25</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.<br><a href="https://lokalise.co/" rel="external nofollow noopener noreferrer" target="_blank">https://lokalise.co/</a> 에서는 이러한 번거로움을 줄이고자, 번역 작업만 전담할 수 있게 툴을 제공한다.</p>
+<ol>
+<li><p>DOCS -&gt; CLI TOOL 에서 OS에 맞는 tgz 형식의 파일을 다운 받아서 압축 해제</p>
+</li>
+<li><p>압축을 해제하면 lokalise.exe 파일이 보일 것이고 /usr/local/bin 폴더에 위치</p>
+</li>
+<li><p>작업 폴더의 루트에 lokalise 폴더를 생성</p>
+</li>
+<li><p>쉘스크립트 파일 생성 lokalise/script.sh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lokalise --token &lt;TOKEN&gt; export &lt;PROJECTID&gt; --type json --export_all 1 --unzip_to lokalise --export_empty skip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>package.json에 쉘스크립트 실행 명령어를 추가</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "serve": "vue-cli-service serve",</span><br><span class="line">  "build": "vue-cli-service build",</span><br><span class="line">  "lint": "vue-cli-service lint",</span><br><span class="line">  "test:unit": "vue-cli-service test:unit",</span><br><span class="line">  "lokalise": "sh ./lokalise/script.sh"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>명령어를 실행하면 프로젝트에 등록된 언어가 폴더 내 추가 또는 업데이트 된다</p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjmhhclcw000g70pltl2qv85v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-React-시작하기" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -248,7 +391,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjmhf3k8k0006icplu0sq0nag" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjmhhclcf000570pljihn23z7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -381,7 +524,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjmhf3k95000picplbec763g4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjmhhclcz000i70plwwsybzqu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -514,7 +657,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjmhf3k8w000gicplstkeikvy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjmhhclde000s70plce8vnauo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -719,7 +862,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjmhf3k8c0002icplh2szgvi8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjmhhclck000770plk404junw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -860,7 +1003,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/작업시-알면-유용한-사이트-모음/" data-id="cjmhf3k98000ticplbsb6apkg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/작업시-알면-유용한-사이트-모음/" data-id="cjmhhcldg000u70ploausbuqt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1001,7 +1144,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjmhf3k8m0007icplejdjekjc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjmhhclci000670plgsm10mpu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1137,7 +1280,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/" data-id="cjmhf3k8s000cicplrzrjqg3g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/" data-id="cjmhhclcp000b70pls94044zz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1279,7 +1422,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjmhf3k8y000iicplvgjmnaum" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjmhhcld9000o70pl0bzk1xzu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1411,7 +1554,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/" data-id="cjmhf3k8p000bicpl164q2kmq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/" data-id="cjmhhclct000c70pl0l7syyqo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1489,137 +1632,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-배열의-합을-구해보자" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/18/배열의-합을-구해보자/">알고리즘 문제 풀이 - 배열의 합을 구해보자</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/18/배열의-합을-구해보자/">
-            <time datetime="2018-01-18T00:50:22.000Z" itemprop="datePublished">2018-01-18</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/javascript/">javascript</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">10</span>, <span class="number">11</span>];</span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> ar)&#123;</span><br><span class="line">    sub += ar[i]; <span class="comment">// i는 배열의 인덱스를 순차적으로 출력하므로 sum은 배열의 값을 더해나감</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> sum;</span><br></pre></td></tr></table></figure>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hckang80.github.io/2018/01/18/배열의-합을-구해보자/" data-id="cjmhf3k93000micplka482sor" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://hckang80.github.io/2018/01/18/배열의-합을-구해보자/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/18/배열의-합을-구해보자/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
@@ -1633,6 +1645,15 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/09/25/lokalise를-이용한-다국어-적용기/" class="title">lokalise를 이용한 다국어 적용기</a></p>
+                            <p class="item-date"><time datetime="2018-09-25T08:01:18.000Z" itemprop="datePublished">2018-09-25</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1670,15 +1691,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a></p>
-                            <p class="item-title"><a href="/2018/03/13/작업시-알면-유용한-사이트-모음/" class="title">프론트엔드 개발에 유용한 사이트 모음</a></p>
-                            <p class="item-date"><time datetime="2018-03-13T01:03:42.000Z" itemprop="datePublished">2018-03-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1697,7 +1709,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-development/">tools, development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-development/">tools, development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
