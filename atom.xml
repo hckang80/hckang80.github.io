@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-09-30T11:44:25.129Z</updated>
+  <updated>2018-09-30T11:48:25.487Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hckang80.github.io/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/"/>
     <id>https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/</id>
     <published>2018-09-25T08:01:18.000Z</published>
-    <updated>2018-09-30T11:44:25.129Z</updated>
+    <updated>2018-09-30T11:48:25.487Z</updated>
     
     <summary type="html">
     
@@ -35,7 +35,7 @@
     
     </summary>
     
-      <category term="ETC." scheme="https://hckang80.github.io/categories/ETC/"/>
+      <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
     
     
       <category term="lokalise, i18n, 다국어" scheme="https://hckang80.github.io/tags/lokalise-i18n-%EB%8B%A4%EA%B5%AD%EC%96%B4/"/>
@@ -151,7 +151,7 @@
     <link href="https://hckang80.github.io/2018/03/13/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/"/>
     <id>https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/</id>
     <published>2018-03-13T01:03:42.000Z</published>
-    <updated>2018-09-30T11:45:02.347Z</updated>
+    <updated>2018-09-30T11:48:16.722Z</updated>
     
     <summary type="html">
     
@@ -165,7 +165,7 @@
     
     </summary>
     
-      <category term="ETC." scheme="https://hckang80.github.io/categories/ETC/"/>
+      <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
     
     
       <category term="tools, development" scheme="https://hckang80.github.io/tags/tools-development/"/>
@@ -312,7 +312,7 @@
     <link href="https://hckang80.github.io/2018/01/15/2018%EB%85%84%20Front-end%20%EA%B0%9C%EB%B0%9C%20%EB%A1%9C%EB%93%9C%EB%A7%B5/"/>
     <id>https://hckang80.github.io/2018/01/15/2018년 Front-end 개발 로드맵/</id>
     <published>2018-01-15T03:53:19.000Z</published>
-    <updated>2018-09-30T11:44:17.694Z</updated>
+    <updated>2018-09-30T11:48:22.853Z</updated>
     
     <summary type="html">
     
@@ -326,7 +326,7 @@
     
     </summary>
     
-      <category term="ETC." scheme="https://hckang80.github.io/categories/ETC/"/>
+      <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
     
     
       <category term="development" scheme="https://hckang80.github.io/tags/development/"/>
@@ -338,7 +338,7 @@
     <link href="https://hckang80.github.io/2018/01/14/Hexo-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95/"/>
     <id>https://hckang80.github.io/2018/01/14/Hexo-기본-사용법/</id>
     <published>2018-01-14T05:16:50.000Z</published>
-    <updated>2018-09-30T11:44:20.428Z</updated>
+    <updated>2018-09-30T11:48:19.533Z</updated>
     
     <summary type="html">
     
@@ -352,7 +352,7 @@
     
     </summary>
     
-      <category term="ETC." scheme="https://hckang80.github.io/categories/ETC/"/>
+      <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
     
     
       <category term="hexo" scheme="https://hckang80.github.io/tags/hexo/"/>
