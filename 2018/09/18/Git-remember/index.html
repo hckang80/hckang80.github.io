@@ -5,18 +5,18 @@
     
     <title>Git remember | HTML, CSS, Javascript, ETC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="자동완성 설정하기git 명령어를 입력할 때  키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다(Mac O">
+    <meta name="description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다.">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git remember">
 <meta property="og:url" content="https://hckang80.github.io/2018/09/18/Git-remember/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
-<meta property="og:description" content="자동완성 설정하기git 명령어를 입력할 때  키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다(Mac O">
+<meta property="og:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-11T23:24:30.597Z">
+<meta property="og:updated_time" content="2018-10-11T23:56:27.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git remember">
-<meta name="twitter:description" content="자동완성 설정하기git 명령어를 입력할 때  키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다(Mac O">
+<meta name="twitter:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.  https://github.com/git/git/blob/master/contrib/completion/git-completion.bash 파일을 홈 디렉토리에 다운받는다  ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다.">
     
 
     
@@ -245,19 +245,20 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="자동완성-설정하기"><a href="#자동완성-설정하기" class="headerlink" title="자동완성 설정하기"></a>자동완성 설정하기</h3><p>git 명령어를 입력할 때 <tab> 키를 눌러서 자동완성을 사용할 수 있다.</tab></p>
+            <p><br></p>
+<h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.</p>
 <ol>
 <li><p><a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/git/git/blob/master/contrib/completion/git-completion.bash</a> 파일을 홈 디렉토리에 다운받는다</p>
 </li>
-<li><p>~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다(Mac OS).</p>
+<li><p>~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다. (Mac OS)</p>
 <p>Window의 경우에는 따로 설정이 필요하지 않다.</p>
 </li>
 </ol>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/git-completion.bash</span><br></pre></td></tr></table></figure>
-<h3 id="자주사용하는-명령어"><a href="#자주사용하는-명령어" class="headerlink" title="자주사용하는 명령어"></a>자주사용하는 명령어</h3><p>정말로 자주 사용하는 명령어만 추려보았다.</p>
-<p>(add, commit과 같이 가장 기본적인 내용은 생략하였다)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가장 최근의 add 취소하기</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소하기</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line"><span class="variable">$git</span> commit --amend</span><br></pre></td></tr></table></figure>
-
+<p><br></p>
+<h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>add, commit, branch와 같이 매우 자주 다루는 내용은 생략하였다.</p>
+<h4 id="2-1-history"><a href="#2-1-history" class="headerlink" title="2-1. history"></a>2-1. history</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line"><span class="variable">$git</span> commit --amend</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-stash"><a href="#2-2-stash" class="headerlink" title="2-2. stash"></a>2-2. stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지(rebase나 pull이 가능해짐)</span></span><br><span class="line"><span class="variable">$git</span> stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경사항을 다시 가져오고 Stack에 백업했던 내용은 삭제 </span></span><br><span class="line"><span class="variable">$git</span> stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 백업 목록 확인</span></span><br><span class="line"><span class="variable">$git</span> stash list</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +268,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/18/Git-remember/" data-id="cjn57ne9j000650plgmxwuu4n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/18/Git-remember/" data-id="cjn58sm3s0002ksplvy6dk85b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
