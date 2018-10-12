@@ -47,7 +47,7 @@
     <link href="https://hckang80.github.io/2018/09/18/Git-Remember/"/>
     <id>https://hckang80.github.io/2018/09/18/Git-Remember/</id>
     <published>2018-09-17T22:44:28.000Z</published>
-    <updated>2018-10-12T00:02:54.784Z</updated>
+    <updated>2018-10-12T00:05:04.548Z</updated>
     
     <summary type="html">
     
@@ -55,8 +55,7 @@
       
         
         
-          &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;&lt;p&gt;git 명령어를 입력할 때 Tab키를 눌러서
+          &lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;&lt;p&gt;git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수
         
       
     
