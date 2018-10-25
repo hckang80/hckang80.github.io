@@ -9,15 +9,14 @@ thumbnail:
 
 ### 1. 자동완성 설정
 
-git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.
+git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.  
+(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)
 
 1. 다음의 경로에서 파일을 홈 디렉토리에 다운받는다
 
    https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 
 2. ~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다. (Mac OS)
-
-   Window의 경우 따로 설정이 필요하지 않다.
 
 ```basic
 source ~/git-completion.bash
@@ -45,6 +44,9 @@ $git reset HEAD^
 
 # 가장 최근의 commit 메세지 변경
 $git commit --amend
+
+# pull 되돌리기
+$git reset --hard ORIG_HEAD
 ```
 
 #### 2-2. stash
