@@ -267,7 +267,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjn59alfm000cecpldlrtl5or" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnoezshi000krspl5lydcdql" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -388,19 +388,18 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.</p>
+            <h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.<br>(Window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)</p>
 <ol>
 <li><p>다음의 경로에서 파일을 홈 디렉토리에 다운받는다</p>
 <p><a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/git/git/blob/master/contrib/completion/git-completion.bash</a></p>
 </li>
 <li><p>~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다. (Mac OS)</p>
-<p>Window의 경우 따로 설정이 필요하지 않다.</p>
 </li>
 </ol>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/git-completion.bash</span><br></pre></td></tr></table></figure>
 <p><br></p>
 <h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>add, commit, branch와 같이 매우 자주 다루는 내용은 생략하였다.</p>
-<h4 id="2-1-history"><a href="#2-1-history" class="headerlink" title="2-1. history"></a>2-1. history</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line"><span class="variable">$git</span> commit --amend</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-history"><a href="#2-1-history" class="headerlink" title="2-1. history"></a>2-1. history</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line"><span class="variable">$git</span> commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line"><span class="variable">$git</span> reset --hard ORIG_HEAD</span><br></pre></td></tr></table></figure>
 <h4 id="2-2-stash"><a href="#2-2-stash" class="headerlink" title="2-2. stash"></a>2-2. stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지(rebase나 pull이 가능해짐)</span></span><br><span class="line"><span class="variable">$git</span> stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경사항을 다시 가져오고 Stack에 백업했던 내용은 삭제 </span></span><br><span class="line"><span class="variable">$git</span> stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 백업 목록 확인</span></span><br><span class="line"><span class="variable">$git</span> stash list</span><br></pre></td></tr></table></figure>
         
         </div>
@@ -411,7 +410,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/18/Git-remember/" data-id="cjn59alfd0006ecpl5jadmhja" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/18/Git-remember/" data-id="cjnoezsgx0007rspl2labhx3q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -547,7 +546,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjn59alff0007ecplplstj037" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnoezsh5000crsplekejc173" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -680,7 +679,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjn59ali5001becpl0bit5w7h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnoezsi4000zrspldy5ns56k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -813,7 +812,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjn59ali10019ecplv8beubkk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnoezsi1000xrspl6po3bqau" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1018,7 +1017,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjn59alf50002ecplryxxjg0f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnoezsgu0006rsplid6h1vh4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1159,7 +1158,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjn59ali9001fecpluy4s3btx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnoezsi90013rsplkqkbyi2x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1300,7 +1299,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjn59alfs000gecpl1m3cuohw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjnoezsh9000drsplv9fuylpg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1436,7 +1435,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/" data-id="cjn59alfk000becpl30xoq4bg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/" data-id="cjnoezshe000hrsplgelh8ii1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1578,7 +1577,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjn59alht0014ecpldh7uwy66" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjnoezsht000rrsplaoadz1rs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
