@@ -73,7 +73,7 @@
     <link href="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/"/>
     <id>https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/</id>
     <published>2018-05-26T11:48:26.000Z</published>
-    <updated>2018-10-26T12:10:13.955Z</updated>
+    <updated>2018-10-26T12:13:16.791Z</updated>
     
     <summary type="html">
     
@@ -81,8 +81,7 @@
       
         
         
-          &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;h, j, k, l - 좌, 하, 상, 우 커서 이동&lt;/p&gt;
-&lt;p&gt;i: 현재 커서 위치에
+          &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;h, j, k, l&lt;/strong&gt; - 좌, 하, 상, 우 커서
         
       
     
