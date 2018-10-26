@@ -5,18 +5,18 @@
     
     <title>Git Remember | HTML, CSS, Javascript, ETC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리에 다운받는다 https://github.com/git/git/blob/master/contrib/completion/git-completion.bash">
+    <meta name="description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS) https://github.com/git/git/blob/master/contrib/completion/git-comp">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Remember">
-<meta property="og:url" content="https://hckang80.github.io/2018/09/18/Git-remember/index.html">
+<meta property="og:url" content="https://hckang80.github.io/2018/06/18/Git-remember/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
-<meta property="og:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리에 다운받는다 https://github.com/git/git/blob/master/contrib/completion/git-completion.bash">
+<meta property="og:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS) https://github.com/git/git/blob/master/contrib/completion/git-comp">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-25T10:02:27.246Z">
+<meta property="og:updated_time" content="2018-10-26T11:53:21.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Remember">
-<meta name="twitter:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리에 다운받는다 https://github.com/git/git/blob/master/contrib/completion/git-completion.bash">
+<meta name="twitter:description" content="1. 자동완성 설정git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)  다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS) https://github.com/git/git/blob/master/contrib/completion/git-comp">
     
 
     
@@ -168,11 +168,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                14
+                15
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                12
+                13
                 <span>tags</span>
             </div>
         </div>
@@ -219,8 +219,8 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/09/18/Git-remember/">
-            <time datetime="2018-09-17T22:44:28.000Z" itemprop="datePublished">2018-09-18</time>
+        <a href="/2018/06/18/Git-remember/">
+            <time datetime="2018-06-18T10:44:28.000Z" itemprop="datePublished">2018-06-18</time>
         </a>
     </div>
 
@@ -247,17 +247,19 @@ ga('send', 'pageview');
             
             <h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.<br>(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)</p>
 <ol>
-<li><p>다음의 경로에서 파일을 홈 디렉토리에 다운받는다</p>
+<li><p>다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS)</p>
 <p><a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/git/git/blob/master/contrib/completion/git-completion.bash</a></p>
 </li>
-<li><p>~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다. (Mac OS)</p>
+<li><p>~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다.</p>
 </li>
 </ol>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/git-completion.bash</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>add, commit, branch와 같이 매우 자주 다루는 내용은 생략하였다.</p>
-<h4 id="2-1-history"><a href="#2-1-history" class="headerlink" title="2-1. history"></a>2-1. history</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line"><span class="variable">$git</span> reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line"><span class="variable">$git</span> commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line"><span class="variable">$git</span> reset --hard ORIG_HEAD</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-stash"><a href="#2-2-stash" class="headerlink" title="2-2. stash"></a>2-2. stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지(rebase나 pull이 가능해짐)</span></span><br><span class="line"><span class="variable">$git</span> stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경사항을 다시 가져오고 Stack에 백업했던 내용은 삭제 </span></span><br><span class="line"><span class="variable">$git</span> stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 백업 목록 확인</span></span><br><span class="line"><span class="variable">$git</span> stash list</span><br></pre></td></tr></table></figure>
+<h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>단순한 add, commit과 같이 자주 다루는 내용은 생략하였다.</p>
+<h4 id="2-1-Config"><a href="#2-1-Config" class="headerlink" title="2-1. Config"></a>2-1. Config</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># squash할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash 1q2w3e4</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># commit 이력 편집</span></span><br><span class="line"><span class="comment"># 이후 pick으로 되어 있는 부분을 squash 또는 edit로 변경하여</span></span><br><span class="line"><span class="comment"># 저장하면 commit을 합치거나 메세지를 변경할 수 있다.</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-Stash"><a href="#2-3-Stash" class="headerlink" title="2-3. Stash"></a>2-3. Stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지</span></span><br><span class="line"><span class="comment"># (rebase나 pull이 가능해짐)</span></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 백업한 내용을 가져오고 Stack을 비움</span></span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 목록 확인</span></span><br><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
+<h4 id="2-4-ETC"><a href="#2-4-ETC" class="headerlink" title="2-4. ETC"></a>2-4. ETC</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Remote 브런치를 동기화하고 이동</span></span><br><span class="line">$ git fetch origin --prune</span><br><span class="line">$ git checkout -t origin/&lt;브런치명&gt;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -267,7 +269,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/18/Git-remember/" data-id="cjnoezsgx0007rspl2labhx3q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnpz5yj20008n0pl3ktj4ysh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -335,7 +337,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/09/18/Git-remember/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/09/18/Git-remember/">Comments</a>
+        <a href="https://hckang80.github.io/2018/06/18/Git-remember/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/06/18/Git-remember/">Comments</a>
     
 
         </footer>
@@ -354,9 +356,9 @@ ga('send', 'pageview');
         </a>
     
     
-        <a href="/2018/05/10/React-시작하기/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">TypeScript &amp; React &amp; Redux 시작하기</div>
+            <div class="article-nav-title">자주 사용하는 단축키 정리(Vim, 터미널)</div>
         </a>
     
 </nav>
@@ -399,8 +401,17 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
-                            <p class="item-title"><a href="/2018/09/18/Git-remember/" class="title">Git Remember</a></p>
-                            <p class="item-date"><time datetime="2018-09-17T22:44:28.000Z" itemprop="datePublished">2018-09-18</time></p>
+                            <p class="item-title"><a href="/2018/06/18/Git-remember/" class="title">Git Remember</a></p>
+                            <p class="item-date"><time datetime="2018-06-18T10:44:28.000Z" itemprop="datePublished">2018-06-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
+                            <p class="item-title"><a href="/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" class="title">자주 사용하는 단축키 정리(Vim, 터미널)</a></p>
+                            <p class="item-date"><time datetime="2018-05-26T11:48:26.000Z" itemprop="datePublished">2018-05-26</time></p>
                         </div>
                     </li>
                 
@@ -422,15 +433,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/05/01/시저암호/" class="title">알고리즘 문제 풀이 - 시저암호</a></p>
-                            <p class="item-date"><time datetime="2018-05-01T13:23:15.000Z" itemprop="datePublished">2018-05-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -440,7 +442,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -449,7 +451,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -508,7 +510,7 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://hckang80.github.io/2018/09/18/Git-remember/';
+            this.page.url = 'https://hckang80.github.io/2018/06/18/Git-remember/';
         
         this.page.identifier = 'Git-remember';
     };

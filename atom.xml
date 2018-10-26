@@ -44,10 +44,10 @@
   
   <entry>
     <title>Git Remember</title>
-    <link href="https://hckang80.github.io/2018/09/18/Git-remember/"/>
-    <id>https://hckang80.github.io/2018/09/18/Git-remember/</id>
-    <published>2018-09-17T22:44:28.000Z</published>
-    <updated>2018-10-25T10:02:27.246Z</updated>
+    <link href="https://hckang80.github.io/2018/06/18/Git-remember/"/>
+    <id>https://hckang80.github.io/2018/06/18/Git-remember/</id>
+    <published>2018-06-18T10:44:28.000Z</published>
+    <updated>2018-10-26T11:53:21.415Z</updated>
     
     <summary type="html">
     
@@ -65,6 +65,33 @@
     
     
       <category term="git" scheme="https://hckang80.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>자주 사용하는 단축키 정리(Vim, 터미널)</title>
+    <link href="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/"/>
+    <id>https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/</id>
+    <published>2018-05-26T11:48:26.000Z</published>
+    <updated>2018-10-26T12:10:13.955Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;h, j, k, l - 좌, 하, 상, 우 커서 이동&lt;/p&gt;
+&lt;p&gt;i: 현재 커서 위치에
+        
+      
+    
+    </summary>
+    
+      <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
+    
+    
+      <category term="단축키, 터미널, vim" scheme="https://hckang80.github.io/tags/%EB%8B%A8%EC%B6%95%ED%82%A4-%ED%84%B0%EB%AF%B8%EB%84%90-vim/"/>
     
   </entry>
   
