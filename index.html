@@ -163,11 +163,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                16
+                17
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                14
+                15
                 <span>tags</span>
             </div>
         </div>
@@ -198,7 +198,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-axios로-파일-다운로드-구현하기" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-Big-O란" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -206,7 +206,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/31/axios로-파일-다운로드-구현하기/">axios로 파일 다운로드 구현하기</a>
+            <a class="article-title" href="/2018/10/31/Big-O란/">Big O란</a>
         </h1>
     
 
@@ -215,8 +215,8 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/10/31/axios로-파일-다운로드-구현하기/">
-            <time datetime="2018-10-31T13:50:18.000Z" itemprop="datePublished">2018-10-31</time>
+        <a href="/2018/10/31/Big-O란/">
+            <time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time>
         </a>
     </div>
 
@@ -224,13 +224,13 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/javascript/">javascript</a>
+        <a class="article-category-link" href="/categories/etc/">etc</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/axios-download-file/">axios, download, file</a>
+        <a class="tag-link" href="/tags/algorithm/">algorithm</a>
     </div>
 
                     </div>
@@ -241,7 +241,14 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; element 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'request body 전달'</span>, <span class="string">'request header 전달'</span>)</span><br></pre></td></tr></table></figure>
+            <h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><p>Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.</p>
+<h2 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h2><h3 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h3><p>이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.<br>종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getLast = <span class="function"><span class="params">array</span> =&gt;</span> array[array.length - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">getLast([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]) <span class="comment">// d (1회 반복)</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h3><p>이 수에서는 최악의 경우 시간복잡도가 항목 수와 동일하게 증가합니다.<br>즉, N개의 원소가 있다면 최대 N번의 반복이 필요합니다.<br>반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> findIndex = <span class="function">(<span class="params">array, match</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (array[i] === match) <span class="keyword">return</span> i</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'a'</span>); <span class="comment">// 0  (1회 반복 - 최소 반복)</span></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'d'</span>); <span class="comment">// 3  (4회 반복 - 최대 반복)</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="O-n²"><a href="#O-n²" class="headerlink" title="O(n²)"></a>O(n²)</h3><p>이 수에서는 최악의 경우 시간복잡도는 입력한 수의 제곱입니다.<br>입력한 수와 비례하여 시간이 기하급수적으로 늘어납니다.<br>이중 반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> generatorSquareMatrix = <span class="function"><span class="params">array</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> matrix = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123; </span><br><span class="line">    matrix[i] = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; array.length; j++)</span><br><span class="line">      matrix[i].push(array[j])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> matrix</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">generatorSquareMatrix([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]); <span class="comment">// 3개의 원소일 때 9회 반복</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="O-log-n"><a href="#O-log-n" class="headerlink" title="O(log n)"></a>O(log n)</h3><p>이 수는 검색 알고리즘의 가장 적합한 사례로써 대규모 데이터를 처리할 때 가장 효율적인 방법입니다.<br>구성 요소를 하나씩 살펴보는 대신 데이터를 일반적으로 두 분류로 나누고, 매 반복 작업에서 한 분류를 삭제합니다.</p>
+<p>이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> quickSort = <span class="function"><span class="params">list</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (list.length &lt; <span class="number">2</span>) <span class="keyword">return</span> list</span><br><span class="line">  <span class="keyword">let</span> pivot = list[<span class="number">0</span>]</span><br><span class="line">  <span class="keyword">let</span> left  = []</span><br><span class="line">  <span class="keyword">let</span> right = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; list.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> (list[i] &lt; pivot) left.push(list[i])</span><br><span class="line">    <span class="keyword">else</span> right.push(list[i])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    ...quickSort(left), </span><br><span class="line">    pivot, </span><br><span class="line">    ...quickSort(right)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">quickSort( [<span class="string">'o'</span>,<span class="string">'b'</span>,<span class="string">'j'</span>,<span class="string">'e'</span>,<span class="string">'c'</span>,<span class="string">'t'</span>,<span class="string">'a'</span>,<span class="string">'s'</span>,<span class="string">'i'</span>,<span class="string">'g'</span>,<span class="string">'n'</span>])</span><br><span class="line"><span class="comment">// ["b", "j", "e", "c", "a", "i", "g", "n", "o", "t", "s"]</span></span><br></pre></td></tr></table></figure></p>
+<!-- ### O(2ⁿ)
+피보나치 수열 -->
         
         </div>
         <footer class="article-footer">
@@ -251,7 +258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/" data-id="cjnx8iwcr000fowpld408s592" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/31/Big-O란/" data-id="cjnxb4bce0007g4plvca6jirh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -319,7 +326,138 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/">Comments</a>
+        <a href="https://hckang80.github.io/2018/10/31/Big-O란/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/Big-O란/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-axios로-파일-다운로드-구현하기" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/14/axios로-파일-다운로드-구현하기/">axios로 파일 다운로드 구현하기</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/10/14/axios로-파일-다운로드-구현하기/">
+            <time datetime="2018-10-14T13:50:18.000Z" itemprop="datePublished">2018-10-14</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/axios-file-download/">axios, file download</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; element 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'request body 전달'</span>, <span class="string">'request header 전달'</span>)</span><br></pre></td></tr></table></figure>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjnxb4bem000tg4plujzo81x3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/">Comments</a>
     
 
         </footer>
@@ -398,7 +536,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnx8iwcx000jowpl27hfvj79" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnxb4bek000sg4plhqsdl3k4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -543,7 +681,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnx8iwc10004owpl1b40tnig" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnxb4bcc0006g4pl2glhh22b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -681,7 +819,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnx8iwdm0012owpl0qk8kqya" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnxb4bfc001ig4plhu7w29us" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -817,7 +955,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnx8iwcn000eowpl1jjtoq5f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnxb4be6000lg4pl9wrkc2ox" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -950,7 +1088,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnx8iwdr0016owpljwhou7fr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnxb4bf20019g4plugx45nlk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1083,7 +1221,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnx8iwdi000zowple3lg3v4o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnxb4bez0016g4plumdax9dw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1288,7 +1426,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnx8iwcb0008owplhbibbm3d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnxb4bc60003g4pl64bzvkvg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1429,7 +1567,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnx8iwdv0018owpltvsbfjr3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnxb4bf8001fg4plj632tw5c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1507,147 +1645,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-TypeScript-시작하기" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/08/TypeScript-시작하기/">TypeScript 시작하기</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/08/TypeScript-시작하기/">
-            <time datetime="2018-03-08T04:52:37.000Z" itemprop="datePublished">2018-03-08</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/javascript/">javascript</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/typescript/">typescript</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h3 id="Typescript-이하-ts-의-특징-및-장점"><a href="#Typescript-이하-ts-의-특징-및-장점" class="headerlink" title="Typescript(이하 ts)의 특징 및 장점"></a>Typescript(이하 ts)의 특징 및 장점</h3><ul>
-<li>React 등 사용영역이 점차 확대되고 있다.</li>
-<li>타입을 지원하므로 다양한 도구의 지원를 받기가 좋아 생산성이 향상된다.</li>
-<li>Java 나 C# 등의 클래스 기반 언어를 먼저 알고 접근하면 더 좋다.</li>
-<li>컴파일러 기능을 내장하고 있으므로, Babel이 필요 없게 된다.</li>
-<li>코드 가독성, 예측성, 안정성이 향상되어 대규모 프로젝트에 적합하다.</li>
-</ul>
-<p><strong>설치 및 버전 확인</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g typescript // typescript는 전역으로 설치하자</span><br><span class="line"></span><br><span class="line">$ tsc -v // 설치가 잘 되었는지 확인하자</span><br><span class="line">Version 2.7.2</span><br></pre></td></tr></table></figure>
-<p><strong>컴파일 방법</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tsc person // person.ts의 확장자 생략이 가능하다. 기본적으로 es3문법으로 컴파일한다</span><br><span class="line"></span><br><span class="line">$ tsc person -t es5 // -t는 target이며 문법을 지정하여 컴파일한다</span><br><span class="line"></span><br><span class="line">$ tsc *.ts // 한번에 여러파일을 컴파일한다</span><br></pre></td></tr></table></figure>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjnx8iwd1000mowplygyyjkyw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
@@ -1665,9 +1662,18 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
+                            <p class="item-title"><a href="/2018/10/31/Big-O란/" class="title">Big O란</a></p>
+                            <p class="item-date"><time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/10/31/axios로-파일-다운로드-구현하기/" class="title">axios로 파일 다운로드 구현하기</a></p>
-                            <p class="item-date"><time datetime="2018-10-31T13:50:18.000Z" itemprop="datePublished">2018-10-31</time></p>
+                            <p class="item-title"><a href="/2018/10/14/axios로-파일-다운로드-구현하기/" class="title">axios로 파일 다운로드 구현하기</a></p>
+                            <p class="item-date"><time datetime="2018-10-14T13:50:18.000Z" itemprop="datePublished">2018-10-14</time></p>
                         </div>
                     </li>
                 
@@ -1698,15 +1704,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/react/">react</a></p>
-                            <p class="item-title"><a href="/2018/05/10/React-시작하기/" class="title">TypeScript &amp; React &amp; Redux 시작하기</a></p>
-                            <p class="item-date"><time datetime="2018-05-10T10:34:11.000Z" itemprop="datePublished">2018-05-10</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1716,7 +1713,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1725,7 +1722,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-download-file/">axios, download, file</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-file-download/">axios, file download</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
