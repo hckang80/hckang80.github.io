@@ -49,19 +49,25 @@ $ git reset HEAD^
 # pull 되돌리기
 $ git reset --hard ORIG_HEAD
 
-# 가장 최근의 commit 메세지 변경
+# 직전 commit 메세지 변경
 $ git commit --amend
 
-# squash할 목적으로 commit 하기
-$ git commit --squash 1q2w3e4
+# 기존의 커밋과 병합할 목적으로 commit 하기
+$ git commit --squash <commit number 7자리~>
 
 # vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)
 $ git commit -v
 
-# commit 이력 편집
-# 이후 pick으로 되어 있는 부분을 squash 또는 edit로 변경하여
-# 저장하면 commit을 합치거나 메세지를 변경할 수 있다.
+# 기존의 commit 이력 관리
 $ git rebase -i HEAD~10
+
+# 이후 메세지를 병합하려면 pick을 squash로 변경 후 저장
+# 이때 병합하는 메세지의 순서가 나란해야 함
+
+# 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장
+$ git commit --amend
+# 메세지 변경
+$ git commit --continue
 ```
 
 #### 2-3. Stash
