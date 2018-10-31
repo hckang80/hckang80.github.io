@@ -40,10 +40,10 @@ $ git config --list
 #### 2-2. History
 
 ```bash
-# 가장 최근의 add 취소
+# 직전의 add 취소
 $ git reset HEAD
 
-# 가장 최근의 commit 취소
+# 직전의 add와 commit 취소
 $ git reset HEAD^
 
 # pull 되돌리기
@@ -74,7 +74,7 @@ $ git commit --continue
 
 ```bash
 # 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지
-# (rebase나 pull이 가능해짐)
+# rebase나 pull이 가능해짐. 직전의 변경사항이 @stash{0}으로 백업
 $ git stash
 
 # 백업한 내용을 가져오고 Stack을 비움
