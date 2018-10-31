@@ -163,11 +163,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                15
+                16
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                13
+                14
                 <span>tags</span>
             </div>
         </div>
@@ -198,6 +198,137 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-axios로-파일-다운로드-구현하기" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/31/axios로-파일-다운로드-구현하기/">axios로 파일 다운로드 구현하기</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/10/31/axios로-파일-다운로드-구현하기/">
+            <time datetime="2018-10-31T13:50:18.000Z" itemprop="datePublished">2018-10-31</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/axios-download-file/">axios, download, file</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; element 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; element에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'request body 전달'</span>, <span class="string">'request header 전달'</span>)</span><br></pre></td></tr></table></figure>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/" data-id="cjnx8iwcr000fowpld408s592" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/axios로-파일-다운로드-구현하기/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-lokalise를-이용한-다국어-적용기" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -267,7 +398,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnpza19p000eqopl2as7fbod" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnx8iwcx000jowpl27hfvj79" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -400,7 +531,7 @@ ga('send', 'pageview');
 <p><br></p>
 <h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>단순한 add, commit과 같이 자주 다루는 내용은 생략하였다.</p>
 <h4 id="2-1-Config"><a href="#2-1-Config" class="headerlink" title="2-1. Config"></a>2-1. Config</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># squash할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash 1q2w3e4</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># commit 이력 편집</span></span><br><span class="line"><span class="comment"># 이후 pick으로 되어 있는 부분을 squash 또는 edit로 변경하여</span></span><br><span class="line"><span class="comment"># 저장하면 commit을 합치거나 메세지를 변경할 수 있다.</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 커밋과 병합할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash &lt;commit number 7자리~&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 commit 이력 관리</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이후 메세지를 병합하려면 pick을 squash로 변경 후 저장</span></span><br><span class="line"><span class="comment"># 이때 병합하는 메세지의 순서가 나란해야 함</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment"># 메세지 변경</span></span><br><span class="line">$ git commit --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-3-Stash"><a href="#2-3-Stash" class="headerlink" title="2-3. Stash"></a>2-3. Stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지</span></span><br><span class="line"><span class="comment"># (rebase나 pull이 가능해짐)</span></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 백업한 내용을 가져오고 Stack을 비움</span></span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 목록 확인</span></span><br><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
 <h4 id="2-4-ETC"><a href="#2-4-ETC" class="headerlink" title="2-4. ETC"></a>2-4. ETC</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Remote 브런치를 동기화하고 이동</span></span><br><span class="line">$ git fetch origin --prune</span><br><span class="line">$ git checkout -t origin/&lt;브런치명&gt;</span><br></pre></td></tr></table></figure>
         
@@ -412,7 +543,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnpza19j0009qoplh8r9oee9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnx8iwc10004owpl1b40tnig" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -550,7 +681,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnpza1ap0017qoplxo2njsap" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnx8iwdm0012owpl0qk8kqya" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -686,7 +817,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnpza19l000aqopljldmw6nf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnx8iwcn000eowpl1jjtoq5f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -819,7 +950,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnpza1ah0010qoplqra4ev7r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnx8iwdr0016owpljwhou7fr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -952,7 +1083,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnpza1ad000xqoplyz7t79uv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnx8iwdi000zowple3lg3v4o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1157,7 +1288,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnpza18y0004qoplvvuxfwij" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnx8iwcb0008owplhbibbm3d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1298,7 +1429,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnpza1al0013qoplgd6z5hne" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnx8iwdv0018owpltvsbfjr3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1439,7 +1570,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjnpza1a9000tqoplb9gbo2jx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/08/TypeScript-시작하기/" data-id="cjnx8iwd1000mowplygyyjkyw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1517,142 +1648,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-Sass-시작하기" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/08/Sass-시작하기/">Sass 시작하기</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/08/Sass-시작하기/">
-            <time datetime="2018-02-08T01:54:42.000Z" itemprop="datePublished">2018-02-08</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/CSS/">CSS</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Sass/">Sass</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Sass의 경우 Ruby 와 Node 기반 형태로 나누어지며 문법이 조금 다르다. (node 기반이 css 작성 방법과 조금 더 유사하며 최신 트렌드이므로 node 기반으로 설명하겠다)</p>
-<p>우선 node.js의 설치가 필요하다.<br><a href="https://nodejs.org/ko/" rel="external nofollow noopener noreferrer" target="_blank">https://nodejs.org/ko/</a></p>
-<p>설치하고자 하는 폴더로 이동 후 bash에서 아래와 같이 입력하여 진행한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 폴더 내에 package.json이 없는 경우에는 아래 명령어부터 입력하여 설정하는 것이 좋다.</span></span><br><span class="line">$ npm init -y</span><br><span class="line"></span><br><span class="line"><span class="comment">// npm을 통한 node-sass의 설치</span></span><br><span class="line">$ npm install node-sass</span><br><span class="line"></span><br><span class="line"><span class="comment">// src 하위의 sass 폴더 전체를 dist 하위의 css 폴더로 컴파일한다.</span></span><br><span class="line"><span class="comment">// 이때 watch 모드이므로 변경사항을 실시간 감지한다.</span></span><br><span class="line">$ node-sass --watch src/sass --output dist/css</span><br><span class="line"></span><br><span class="line"><span class="comment">// 실제 프로젝트를 진행할때는 용량이 적을수록 좋기 때문에 빈공간이 없는 압축된 형태로 컴파일한다.</span></span><br><span class="line"><span class="comment">// --output-style : nested(default), expanded(표준 스타일), compact(룰셋을 한줄로 표기), compressed(빈공간이 없는 형태)</span></span><br><span class="line">$ node-sass --output-style compressed src/sass --output dist/css</span><br></pre></td></tr></table></figure>
-<p>관련 사이트<br><a href="https://velopert.com/1712" rel="external nofollow noopener noreferrer" target="_blank">https://velopert.com/1712</a><br><a href="https://sass-guidelin.es/ko/" rel="external nofollow noopener noreferrer" target="_blank">https://sass-guidelin.es/ko/</a><br><a href="https://sass.urbanzakapa.kr/" rel="external nofollow noopener noreferrer" target="_blank">https://sass.urbanzakapa.kr/</a><br><a href="https://www.sassmeister.com/" rel="external nofollow noopener noreferrer" target="_blank">https://www.sassmeister.com/</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/" data-id="cjnpza19y000jqopl0beqw7kh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://hckang80.github.io/2018/02/08/Sass-시작하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/02/08/Sass-시작하기/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
@@ -1666,6 +1661,15 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
+                            <p class="item-title"><a href="/2018/10/31/axios로-파일-다운로드-구현하기/" class="title">axios로 파일 다운로드 구현하기</a></p>
+                            <p class="item-date"><time datetime="2018-10-31T13:50:18.000Z" itemprop="datePublished">2018-10-31</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1703,15 +1707,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/05/03/야근 지수/" class="title">알고리즘 문제 풀이 - 야근 지수</a></p>
-                            <p class="item-date"><time datetime="2018-05-03T10:24:54.000Z" itemprop="datePublished">2018-05-03</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1721,7 +1716,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1730,7 +1725,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-download-file/">axios, download, file</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
