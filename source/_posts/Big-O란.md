@@ -1,0 +1,80 @@
+---
+title: Big O란
+date: 2018-10-31 23:26:50
+categories: etc
+tags: algorithm
+thumbnail:
+---
+
+## 정의
+Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.
+
+## 종류
+### O(1)
+이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.
+종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.
+```js
+const getLast = array => array[array.length - 1]
+
+getLast(['a', 'b', 'c', 'd']) // d (1회 반복)
+```
+
+### O(n)
+이 수에서는 최악의 경우 시간복잡도가 항목 수와 동일하게 증가합니다.
+즉, N개의 원소가 있다면 최대 N번의 반복이 필요합니다.
+반복문 형태를 취합니다.
+```js
+const findIndex = (array, match) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === match) return i
+  }
+  return -1
+}
+
+findIndex(['a', 'b', 'c', 'd'], 'a'); // 0  (1회 반복 - 최소 반복)
+findIndex(['a', 'b', 'c', 'd'], 'd'); // 3  (4회 반복 - 최대 반복)
+```
+### O(n²)
+이 수에서는 최악의 경우 시간복잡도는 입력한 수의 제곱입니다.
+입력한 수와 비례하여 시간이 기하급수적으로 늘어납니다.
+이중 반복문 형태를 취합니다.
+```js
+const generatorSquareMatrix = array => {
+  let matrix = []
+  for (let i = 0; i < array.length; i++){ 
+    matrix[i] = []
+    for (let j = 0; j < array.length; j++)
+      matrix[i].push(array[j])
+  }
+  return matrix
+}
+
+generatorSquareMatrix(['a', 'b', 'c']); // 3개의 원소일 때 9회 반복
+```
+### O(log n)
+이 수는 검색 알고리즘의 가장 적합한 사례로써 대규모 데이터를 처리할 때 가장 효율적인 방법입니다.
+구성 요소를 하나씩 살펴보는 대신 데이터를 일반적으로 두 분류로 나누고, 매 반복 작업에서 한 분류를 삭제합니다.
+
+이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.
+```js
+const quickSort = list => {
+  if (list.length < 2) return list
+  let pivot = list[0]
+  let left  = []
+  let right = []
+  for (let i = 1; i < list.length; i++){
+    if (list[i] < pivot) left.push(list[i])
+    else right.push(list[i])
+  }
+  return [
+    ...quickSort(left), 
+    pivot, 
+    ...quickSort(right)
+  ]
+};
+
+quickSort( ['o','b','j','e','c','t','a','s','i','g','n'])
+// ["b", "j", "e", "c", "a", "i", "g", "n", "o", "t", "s"]
+```
+<!-- ### O(2ⁿ)
+피보나치 수열 -->
