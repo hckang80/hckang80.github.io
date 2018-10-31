@@ -76,5 +76,21 @@ const quickSort = list => {
 quickSort( ['o','b','j','e','c','t','a','s','i','g','n'])
 // ["b", "j", "e", "c", "a", "i", "g", "n", "o", "t", "s"]
 ```
-<!-- ### O(2ⁿ)
-피보나치 수열 -->
+### O(2ⁿ)
+이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.
+다음은 예시입니다.
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+```js
+const fiboLoop = num => {
+  let a = 1, b = 0, temp;
+  while (num >= 0) {
+    temp = a
+    a = a + b
+    b = temp
+    num--
+  }
+  return b
+}
+
+fiboLoop(10) // 89
+```
