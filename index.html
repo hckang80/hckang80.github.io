@@ -258,7 +258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/31/Big-O란/" data-id="cjnxb4bce0007g4plvca6jirh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/31/Big-O란/" data-id="cjnxbs3cs000860plemikrnxg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -389,7 +389,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjnxb4bem000tg4plujzo81x3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjnxbs3dc000l60pl989raoxy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -536,7 +536,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnxb4bek000sg4plhqsdl3k4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjnxbs3df000o60plvo6b8wte" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -669,8 +669,8 @@ ga('send', 'pageview');
 <p><br></p>
 <h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>단순한 add, commit과 같이 자주 다루는 내용은 생략하였다.</p>
 <h4 id="2-1-Config"><a href="#2-1-Config" class="headerlink" title="2-1. Config"></a>2-1. Config</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가장 최근의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가장 최근의 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 커밋과 병합할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash &lt;commit number 7자리~&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 commit 이력 관리</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이후 메세지를 병합하려면 pick을 squash로 변경 후 저장</span></span><br><span class="line"><span class="comment"># 이때 병합하는 메세지의 순서가 나란해야 함</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment"># 메세지 변경</span></span><br><span class="line">$ git commit --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-3-Stash"><a href="#2-3-Stash" class="headerlink" title="2-3. Stash"></a>2-3. Stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지</span></span><br><span class="line"><span class="comment"># (rebase나 pull이 가능해짐)</span></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 백업한 내용을 가져오고 Stack을 비움</span></span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 목록 확인</span></span><br><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 직전의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전의 add와 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 커밋과 병합할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash &lt;commit number 7자리~&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 commit 이력 관리</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이후 메세지를 병합하려면 pick을 squash로 변경 후 저장</span></span><br><span class="line"><span class="comment"># 이때 병합하는 메세지의 순서가 나란해야 함</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment"># 메세지 변경</span></span><br><span class="line">$ git commit --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-3-Stash"><a href="#2-3-Stash" class="headerlink" title="2-3. Stash"></a>2-3. Stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지</span></span><br><span class="line"><span class="comment"># rebase나 pull이 가능해짐. 직전의 변경사항이 @stash&#123;0&#125;으로 백업</span></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 백업한 내용을 가져오고 Stack을 비움</span></span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 목록 확인</span></span><br><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
 <h4 id="2-4-ETC"><a href="#2-4-ETC" class="headerlink" title="2-4. ETC"></a>2-4. ETC</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Remote 브런치를 동기화하고 이동</span></span><br><span class="line">$ git fetch origin --prune</span><br><span class="line">$ git checkout -t origin/&lt;브런치명&gt;</span><br></pre></td></tr></table></figure>
         
         </div>
@@ -681,7 +681,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnxb4bcc0006g4pl2glhh22b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjnxbs3d4000e60pl8p7eszjm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -819,7 +819,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnxb4bfc001ig4plhu7w29us" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjnxbs3ea001960pldqrdzr0m" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -955,7 +955,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnxb4be6000lg4pl9wrkc2ox" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/10/React-시작하기/" data-id="cjnxbs3d8000i60pldsxu7ujc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1088,7 +1088,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnxb4bf20019g4plugx45nlk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/03/야근 지수/" data-id="cjnxbs3ed001c60pl411g9gbv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1221,7 +1221,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnxb4bez0016g4plumdax9dw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/01/시저암호/" data-id="cjnxbs3dw001060plktubddk8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1426,7 +1426,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnxb4bc60003g4pl64bzvkvg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjnxbs3cd000660pldlffpuhx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1567,7 +1567,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnxb4bf8001fg4plj632tw5c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/프론트엔드-개발에-유용한-사이트-모음/" data-id="cjnxbs3e5001660plfwitomqt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
