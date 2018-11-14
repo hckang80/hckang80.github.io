@@ -41,10 +41,11 @@ findIndex(['a', 'b', 'c', 'd'], 'd'); // 3  (4회 반복 - 최대 반복)
 ```js
 const generatorSquareMatrix = array => {
   let matrix = []
-  for (let i = 0; i < array.length; i++){ 
+  for (let i = 0; i < array.length; i++) { 
     matrix[i] = []
-    for (let j = 0; j < array.length; j++)
+    for (let j = 0; j < array.length; j++) {
       matrix[i].push(array[j])
+    }
   }
   return matrix
 }
