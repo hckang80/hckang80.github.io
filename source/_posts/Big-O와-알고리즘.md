@@ -82,7 +82,7 @@ quickSort( ['o','b','j','e','c','t','a','s','i','g','n'])
 아래는 피보나치 수열의 예시입니다.
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 ```js
-const fiboLoop = num => {
+const fibonacci = num => {
   let a = 0, b = 1, temp;
   while (num > 1) {
     temp = b
@@ -93,5 +93,5 @@ const fiboLoop = num => {
   return a
 }
 
-fiboLoop(12) // 89
+fibonacci(12) // 89
 ```
