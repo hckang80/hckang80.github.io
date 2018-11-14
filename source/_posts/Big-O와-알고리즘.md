@@ -1,8 +1,8 @@
 ---
-title: Big O란
+title: Big O와 알고리즘
 date: 2018-10-31 23:26:50
 categories: etc
-tags: algorithm
+tags: algorithm, Big O
 thumbnail:
 ---
 
@@ -57,14 +57,15 @@ generatorSquareMatrix(['a', 'b', 'c']); // 3개의 원소일 때 9회 반복
 
 이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.
 ```js
-const quickSort = list => {
-  if (list.length < 2) return list
-  let pivot = list[0]
+const quickSort = array => {
+  if (array.length < 2) return array
+  let pivot = array[0]
   let left  = []
   let right = []
-  for (let i = 1; i < list.length; i++){
-    if (list[i] < pivot) left.push(list[i])
-    else right.push(list[i])
+  for (let i = 1; i < array.length; i++){
+    let list = array[i]
+    if (list < pivot) left.push(list)
+    else right.push(list)
   }
   return [
     ...quickSort(left), 
@@ -74,23 +75,23 @@ const quickSort = list => {
 };
 
 quickSort( ['o','b','j','e','c','t','a','s','i','g','n'])
-// ["b", "j", "e", "c", "a", "i", "g", "n", "o", "t", "s"]
+// ["a", "b", "c", "e", "g", "i", "j", "n", "o", "s", "t"]
 ```
 ### O(2ⁿ)
 이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.
-다음은 예시입니다.
-1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+아래는 피보나치 수열의 예시입니다.
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 ```js
 const fiboLoop = num => {
-  let a = 1, b = 0, temp;
-  while (num >= 0) {
-    temp = a
-    a = a + b
-    b = temp
+  let a = 0, b = 1, temp;
+  while (num > 1) {
+    temp = b
+    b += a
+    a = temp
     num--
   }
-  return b
+  return a
 }
 
-fiboLoop(10) // 89
+fiboLoop(12) // 89
 ```
