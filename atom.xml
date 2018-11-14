@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-10-31T15:53:26.669Z</updated>
+  <updated>2018-11-14T06:02:45.898Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Big O란</title>
-    <link href="https://hckang80.github.io/2018/10/31/Big-O%EB%9E%80/"/>
-    <id>https://hckang80.github.io/2018/10/31/Big-O란/</id>
+    <title>Big O와 알고리즘</title>
+    <link href="https://hckang80.github.io/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    <id>https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/</id>
     <published>2018-10-31T14:26:50.000Z</published>
-    <updated>2018-10-31T15:53:26.669Z</updated>
+    <updated>2018-11-14T06:02:45.898Z</updated>
     
     <summary type="html">
     
@@ -39,7 +39,7 @@
       <category term="etc" scheme="https://hckang80.github.io/categories/etc/"/>
     
     
-      <category term="algorithm" scheme="https://hckang80.github.io/tags/algorithm/"/>
+      <category term="algorithm, Big O" scheme="https://hckang80.github.io/tags/algorithm-Big-O/"/>
     
   </entry>
   
@@ -126,7 +126,7 @@
     <link href="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/"/>
     <id>https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/</id>
     <published>2018-05-26T11:48:26.000Z</published>
-    <updated>2018-10-26T12:13:16.791Z</updated>
+    <updated>2018-11-14T06:03:55.131Z</updated>
     
     <summary type="html">
     

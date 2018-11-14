@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Big O란 | HTML, CSS, Javascript, ETC</title>
+    <title>Big O와 알고리즘 | HTML, CSS, Javascript, ETC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="정의Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다. 종류O(1)이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.123const getLast = array =&amp;gt; array[array.length - 1]getLast([&apos;a&apos;,">
-<meta name="keywords" content="algorithm">
+<meta name="keywords" content="algorithm, Big O">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Big O란">
-<meta property="og:url" content="https://hckang80.github.io/2018/10/31/Big-O란/index.html">
+<meta property="og:title" content="Big O와 알고리즘">
+<meta property="og:url" content="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
 <meta property="og:description" content="정의Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다. 종류O(1)이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.123const getLast = array =&amp;gt; array[array.length - 1]getLast([&apos;a&apos;,">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-31T15:53:26.669Z">
+<meta property="og:updated_time" content="2018-11-14T06:02:45.898Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Big O란">
+<meta name="twitter:title" content="Big O와 알고리즘">
 <meta name="twitter:description" content="정의Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다. 종류O(1)이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.123const getLast = array =&amp;gt; array[array.length - 1]getLast([&apos;a&apos;,">
     
 
@@ -202,7 +202,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-Big-O란" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-Big-O와-알고리즘" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -210,7 +210,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            Big O란
+            Big O와 알고리즘
         </h1>
     
 
@@ -219,7 +219,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/10/31/Big-O란/">
+        <a href="/2018/10/31/Big-O와-알고리즘/">
             <time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time>
         </a>
     </div>
@@ -234,7 +234,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/algorithm/">algorithm</a>
+        <a class="tag-link" href="/tags/algorithm-Big-O/">algorithm, Big O</a>
     </div>
 
                     </div>
@@ -250,8 +250,8 @@ ga('send', 'pageview');
 <h3 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h3><p>이 수에서는 최악의 경우 시간복잡도가 항목 수와 동일하게 증가합니다.<br>즉, N개의 원소가 있다면 최대 N번의 반복이 필요합니다.<br>반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> findIndex = <span class="function">(<span class="params">array, match</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (array[i] === match) <span class="keyword">return</span> i</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'a'</span>); <span class="comment">// 0  (1회 반복 - 최소 반복)</span></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'d'</span>); <span class="comment">// 3  (4회 반복 - 최대 반복)</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="O-n²"><a href="#O-n²" class="headerlink" title="O(n²)"></a>O(n²)</h3><p>이 수에서는 최악의 경우 시간복잡도는 입력한 수의 제곱입니다.<br>입력한 수와 비례하여 시간이 기하급수적으로 늘어납니다.<br>이중 반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> generatorSquareMatrix = <span class="function"><span class="params">array</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> matrix = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123; </span><br><span class="line">    matrix[i] = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; array.length; j++)</span><br><span class="line">      matrix[i].push(array[j])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> matrix</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">generatorSquareMatrix([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]); <span class="comment">// 3개의 원소일 때 9회 반복</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="O-log-n"><a href="#O-log-n" class="headerlink" title="O(log n)"></a>O(log n)</h3><p>이 수는 검색 알고리즘의 가장 적합한 사례로써 대규모 데이터를 처리할 때 가장 효율적인 방법입니다.<br>구성 요소를 하나씩 살펴보는 대신 데이터를 일반적으로 두 분류로 나누고, 매 반복 작업에서 한 분류를 삭제합니다.</p>
-<p>이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> quickSort = <span class="function"><span class="params">list</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (list.length &lt; <span class="number">2</span>) <span class="keyword">return</span> list</span><br><span class="line">  <span class="keyword">let</span> pivot = list[<span class="number">0</span>]</span><br><span class="line">  <span class="keyword">let</span> left  = []</span><br><span class="line">  <span class="keyword">let</span> right = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; list.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> (list[i] &lt; pivot) left.push(list[i])</span><br><span class="line">    <span class="keyword">else</span> right.push(list[i])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    ...quickSort(left), </span><br><span class="line">    pivot, </span><br><span class="line">    ...quickSort(right)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">quickSort( [<span class="string">'o'</span>,<span class="string">'b'</span>,<span class="string">'j'</span>,<span class="string">'e'</span>,<span class="string">'c'</span>,<span class="string">'t'</span>,<span class="string">'a'</span>,<span class="string">'s'</span>,<span class="string">'i'</span>,<span class="string">'g'</span>,<span class="string">'n'</span>])</span><br><span class="line"><span class="comment">// ["b", "j", "e", "c", "a", "i", "g", "n", "o", "t", "s"]</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="O-2ⁿ"><a href="#O-2ⁿ" class="headerlink" title="O(2ⁿ)"></a>O(2ⁿ)</h3><p>이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.<br>다음은 예시입니다.<br>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fiboLoop = <span class="function"><span class="params">num</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>, b = <span class="number">0</span>, temp;</span><br><span class="line">  <span class="keyword">while</span> (num &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">    temp = a</span><br><span class="line">    a = a + b</span><br><span class="line">    b = temp</span><br><span class="line">    num--</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fiboLoop(<span class="number">10</span>) <span class="comment">// 89</span></span><br></pre></td></tr></table></figure></p>
+<p>이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> quickSort = <span class="function"><span class="params">array</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (array.length &lt; <span class="number">2</span>) <span class="keyword">return</span> array</span><br><span class="line">  <span class="keyword">let</span> pivot = array[<span class="number">0</span>]</span><br><span class="line">  <span class="keyword">let</span> left  = []</span><br><span class="line">  <span class="keyword">let</span> right = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; array.length; i++)&#123;</span><br><span class="line">    <span class="keyword">let</span> list = array[i]</span><br><span class="line">    <span class="keyword">if</span> (list &lt; pivot) left.push(list)</span><br><span class="line">    <span class="keyword">else</span> right.push(list)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    ...quickSort(left), </span><br><span class="line">    pivot, </span><br><span class="line">    ...quickSort(right)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">quickSort( [<span class="string">'o'</span>,<span class="string">'b'</span>,<span class="string">'j'</span>,<span class="string">'e'</span>,<span class="string">'c'</span>,<span class="string">'t'</span>,<span class="string">'a'</span>,<span class="string">'s'</span>,<span class="string">'i'</span>,<span class="string">'g'</span>,<span class="string">'n'</span>])</span><br><span class="line"><span class="comment">// ["a", "b", "c", "e", "g", "i", "j", "n", "o", "s", "t"]</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="O-2ⁿ"><a href="#O-2ⁿ" class="headerlink" title="O(2ⁿ)"></a>O(2ⁿ)</h3><p>이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.<br>아래는 피보나치 수열의 예시입니다.<br>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fiboLoop = <span class="function"><span class="params">num</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">0</span>, b = <span class="number">1</span>, temp;</span><br><span class="line">  <span class="keyword">while</span> (num &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    temp = b</span><br><span class="line">    b += a</span><br><span class="line">    a = temp</span><br><span class="line">    num--</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fiboLoop(<span class="number">12</span>) <span class="comment">// 89</span></span><br></pre></td></tr></table></figure></p>
 
         
         </div>
@@ -262,7 +262,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/31/Big-O란/" data-id="cjnxccbzu0004s0plbpahogf2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/" data-id="cjogrgquc0007d8pl2trs0aw6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -330,7 +330,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/10/31/Big-O란/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/Big-O란/">Comments</a>
+        <a href="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/">Comments</a>
     
 
         </footer>
@@ -376,7 +376,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
-                            <p class="item-title"><a href="/2018/10/31/Big-O란/" class="title">Big O란</a></p>
+                            <p class="item-title"><a href="/2018/10/31/Big-O와-알고리즘/" class="title">Big O와 알고리즘</a></p>
                             <p class="item-date"><time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time></p>
                         </div>
                     </li>
@@ -435,7 +435,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-file-download/">axios, file download</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm-Big-O/">algorithm, Big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms-알고리즘/">algorithms, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-file-download/">axios, file download</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react, redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -494,9 +494,9 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://hckang80.github.io/2018/10/31/Big-O란/';
+            this.page.url = 'https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/';
         
-        this.page.identifier = 'Big-O란';
+        this.page.identifier = 'Big-O와-알고리즘';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
