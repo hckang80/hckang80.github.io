@@ -21,14 +21,13 @@ getLast(['a', 'b', 'c', 'd']) // d (1회 반복)
 
 ### O(n)
 이 수에서는 최악의 경우 시간복잡도가 항목 수와 동일하게 증가합니다.
-즉, N개의 원소가 있다면 최대 N번의 반복이 필요합니다.
-반복문 형태를 취합니다.
+즉, N개의 원소가 있다면 최대 N번의 반복이 필요하며 반복문 형태를 취합니다.
 ```js
 const findIndex = (array, match) => {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === match) return i
   }
-  return -1
+  return ''
 }
 
 findIndex(['a', 'b', 'c', 'd'], 'a'); // 0  (1회 반복 - 최소 반복)
@@ -36,8 +35,7 @@ findIndex(['a', 'b', 'c', 'd'], 'd'); // 3  (4회 반복 - 최대 반복)
 ```
 ### O(n²)
 이 수에서는 최악의 경우 시간복잡도는 입력한 수의 제곱입니다.
-입력한 수와 비례하여 시간이 기하급수적으로 늘어납니다.
-이중 반복문 형태를 취합니다.
+입력한 수와 비례하여 시간이 기하급수적으로 늘어나며 이중 반복문 형태를 취합니다.
 ```js
 const generatorSquareMatrix = array => {
   let matrix = []
@@ -63,7 +61,7 @@ const quickSort = array => {
   let pivot = array[0]
   let left  = []
   let right = []
-  for (let i = 1; i < array.length; i++){
+  for (let i = 1; i < array.length; i++) {
     let list = array[i]
     if (list < pivot) left.push(list)
     else right.push(list)
@@ -75,8 +73,8 @@ const quickSort = array => {
   ]
 };
 
-quickSort( ['o','b','j','e','c','t','a','s','i','g','n'])
-// ["a", "b", "c", "e", "g", "i", "j", "n", "o", "s", "t"]
+quickSort( ['o','b','j','e','c','t','a','s','s','i','g','n'])
+// ["a","b","c", "e","g","i","j","n","o","s","s","t"]
 ```
 ### O(2ⁿ)
 이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.

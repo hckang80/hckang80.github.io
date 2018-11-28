@@ -46,7 +46,7 @@ $ git reset HEAD
 # 직전의 add와 commit 취소
 $ git reset HEAD^
 
-# pull 되돌리기
+# pull, merge 되돌리기
 $ git reset --hard ORIG_HEAD
 
 # 직전 commit 메세지 변경
