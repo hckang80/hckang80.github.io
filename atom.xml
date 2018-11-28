@@ -48,7 +48,7 @@
     <link href="https://hckang80.github.io/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/"/>
     <id>https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/</id>
     <published>2018-10-14T13:50:18.000Z</published>
-    <updated>2018-10-31T15:19:03.591Z</updated>
+    <updated>2018-11-28T01:41:48.531Z</updated>
     
     <summary type="html">
     
@@ -56,7 +56,8 @@
       
         
         
-          &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+          &lt;p&gt;일반적인 웹사이트에서 파일다운로드를 위해 &lt;a href=&quot;다운로드 경로&quot;&gt; 형태로 구현하나, Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight
         
       
     
