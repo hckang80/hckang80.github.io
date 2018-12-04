@@ -48,7 +48,7 @@
     <link href="https://hckang80.github.io/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/"/>
     <id>https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/</id>
     <published>2018-10-14T13:50:18.000Z</published>
-    <updated>2018-11-28T01:56:01.659Z</updated>
+    <updated>2018-12-04T09:11:15.504Z</updated>
     
     <summary type="html">
     
@@ -56,7 +56,7 @@
       
         
         
-          &lt;p&gt;일반적인 웹사이트에서 파일다운로드를 위해 a 요소로 구현하나, Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/p&gt;
+          &lt;p&gt;공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       

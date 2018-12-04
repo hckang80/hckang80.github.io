@@ -258,7 +258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/" data-id="cjogrgquc0007d8pl2trs0aw6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/" data-id="cjp6otp9n0011cwpljehlywt9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -379,7 +379,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>일반적인 웹사이트에서 파일다운로드를 위해 a 요소로 구현하나, Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.</p>
+            <p>공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 일반적인 형태 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"fileName.xls"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rest API</span></span><br><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계 자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'Insert request body argument'</span>, <span class="string">'Insert request header argument'</span>)</span><br></pre></td></tr></table></figure>
         
@@ -391,7 +391,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjogrgqvk000sd8plpxbax2ku" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjp6otpa1001acwplcf1xzc8a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -538,7 +538,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjogrgqvh000qd8pl9cphke2d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjp6otpa3001bcwpldme72i6n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -683,7 +683,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjogrgqug0009d8plzrael6gr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/06/18/Git-remember/" data-id="cjp6otp9w0015cwpl44obnci8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -821,7 +821,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjogrgqw20015d8plemp00jed" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjp6otpah001ncwpluki6wgb8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1026,7 +1026,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjogrgquj000ad8plj4mmqgf4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjp6otp9i000xcwpl4jbf4nje" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1167,7 +1167,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/UI-개발에-유용한-사이트-모음/" data-id="cjp0hw9e3000easplwkkpq7ax" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/UI-개발에-유용한-사이트-모음/" data-id="cjp6otpa7001ecwpl5g24s0b7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1309,7 +1309,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjogrgqvp000wd8pl5fkarq6u" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjp6otpaa001hcwpl63gwgyng" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1441,7 +1441,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/" data-id="cjogrgqvc000md8plku1v4xkp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/" data-id="cjp6otpae001kcwplfmnhxje9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1573,7 +1573,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/15/2018년 Front-end 개발 로드맵/" data-id="cjogrgqtx0001d8plra2i03jp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/15/2018년 Front-end 개발 로드맵/" data-id="cjp6otp9d000vcwpl3fgpk1r0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
