@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2018-11-28T02:26:58.724Z</updated>
+  <updated>2019-04-12T07:07:53.194Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>부동 소수점 연산</title>
+    <link href="https://hckang80.github.io/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/"/>
+    <id>https://hckang80.github.io/2018/11/04/부동-소수점-연산/</id>
+    <published>2018-11-04T06:37:04.000Z</published>
+    <updated>2019-04-12T07:07:53.194Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.&lt;br&gt;이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://hckang80.github.io/categories/javascript/"/>
+    
+    
+      <category term="floating point arithmetic" scheme="https://hckang80.github.io/tags/floating-point-arithmetic/"/>
+    
+  </entry>
   
   <entry>
     <title>Big O와 알고리즘</title>
