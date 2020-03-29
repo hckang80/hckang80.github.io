@@ -9,28 +9,42 @@
 <meta property="og:title" content="HTML, CSS, Javascript, ETC">
 <meta property="og:url" content="https://hckang80.github.io/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Kang Heechang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML, CSS, Javascript, ETC">
     
 
     
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
 
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
     
     
         <script type="text/javascript">
@@ -48,7 +62,7 @@ ga('send', 'pageview');
     
 
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 </html>
 <body>
     <div id="container">
@@ -117,7 +131,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
         </div>
@@ -206,7 +222,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/11/04/부동-소수점-연산/">부동 소수점 연산</a>
+            <a class="article-title" href="/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/">부동 소수점 연산</a>
         </h1>
     
 
@@ -215,7 +231,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/11/04/부동-소수점-연산/">
+        <a href="/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/">
             <time datetime="2018-11-04T06:37:04.000Z" itemprop="datePublished">2018-11-04</time>
         </a>
     </div>
@@ -230,7 +246,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/floating-point-arithmetic/">floating point arithmetic</a>
+        <a class="tag-link" href="/tags/floating-point-arithmetic/" rel="tag">floating point arithmetic</a>
     </div>
 
                     </div>
@@ -240,13 +256,14 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <p>개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.<br>이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.</p>
+            <p></p><p>개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.<br>이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0.2</span> + <span class="number">0.1</span>;         <span class="comment">// 0.30000000000000004</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">0.1</span> * <span class="number">0.1</span>;         <span class="comment">// 0.010000000000000002</span></span><br></pre></td></tr></table></figure>
 <p>아래와 같이 소수 간에 직접 연산이 일어나지 않도록 하여 올바른 값을 얻을 수는 있지만,<br>연산이 많아질수록 매우 복잡해질것이므로 별로 바람직해 보이지는 않는다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = (<span class="number">0.2</span> * <span class="number">10</span> + <span class="number">0.1</span> * <span class="number">10</span>) / <span class="number">10</span> <span class="comment">// 0.3</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">0.1</span> * <span class="number">1</span> / <span class="number">10</span>               <span class="comment">// 0.01</span></span><br></pre></td></tr></table></figure>
-<p>이를 해결하기 위해 많은 훌륭한 개발자들이 오픈소스를 제공하고 있으며 이를 이용하면 간결하게 처리가 가능하다.<br><a href="https://github.com/MikeMcl/bignumber.js/" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/MikeMcl/bignumber.js/</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> BigNumber(<span class="number">0.2</span>)</span><br><span class="line">x = x.plus(<span class="number">0.1</span>) <span class="comment">// 0.3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> y = <span class="keyword">new</span> BigNumber(<span class="number">0.1</span>)</span><br><span class="line">y = y.multipliedBy(<span class="number">0.1</span>) <span class="comment">// 0.01</span></span><br></pre></td></tr></table></figure>
+<p>이를 해결하기 위해 많은 훌륭한 개발자들이 오픈소스를 제공하고 있으며 이를 이용하면 간결하게 처리가 가능하다.<br><a href="https://github.com/MikeMcl/bignumber.js/" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/MikeMcl/bignumber.js/</a></p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -256,7 +273,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/11/04/부동-소수점-연산/" data-id="cjudqii6h001bmspl6r54ahcy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/" data-id="cjudqii6h001bmspl6r54ahcy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -324,7 +341,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/11/04/부동-소수점-연산/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/11/04/부동-소수점-연산/">Comments</a>
+        <a href="https://hckang80.github.io/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/">Comments</a>
     
 
         </footer>
@@ -342,7 +359,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/31/Big-O와-알고리즘/">Big O와 알고리즘</a>
+            <a class="article-title" href="/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">Big O와 알고리즘</a>
         </h1>
     
 
@@ -351,7 +368,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/10/31/Big-O와-알고리즘/">
+        <a href="/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">
             <time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time>
         </a>
     </div>
@@ -366,7 +383,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/algorithm-Big-O/">algorithm, Big O</a>
+        <a class="tag-link" href="/tags/algorithm-Big-O/" rel="tag">algorithm, Big O</a>
     </div>
 
                     </div>
@@ -376,15 +393,11 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><p>Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.</p>
-<h2 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h2><h3 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h3><p>이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.<br>종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getLast = <span class="function"><span class="params">array</span> =&gt;</span> array[array.length - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">getLast([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]) <span class="comment">// d (1회 반복)</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h3><p>이 수에서는 최악의 경우 시간복잡도가 항목 수와 동일하게 증가합니다.<br>즉, N개의 원소가 있다면 최대 N번의 반복이 필요하며 반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> findIndex = <span class="function">(<span class="params">array, match</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (array[i] === match) <span class="keyword">return</span> i</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">''</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'a'</span>); <span class="comment">// 0  (1회 반복 - 최소 반복)</span></span><br><span class="line">findIndex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], <span class="string">'d'</span>); <span class="comment">// 3  (4회 반복 - 최대 반복)</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="O-n²"><a href="#O-n²" class="headerlink" title="O(n²)"></a>O(n²)</h3><p>이 수에서는 최악의 경우 시간복잡도는 입력한 수의 제곱입니다.<br>입력한 수와 비례하여 시간이 기하급수적으로 늘어나며 이중 반복문 형태를 취합니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> generatorSquareMatrix = <span class="function"><span class="params">array</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> matrix = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123; </span><br><span class="line">    matrix[i] = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">      matrix[i].push(array[j])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> matrix</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">generatorSquareMatrix([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]); <span class="comment">// 3개의 원소일 때 9회 반복</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="O-log-n"><a href="#O-log-n" class="headerlink" title="O(log n)"></a>O(log n)</h3><p>이 수는 검색 알고리즘의 가장 적합한 사례로써 대규모 데이터를 처리할 때 가장 효율적인 방법입니다.<br>구성 요소를 하나씩 살펴보는 대신 데이터를 일반적으로 두 분류로 나누고, 매 반복 작업에서 한 분류를 삭제합니다.</p>
-<p>이 알고리즘이 가장 널리 사용되는 알고리즘은 특정 요소를 찾거나 목록을 매우 효율적으로 정렬하는 데 사용할 수 있는 Quicksort 알고리즘입니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> quickSort = <span class="function"><span class="params">array</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (array.length &lt; <span class="number">2</span>) <span class="keyword">return</span> array</span><br><span class="line">  <span class="keyword">let</span> pivot = array[<span class="number">0</span>]</span><br><span class="line">  <span class="keyword">let</span> left  = []</span><br><span class="line">  <span class="keyword">let</span> right = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> list = array[i]</span><br><span class="line">    <span class="keyword">if</span> (list &lt; pivot) left.push(list)</span><br><span class="line">    <span class="keyword">else</span> right.push(list)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    ...quickSort(left), </span><br><span class="line">    pivot, </span><br><span class="line">    ...quickSort(right)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">quickSort( [<span class="string">'o'</span>,<span class="string">'b'</span>,<span class="string">'j'</span>,<span class="string">'e'</span>,<span class="string">'c'</span>,<span class="string">'t'</span>,<span class="string">'a'</span>,<span class="string">'s'</span>,<span class="string">'s'</span>,<span class="string">'i'</span>,<span class="string">'g'</span>,<span class="string">'n'</span>])</span><br><span class="line"><span class="comment">// ["a","b","c", "e","g","i","j","n","o","s","s","t"]</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="O-2ⁿ"><a href="#O-2ⁿ" class="headerlink" title="O(2ⁿ)"></a>O(2ⁿ)</h3><p>이 수는 피보나치의 수열이라고 부르며, 직전 수와 현재 수를 합하여 다음 수를 결정하게 됩니다.<br>아래는 피보나치 수열의 예시입니다.<br>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fibonacci = <span class="function"><span class="params">num</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">0</span>, b = <span class="number">1</span>, temp;</span><br><span class="line">  <span class="keyword">while</span> (num &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    temp = b</span><br><span class="line">    b += a</span><br><span class="line">    a = temp</span><br><span class="line">    num--</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fibonacci(<span class="number">12</span>) <span class="comment">// 89</span></span><br></pre></td></tr></table></figure></p>
-
+            <p></p><h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><p>Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.</p>
+<h2 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h2><h3 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h3><p>이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.<br>종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getLast = <span class="function"><span class="params">array</span> =&gt;</span> array[array.length - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">getLast([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]) <span class="comment">// d (1회 반복)</span></span><br></pre></td></tr></table></figure></p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -394,7 +407,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/" data-id="cjudqii5y000vmsplrafe5cqd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="cjudqii5y000vmsplrafe5cqd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -462,7 +475,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/Big-O와-알고리즘/">Comments</a>
+        <a href="https://hckang80.github.io/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">Comments</a>
     
 
         </footer>
@@ -480,7 +493,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/14/axios로-파일-다운로드-구현하기/">axios로 파일 다운로드 구현하기</a>
+            <a class="article-title" href="/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/">axios로 파일 다운로드 구현하기</a>
         </h1>
     
 
@@ -489,7 +502,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/10/14/axios로-파일-다운로드-구현하기/">
+        <a href="/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/">
             <time datetime="2018-10-14T13:50:18.000Z" itemprop="datePublished">2018-10-14</time>
         </a>
     </div>
@@ -504,7 +517,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/axios-file-download/">axios, file download</a>
+        <a class="tag-link" href="/tags/axios-file-download/" rel="tag">axios, file download</a>
     </div>
 
                     </div>
@@ -514,10 +527,12 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <p>공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.</p>
+            <p></p><p>공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 일반적인 형태 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"fileName.xls"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rest API</span></span><br><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계 자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'Insert request body argument'</span>, <span class="string">'Insert request header argument'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rest API</span></span><br><span class="line"><span class="keyword">const</span> downloadFile = <span class="function">(<span class="params">params, headers</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;baseUrl&#125;</span>download`</span>, params, &#123; headers, <span class="attr">responseType</span>: <span class="string">'blob'</span> &#125;)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Blob 생성자 함수로 URL 생성하여 할당</span></span><br><span class="line">      <span class="keyword">const</span> url = <span class="built_in">window</span>.URL.createObjectURL(<span class="keyword">new</span> Blob([response.data]))</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소 동적 생성</span></span><br><span class="line">      <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 href attribute에 url 할당</span></span><br><span class="line">      link.href = url</span><br><span class="line">      <span class="comment">// &lt;a&gt; 요소에 download attribute 와 value 동적 할당</span></span><br><span class="line">      link.setAttribute(<span class="string">'download'</span>, <span class="string">'fileName.xls'</span>)</span><br><span class="line">      <span class="comment">// body 요소의 직계 자식으로 삽입 후 클릭</span></span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(link)</span><br><span class="line">      link.click()</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(e)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">downloadFile(<span class="string">'Insert request body argument'</span>, <span class="string">'Insert request header argument'</span>)</span><br></pre></td></tr></table></figure><p></p>
+            <p class="article-more-link">
+                <a href="/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -527,7 +542,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/" data-id="cjudqii62000ymsplf4otfp1t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/" data-id="cjudqii62000ymsplf4otfp1t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -595,7 +610,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/14/axios로-파일-다운로드-구현하기/">Comments</a>
+        <a href="https://hckang80.github.io/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/">Comments</a>
     
 
         </footer>
@@ -613,7 +628,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/25/lokalise를-이용한-다국어-적용기/">lokalise를 이용한 다국어 적용 방법</a>
+            <a class="article-title" href="/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/">lokalise를 이용한 다국어 적용 방법</a>
         </h1>
     
 
@@ -622,7 +637,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/09/25/lokalise를-이용한-다국어-적용기/">
+        <a href="/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/">
             <time datetime="2018-09-25T08:01:18.000Z" itemprop="datePublished">2018-09-25</time>
         </a>
     </div>
@@ -637,7 +652,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a>
+        <a class="tag-link" href="/tags/lokalise-i18n-%EB%8B%A4%EA%B5%AD%EC%96%B4/" rel="tag">lokalise, i18n, 다국어</a>
     </div>
 
                     </div>
@@ -647,8 +662,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <p>웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.<br><a href="https://lokalise.co/" rel="external nofollow noopener noreferrer" target="_blank">https://lokalise.co/</a> 에서는 이러한 번거로움을 줄이고자, 번역 작업만 전담할 수 있게 툴을 제공한다.</p>
+            <p></p><p>웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.<br><a href="https://lokalise.co/" rel="external nofollow noopener noreferrer" target="_blank">https://lokalise.co/</a> 에서는 이러한 번거로움을 줄이고자, 번역 작업만 전담할 수 있게 툴을 제공한다.</p>
 <ol>
 <li><p>DOCS -&gt; CLI TOOL 에서 OS에 맞는 tgz 형식의 파일을 다운 받아서 압축 해제</p>
 </li>
@@ -664,7 +678,10 @@ ga('send', 'pageview');
 <li><p>명령어를 실행하면 프로젝트에 등록된 언어가 폴더 내에 자동으로 업데이트 된다</p>
 </li>
 </ol>
-
+<p></p>
+            <p class="article-more-link">
+                <a href="/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -674,7 +691,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/" data-id="cjudqii6d0017mspl4n7vlw4g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/" data-id="cjudqii6d0017mspl4n7vlw4g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -742,7 +759,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/09/25/lokalise를-이용한-다국어-적용기/">Comments</a>
+        <a href="https://hckang80.github.io/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/">Comments</a>
     
 
         </footer>
@@ -784,7 +801,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/git/">git</a>
+        <a class="tag-link" href="/tags/git/" rel="tag">git</a>
     </div>
 
                     </div>
@@ -794,8 +811,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.<br>(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)</p>
+            <p></p><h3 id="1-자동완성-설정"><a href="#1-자동완성-설정" class="headerlink" title="1. 자동완성 설정"></a>1. 자동완성 설정</h3><p>git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.<br>(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)</p>
 <ol>
 <li><p>다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS)</p>
 <p><a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/git/git/blob/master/contrib/completion/git-completion.bash</a></p>
@@ -804,12 +820,10 @@ ga('send', 'pageview');
 </li>
 </ol>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/git-completion.bash</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="2-주요-명령어"><a href="#2-주요-명령어" class="headerlink" title="2. 주요 명령어"></a>2. 주요 명령어</h3><p>단순한 add, commit과 같이 자주 다루는 내용은 생략하였다.</p>
-<h4 id="2-1-Config"><a href="#2-1-Config" class="headerlink" title="2-1. Config"></a>2-1. Config</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 설정 및 확인</span></span><br><span class="line">$ git config --global user.name hckang80</span><br><span class="line">$ git config --global user.email hckang80@gmail.com</span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-History"><a href="#2-2-History" class="headerlink" title="2-2. History"></a>2-2. History</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 직전의 add 취소</span></span><br><span class="line">$ git reset HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전의 add와 commit 취소</span></span><br><span class="line">$ git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull, merge 되돌리기</span></span><br><span class="line">$ git reset --hard ORIG_HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직전 commit 메세지 변경</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 커밋과 병합할 목적으로 commit 하기</span></span><br><span class="line">$ git commit --squash &lt;commit number 7자리~&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vim으로 이동하여 commit 메시지 입력(괄호, 콜론 등 특수문자의 입력이 가능)</span></span><br><span class="line">$ git commit -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 기존의 commit 이력 관리</span></span><br><span class="line">$ git rebase -i HEAD~10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이후 메세지를 병합하려면 pick을 squash로 변경 후 저장</span></span><br><span class="line"><span class="comment"># 이때 병합하는 메세지의 순서가 나란해야 함</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment"># 메세지 변경</span></span><br><span class="line">$ git commit --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-3-Stash"><a href="#2-3-Stash" class="headerlink" title="2-3. Stash"></a>2-3. Stash</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변경사항을 Stack에 백업하고 워킹디렉토리를 깨끗하게 유지</span></span><br><span class="line"><span class="comment"># rebase나 pull이 가능해짐. 직전의 변경사항이 @stash&#123;0&#125;으로 백업</span></span><br><span class="line">$ git stash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 백업한 내용을 가져오고 Stack을 비움</span></span><br><span class="line">$ git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stack의 목록 확인</span></span><br><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
-<h4 id="2-4-ETC"><a href="#2-4-ETC" class="headerlink" title="2-4. ETC"></a>2-4. ETC</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Remote 브런치를 동기화하고 이동</span></span><br><span class="line">$ git fetch origin --prune</span><br><span class="line">$ git checkout -t origin/&lt;브런치명&gt;</span><br></pre></td></tr></table></figure>
+<p><br></p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/06/18/Git-remember/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -905,7 +919,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/">자주 사용하는 단축키 정리(Vim, 터미널)</a>
+            <a class="article-title" href="/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/">자주 사용하는 단축키 정리(Vim, 터미널)</a>
         </h1>
     
 
@@ -914,7 +928,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/">
+        <a href="/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/">
             <time datetime="2018-05-26T11:48:26.000Z" itemprop="datePublished">2018-05-26</time>
         </a>
     </div>
@@ -929,7 +943,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a>
+        <a class="tag-link" href="/tags/%EB%8B%A8%EC%B6%95%ED%82%A4-%ED%84%B0%EB%AF%B8%EB%84%90-vim/" rel="tag">단축키, 터미널, vim</a>
     </div>
 
                     </div>
@@ -939,15 +953,13 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h3 id="1-Vim"><a href="#1-Vim" class="headerlink" title="1. Vim"></a>1. Vim</h3><p><strong>h, j, k, l</strong> - 좌, 하, 상, 우 커서 이동</p>
+            <p></p><h3 id="1-Vim"><a href="#1-Vim" class="headerlink" title="1. Vim"></a>1. Vim</h3><p><strong>h, j, k, l</strong> - 좌, 하, 상, 우 커서 이동</p>
 <p><strong>i</strong>: 현재 커서 위치에 Insert 하기</p>
 <p><strong>w</strong>: 단어 첫글자로 이동하기<br><strong>b</strong>: 백워드 방향으로 단어의 첫글자로 이동하기</p>
-<p><strong>0</strong> - 라인 맨 앞으로 이동<br><strong>^</strong> - 문장 맨 앞으로 이동<br><strong>$</strong> - 문장 맨 뒤로 이동</p>
-<p><strong>dd</strong> - 현재 줄 잘라내기<br><strong>yy</strong> - 현재 줄 복사하기<br><strong>p</strong> - 붙혀넣기<br><strong>u</strong> - Undo<br><strong>Ctrl + R</strong> : Redo</p>
-<p><strong>~</strong> : 선택 문자 대소문자 변경</p>
-<p><strong>:w</strong> - 문서 저장하기<br><strong>:q</strong> - 현재 문서 닫기<br><strong>:q!</strong> - 저장하지 않고 닫기<br><strong>:wq</strong> - 저장하고 닫기<br><strong>:숫자</strong> - 지정한 라인넘버로 이동</p>
-<h3 id="2-터미널"><a href="#2-터미널" class="headerlink" title="2. 터미널"></a>2. 터미널</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 해당 경로로 이동</span></span><br><span class="line">$ <span class="built_in">cd</span> &lt;경로명&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 파일 목록 표시</span></span><br><span class="line">$ ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># 복사</span></span><br><span class="line">$ cp &lt;복사대상&gt; &lt;복사위치&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이동</span></span><br><span class="line">$ mv &lt;이동대상&gt; &lt;이동위치&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 삭제(폴더의 경우 rf 옵션을 주어 안의 내용까지 삭제)</span></span><br><span class="line">$ rm (-rf) &lt;삭제대상&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 폴더 생성</span></span><br><span class="line">$ mkdir &lt;폴더명&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 폴더 삭제</span></span><br><span class="line">$ rmdir &lt;폴더명&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 파일 생성</span></span><br><span class="line">$ touch &lt;파일명&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 파일 보기</span></span><br><span class="line">$ cat &lt;파일명&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 파일 편집</span></span><br><span class="line">$ vi &lt;파일명&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>0</strong> - 라인 맨 앞으로 이동<br><strong>^</strong> - 문장 맨 앞으로 이동<br><strong>$</strong> - 문장 맨 뒤로 이동</p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -957,7 +969,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/" data-id="cjudqii6n001gmspl6i4hpssa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/" data-id="cjudqii6n001gmspl6i4hpssa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1025,7 +1037,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/05/26/자주-사용하는-단축키-정리-Vim-터미널/">Comments</a>
+        <a href="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/05/26/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC-Vim-%ED%84%B0%EB%AF%B8%EB%84%90/">Comments</a>
     
 
         </footer>
@@ -1043,7 +1055,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/21/Angular-시작하기/">Angular 시작하기</a>
+            <a class="article-title" href="/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">Angular 시작하기</a>
         </h1>
     
 
@@ -1052,7 +1064,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/03/21/Angular-시작하기/">
+        <a href="/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
             <time datetime="2018-03-21T06:10:15.000Z" itemprop="datePublished">2018-03-21</time>
         </a>
     </div>
@@ -1067,7 +1079,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/angular/">angular</a>
+        <a class="tag-link" href="/tags/angular/" rel="tag">angular</a>
     </div>
 
                     </div>
@@ -1077,8 +1089,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h2 id="Angular란"><a href="#Angular란" class="headerlink" title="Angular란?"></a>Angular란?</h2><p>구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째 버전은 AngularJS이 정식명칭이며, 2번째 버전이 Angular이다). 폴더 구조 셋팅 등 프로젝트 초기에 실행해야 하는 개발환경 셋팅을 모두 도와준다.</p>
+            <p></p><h2 id="Angular란"><a href="#Angular란" class="headerlink" title="Angular란?"></a>Angular란?</h2><p>구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째 버전은 AngularJS이 정식명칭이며, 2번째 버전이 Angular이다). 폴더 구조 셋팅 등 프로젝트 초기에 실행해야 하는 개발환경 셋팅을 모두 도와준다.</p>
 <p>###Angular의 특장점</p>
 <ul>
 <li>MVC 개발에서 컴포넌트 기반 개발(CBD, Component Based Development)로 전환되었다.</li>
@@ -1086,73 +1097,10 @@ ga('send', 'pageview');
 <li>주력언어로 TypeScript를 도입하여 대규모 개발에 적합하다.</li>
 <li>Angular CLI를 통해 개발환경 구축이 간편하다.</li>
 </ul>
-<p><strong>설치방법</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g @angular/cli</span><br></pre></td></tr></table></figure>
-<p><strong>프로젝트 생성</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ng new my-app</span><br><span class="line"></span><br><span class="line">$ ng new my-app --prefix todos // 생성하면서 접두사 변경</span><br></pre></td></tr></table></figure>
-<p><strong>프로젝트 실행</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ng serve</span><br><span class="line"></span><br><span class="line">$ ng serve --open // 실행과 동시에 브라우저도 오픈</span><br><span class="line"></span><br><span class="line">$ ng serve --port 4201 // 포트가 충돌날 경우에 포트 변경(4200번을 기본적으로 사용한다)</span><br></pre></td></tr></table></figure>
-<p><strong>프로젝트 구성 요소 추가</strong></p>
-<table>
-<thead>
-<tr>
-<th>추가 대상 구성요소</th>
-<th>명령어</th>
-<th>축약형</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>컴포넌트</td>
-<td>ng generate component component-name</td>
-<td>ng g c component-name</td>
-</tr>
-<tr>
-<td>디렉티브</td>
-<td>ng generate directive directive-name</td>
-<td>ng g d directive-name</td>
-</tr>
-<tr>
-<td>파이프</td>
-<td>ng generate pipe pipe-name</td>
-<td>ng g p pipe-name</td>
-</tr>
-<tr>
-<td>서비스</td>
-<td>ng generate service service-name</td>
-<td>ng g s service-name</td>
-</tr>
-<tr>
-<td>모듈</td>
-<td>ng generate module module-name</td>
-<td>ng g m module-name</td>
-</tr>
-<tr>
-<td>가드</td>
-<td>ng generate guard guard-name</td>
-<td>ng g g guard-name</td>
-</tr>
-<tr>
-<td>클래스</td>
-<td>ng generate class class-name</td>
-<td>ng g cl class-name</td>
-</tr>
-<tr>
-<td>인터페이스</td>
-<td>ng generate interface interface-name</td>
-<td>ng g i interface-name</td>
-</tr>
-<tr>
-<td>Enum</td>
-<td>ng generate enum enum-name</td>
-<td>ng g e enum-name</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 인라인 HTML 템플릿을 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-template // html 파일이 생성되지 않는다.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 인라인 CSS를 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-style // css 파일이 생성되지 않는다.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 인라인 HTML 템플릿과 인라인 CSS를 사용하는 경우</span></span><br><span class="line">$ ng g c home --inline-template --inline-style // html, css 파일이 모두 생성되지 않는다.</span><br></pre></td></tr></table></figure>
-<p><strong>app.component.ts 기본 구조</strong> (루트 컴포넌트)</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 임포트 영역</span></span><br><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// @Component 데코레이터 영역</span></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-root'</span>,</span><br><span class="line">  templateUrl: <span class="string">'./app.component.html'</span>,</span><br><span class="line">  styleUrls: [<span class="string">'./app.component.css'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 컴포넌트 클래스 영역</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</span><br><span class="line">  title = <span class="string">'app'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p><strong>설치방법</strong></p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -1162,7 +1110,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/" data-id="cjudqii5l000nmsplsbsgrlj2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" data-id="cjudqii5l000nmsplsbsgrlj2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1230,7 +1178,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/03/21/Angular-시작하기/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/03/21/Angular-시작하기/">Comments</a>
+        <a href="https://hckang80.github.io/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/03/21/Angular-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">Comments</a>
     
 
         </footer>
@@ -1248,7 +1196,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/13/UI-개발에-유용한-사이트-모음/">UI 개발에 유용한 사이트 모음</a>
+            <a class="article-title" href="/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/">UI 개발에 유용한 사이트 모음</a>
         </h1>
     
 
@@ -1257,7 +1205,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/03/13/UI-개발에-유용한-사이트-모음/">
+        <a href="/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/">
             <time datetime="2018-03-13T01:03:42.000Z" itemprop="datePublished">2018-03-13</time>
         </a>
     </div>
@@ -1272,7 +1220,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/tools-sitemap/">tools, sitemap</a>
+        <a class="tag-link" href="/tags/tools-sitemap/" rel="tag">tools, sitemap</a>
     </div>
 
                     </div>
@@ -1282,18 +1230,12 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h2 id="1-https-caniuse-com"><a href="#1-https-caniuse-com" class="headerlink" title="1. https://caniuse.com/"></a>1. <a href="https://caniuse.com/" rel="external nofollow noopener noreferrer" target="_blank">https://caniuse.com/</a></h2><p>HTML5, CSS3, Javascript 등 여러가지 속성과 값에 대한 브라우저 지원 여부를 알려준다. 브라우저가 지원을 안할 경우 Resources 탭을 한 번 확인하자. Polyfill 을 제공하여 사용할 수 있도록 도와주기도 한다.</p>
+            <p></p><h2 id="1-https-caniuse-com"><a href="#1-https-caniuse-com" class="headerlink" title="1. https://caniuse.com/"></a>1. <a href="https://caniuse.com/" rel="external nofollow noopener noreferrer" target="_blank">https://caniuse.com/</a></h2><p>HTML5, CSS3, Javascript 등 여러가지 속성과 값에 대한 브라우저 지원 여부를 알려준다. 브라우저가 지원을 안할 경우 Resources 탭을 한 번 확인하자. Polyfill 을 제공하여 사용할 수 있도록 도와주기도 한다.</p>
 <p><img src="https://user-images.githubusercontent.com/7262465/37320401-eaf5105c-26b6-11e8-8096-967ec7596222.png" alt="css3 sticky 검색에서 polyfill 제공 화면"></p>
-<h2 id="2-https-www-miketaylr-com-pres-html5-forms2-html"><a href="#2-https-www-miketaylr-com-pres-html5-forms2-html" class="headerlink" title="2. https://www.miketaylr.com/pres/html5/forms2.html"></a>2. <a href="https://www.miketaylr.com/pres/html5/forms2.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.miketaylr.com/pres/html5/forms2.html</a></h2><p>HTML5 의 다양한 폼 컨트롤 요소가 정리되어 있다. IE 의 경우 지원안하는 경우가 많으므로 <a href="https://caniuse.com/" rel="external nofollow noopener noreferrer" target="_blank">https://caniuse.com/</a> 에서 확인하고 사용하자.</p>
-<h2 id="3-https-googlefonts-github-io-korean"><a href="#3-https-googlefonts-github-io-korean" class="headerlink" title="3. https://googlefonts.github.io/korean/"></a>3. <a href="https://googlefonts.github.io/korean/" rel="external nofollow noopener noreferrer" target="_blank">https://googlefonts.github.io/korean/</a></h2><p>머싱러닝 기반의 한글 웹폰트를 제공한다.</p>
-<h2 id="4-http-fontello-com"><a href="#4-http-fontello-com" class="headerlink" title="4. http://fontello.com/"></a>4. <a href="http://fontello.com/" rel="external nofollow noopener noreferrer" target="_blank">http://fontello.com/</a></h2><p>Font Awesome 등 다양한 웹폰트 아이콘을 제공하여 주며, 필요한 것만 설정하여 다운받을 수 있다. 웹폰트 아이콘은 확대해서 보아도 선명한 장점이 있으므로, 모바일 프로젝트에서 많은 이점이 있다. 설정한 아이콘은 config.json 에 저장되므로 임포트하여 선택한 폰트 목록을 나중에 다시 불러올 수 있다.</p>
-<p><img src="https://user-images.githubusercontent.com/7262465/37696203-520cc3a4-2d18-11e8-8f10-dcbc299a61db.png" alt="config.json 다운로드와 import 인터페이스"></p>
-<h2 id="5-http-lorempixel-com"><a href="#5-http-lorempixel-com" class="headerlink" title="5. http://lorempixel.com/"></a>5. <a href="http://lorempixel.com/" rel="external nofollow noopener noreferrer" target="_blank">http://lorempixel.com/</a></h2><p>더미(Dummy) 이미지를 제공하여 준다. 사이즈와 종류를 선택하여 원하는대로 생성이 가능하다.</p>
-<p><img src="https://user-images.githubusercontent.com/7262465/37317452-3dffe7fe-26a8-11e8-9131-2f7b9cba710e.png" alt="메인 화면"></p>
-<h2 id="6-https-placeholder-com"><a href="#6-https-placeholder-com" class="headerlink" title="6. https://placeholder.com/"></a>6. <a href="https://placeholder.com/" rel="external nofollow noopener noreferrer" target="_blank">https://placeholder.com/</a></h2><p>똑같이 더미(Dummy) 이미지를 제공하여주나, 회색배경에 사이즈를 표기한 형태로 제공한다.</p>
-<p><img src="https://user-images.githubusercontent.com/7262465/37745669-6c13b446-2db9-11e8-883c-d85a14dfee93.png" alt=""></p>
-
+<h2 id="2-https-www-miketaylr-com-pres-html5-forms2-html"><a href="#2-https-www-miketaylr-com-pres-html5-forms2-html" class="headerlink" title="2. https://www.miketaylr.com/pres/html5/forms2.html"></a>2. <a href="https://www.miketaylr.com/pres/html5/forms2.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.miketaylr.com/pres/html5/forms2.html</a></h2><p>HTML5 의 다양한 폼 컨트롤 요소가 정리되어 있다. IE 의 경우 지원안하는 경우가 많으므로 <a href="https://caniuse.com/" rel="external nofollow noopener noreferrer" target="_blank">https://caniuse.com/</a> 에서 확인하고 사용하자.</p><p></p>
+            <p class="article-more-link">
+                <a href="/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -1303,7 +1245,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/03/13/UI-개발에-유용한-사이트-모음/" data-id="cjudqii650011mspl7yznxwbg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/" data-id="cjudqii650011mspl7yznxwbg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1371,7 +1313,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/03/13/UI-개발에-유용한-사이트-모음/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/03/13/UI-개발에-유용한-사이트-모음/">Comments</a>
+        <a href="https://hckang80.github.io/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/03/13/UI-%EA%B0%9C%EB%B0%9C%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/">Comments</a>
     
 
         </footer>
@@ -1389,7 +1331,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/25/바람직한-CSS-작성-방법/">바람직한 CSS 작성 방법(지극히 주관적)</a>
+            <a class="article-title" href="/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/">바람직한 CSS 작성 방법(지극히 주관적)</a>
         </h1>
     
 
@@ -1398,7 +1340,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/25/바람직한-CSS-작성-방법/">
+        <a href="/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/">
             <time datetime="2018-01-25T06:05:26.000Z" itemprop="datePublished">2018-01-25</time>
         </a>
     </div>
@@ -1413,7 +1355,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a>
+        <a class="tag-link" href="/tags/CSS-Desirable-Simple-%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-%EA%B0%84%EA%B2%B0%ED%95%9C/" rel="tag">CSS, Desirable, Simple, 바람직한, 간결한</a>
     </div>
 
                     </div>
@@ -1423,19 +1365,15 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <ul>
+            <p><ul>
 <li>참고 : 글쓴이의 주관적인 생각에 의해 작성된 것이므로 자신이 사용하는 방법과 맞지 않을 수도 있습니다. 글 특성상 경어는 생략하도록 하겠습니다.</li>
 </ul>
-<p>요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해 질 수 있는 css 코드도 효과적인 관리가 가능하지만 바람직한 css를 작성하는 기본은 잊지 않아야 한다.<br>그럼 글쓴이의 경험에 의한 바람직한 css 작성 방법에 대해 알아보겠다.</p>
+</p><p>요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해 질 수 있는 css 코드도 효과적인 관리가 가능하지만 바람직한 css를 작성하는 기본은 잊지 않아야 한다.<br>그럼 글쓴이의 경험에 의한 바람직한 css 작성 방법에 대해 알아보겠다.</p>
 <h2 id="1-내용이-반복되지-않도록-한다"><a href="#1-내용이-반복되지-않도록-한다" class="headerlink" title="1. 내용이 반복되지 않도록 한다."></a>1. 내용이 반복되지 않도록 한다.</h2><p>아래는 국기 아이콘 부분을 IR(Image Replacement) 기법을 이용하여 작성한 코드이다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"lang-list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-kr"</span>&gt;</span>국문<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-en"</span>&gt;</span>English<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-ja"</span>&gt;</span>日本語<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-zh"</span>&gt;</span>中國<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 내용이 중복된 코드 */</span></span><br><span class="line"><span class="selector-class">.ico-kr</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">9999px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(‘../images/ico-flag.png’) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-en</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">9999px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(‘../images/ico-flag.png’) no-repeat <span class="number">0</span> -<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-ja</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">9999px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(‘../images/ico-flag.png’) no-repeat <span class="number">0</span> -<span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-zh</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">9999px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(‘../images/ico-flag.png’) no-repeat <span class="number">0</span> -<span class="number">60px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>위와 같은 경우, 배경이미지 등 여러 내용이 동일함에도 불구하고 반복되어 사용되고 있다.<br>공통으로 선택하여 반복되는 내용은 한 번에 작성하고 값이 다른 배경이미지 위치만 각기 넣는 형태가 바람직하다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 개선된 코드 */</span></span><br><span class="line"><span class="selector-class">.lang-list</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">9999px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(‘../images/ico-flag.png’);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-kr</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>; <span class="comment">/* 배경위치가 기본 값이므로 생략 가능하나 코드의 일관성을 위해 넣어봤다. */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-en</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-ja</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">40px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ico-zh</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">60px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-선택자를-너무-간결하거나-복잡하게-사용하지-않는다"><a href="#2-선택자를-너무-간결하거나-복잡하게-사용하지-않는다" class="headerlink" title="2. 선택자를 너무 간결하거나 복잡하게 사용하지 않는다."></a>2. 선택자를 너무 간결하거나 복잡하게 사용하지 않는다.</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 안좋은 예 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123; <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>; &#125;</span><br><span class="line"><span class="selector-class">.title</span>&#123; <span class="attribute">font-size</span>:<span class="number">1.2rem</span>; &#125;</span><br><span class="line"><span class="selector-class">.content</span> <span class="selector-class">.wrap</span> <span class="selector-class">.list</span> <span class="selector-class">.desc-area</span> <span class="selector-class">.item</span>&#123; <span class="attribute">color</span>:<span class="number">#f00</span>; &#125;</span><br></pre></td></tr></table></figure>
-<p>선택자가 간결할 경우, 웹 사이트가 확장 됨에 따라 중첩된 선택이 일어나 의도하지 않은 변형이 일어날 확률이 현저히 많아진다. 반대로 너무 길어지게 되면 가독성이 안좋아지고, 코드의 일관성을 맞추기도 어려워진다.<br>각 요소의 첫 번째 선택자를 두 단어 이상 조합된 형태로 작성만 하여도 이러한 문제를 충분히 피할 수 있다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 개선된 코드 */</span></span><br><span class="line"><span class="selector-class">.news-wrap</span> <span class="selector-class">.box</span>&#123; <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>; &#125;</span><br><span class="line"><span class="selector-class">.sub-title</span>&#123; <span class="attribute">font-size</span>:<span class="number">1.2rem</span>; &#125;</span><br><span class="line"><span class="selector-class">.desc-area</span> <span class="selector-class">.item</span>&#123; <span class="attribute">color</span>:<span class="number">#f00</span>; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"lang-list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-kr"</span>&gt;</span>국문<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-en"</span>&gt;</span>English<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-ja"</span>&gt;</span>日本語<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"ico-zh"</span>&gt;</span>中國<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure><p></p>
+            <p class="article-more-link">
+                <a href="/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -1445,7 +1383,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/" data-id="cjudqii6r001kmsplqt2e3us7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/" data-id="cjudqii6r001kmsplqt2e3us7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1513,7 +1451,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/25/바람직한-CSS-작성-방법/">Comments</a>
+        <a href="https://hckang80.github.io/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/25/%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-CSS-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/">Comments</a>
     
 
         </footer>
@@ -1531,7 +1469,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/22/두 점수를 비교하다/">알고리즘 문제 풀이 - 두 점수를 비교하다</a>
+            <a class="article-title" href="/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/">알고리즘 문제 풀이 - 두 점수를 비교하다</a>
         </h1>
     
 
@@ -1540,7 +1478,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/22/두 점수를 비교하다/">
+        <a href="/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/">
             <time datetime="2018-01-22T08:30:27.000Z" itemprop="datePublished">2018-01-22</time>
         </a>
     </div>
@@ -1555,7 +1493,7 @@ ga('send', 'pageview');
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a>
+        <a class="tag-link" href="/tags/array-algorithms-%EB%B0%B0%EC%97%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="tag">array, algorithms, 배열, 알고리즘</a>
     </div>
 
                     </div>
@@ -1565,9 +1503,11 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <p>‘a양’과 ‘b군’의 점수를 비교한 후 점수가 높은 쪽에게 승점을 주어 배열로 출력해보자.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">5</span>, <span class="number">7</span>, <span class="number">15</span>]; <span class="comment">// 'a양'의 점수</span></span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">10</span>, <span class="number">7</span>, <span class="number">11</span>]; <span class="comment">// 'b군'의 점수</span></span><br><span class="line"><span class="keyword">var</span> point = [<span class="number">0</span>, <span class="number">0</span>]; <span class="comment">// 'a양'과 'b군'이 획득하게 될 승점을 배열로 선언</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[i] &gt; b[i])&#123; <span class="comment">// 'a양'의 점수가 높다면</span></span><br><span class="line">        point[<span class="number">0</span>]++; <span class="comment">// 배열로 선언한 'a양'의 승점이 증가</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(a[i] &lt; b[i])&#123; <span class="comment">// 'b군'의 점수가 높다면</span></span><br><span class="line">        point[<span class="number">1</span>]++; <span class="comment">// 배열로 선언한 'b군'의 승점이 증가</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> point;</span><br></pre></td></tr></table></figure>
+            <p></p><p>‘a양’과 ‘b군’의 점수를 비교한 후 점수가 높은 쪽에게 승점을 주어 배열로 출력해보자.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">5</span>, <span class="number">7</span>, <span class="number">15</span>]; <span class="comment">// 'a양'의 점수</span></span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">10</span>, <span class="number">7</span>, <span class="number">11</span>]; <span class="comment">// 'b군'의 점수</span></span><br><span class="line"><span class="keyword">var</span> point = [<span class="number">0</span>, <span class="number">0</span>]; <span class="comment">// 'a양'과 'b군'이 획득하게 될 승점을 배열로 선언</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[i] &gt; b[i])&#123; <span class="comment">// 'a양'의 점수가 높다면</span></span><br><span class="line">        point[<span class="number">0</span>]++; <span class="comment">// 배열로 선언한 'a양'의 승점이 증가</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(a[i] &lt; b[i])&#123; <span class="comment">// 'b군'의 점수가 높다면</span></span><br><span class="line">        point[<span class="number">1</span>]++; <span class="comment">// 배열로 선언한 'b군'의 승점이 증가</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> point;</span><br></pre></td></tr></table></figure><p></p>
+            <p class="article-more-link">
+                <a href="/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/#more">Read More</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -1577,7 +1517,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/" data-id="cjudqii6k001emsplmav5812x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://hckang80.github.io/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/" data-id="cjudqii6k001emsplmav5812x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1645,7 +1585,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/22/두 점수를 비교하다/">Comments</a>
+        <a href="https://hckang80.github.io/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2018/01/22/%EB%91%90%20%EC%A0%90%EC%88%98%EB%A5%BC%20%EB%B9%84%EA%B5%90%ED%95%98%EB%8B%A4/">Comments</a>
     
 
         </footer>
@@ -1656,7 +1596,7 @@ ga('send', 'pageview');
 
 
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
 </section>
             
@@ -1673,7 +1613,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/11/04/부동-소수점-연산/" class="title">부동 소수점 연산</a></p>
+                            <p class="item-title"><a href="/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/" class="title">부동 소수점 연산</a></p>
                             <p class="item-date"><time datetime="2018-11-04T06:37:04.000Z" itemprop="datePublished">2018-11-04</time></p>
                         </div>
                     </li>
@@ -1682,7 +1622,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
-                            <p class="item-title"><a href="/2018/10/31/Big-O와-알고리즘/" class="title">Big O와 알고리즘</a></p>
+                            <p class="item-title"><a href="/2018/10/31/Big-O%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" class="title">Big O와 알고리즘</a></p>
                             <p class="item-date"><time datetime="2018-10-31T14:26:50.000Z" itemprop="datePublished">2018-10-31</time></p>
                         </div>
                     </li>
@@ -1691,7 +1631,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2018/10/14/axios로-파일-다운로드-구현하기/" class="title">axios로 파일 다운로드 구현하기</a></p>
+                            <p class="item-title"><a href="/2018/10/14/axios%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/" class="title">axios로 파일 다운로드 구현하기</a></p>
                             <p class="item-date"><time datetime="2018-10-14T13:50:18.000Z" itemprop="datePublished">2018-10-14</time></p>
                         </div>
                     </li>
@@ -1700,7 +1640,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/etc/">etc</a></p>
-                            <p class="item-title"><a href="/2018/09/25/lokalise를-이용한-다국어-적용기/" class="title">lokalise를 이용한 다국어 적용 방법</a></p>
+                            <p class="item-title"><a href="/2018/09/25/lokalise%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A0%81%EC%9A%A9%EA%B8%B0/" class="title">lokalise를 이용한 다국어 적용 방법</a></p>
                             <p class="item-date"><time datetime="2018-09-25T08:01:18.000Z" itemprop="datePublished">2018-09-25</time></p>
                         </div>
                     </li>
@@ -1732,7 +1672,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-바람직한-간결한/">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm-Big-O/">algorithm, Big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-배열-알고리즘/">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-file-download/">axios, file download</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floating-point-arithmetic/">floating point arithmetic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-다국어/">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/단축키-터미널-vim/">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS-Desirable-Simple-%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-%EA%B0%84%EA%B2%B0%ED%95%9C/" rel="tag">CSS, Desirable, Simple, 바람직한, 간결한</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm-Big-O/" rel="tag">algorithm, Big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/" rel="tag">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array-algorithms-%EB%B0%B0%EC%97%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="tag">array, algorithms, 배열, 알고리즘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios-file-download/" rel="tag">axios, file download</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/floating-point-arithmetic/" rel="tag">floating point arithmetic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lokalise-i18n-%EB%8B%A4%EA%B5%AD%EC%96%B4/" rel="tag">lokalise, i18n, 다국어</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/" rel="tag">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools-sitemap/" rel="tag">tools, sitemap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%8B%A8%EC%B6%95%ED%82%A4-%ED%84%B0%EB%AF%B8%EB%84%90-vim/" rel="tag">단축키, 터미널, vim</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1744,27 +1684,27 @@ ga('send', 'pageview');
             <ul>
                 
                     <li>
-                        <a href="https://typescript-kr.github.io" rel="external nofollow noopener noreferrer" target="_blank">TypeScript-Handbook 한글 문서</a>
+                        <a href="https://typescript-kr.github.io" target="_blank" rel="external nofollow noopener noreferrer">TypeScript-Handbook 한글 문서</a>
                     </li>
                 
                     <li>
-                        <a href="https://angular.io/" rel="external nofollow noopener noreferrer" target="_blank">Angular</a>
+                        <a href="https://angular.io/" target="_blank" rel="external nofollow noopener noreferrer">Angular</a>
                     </li>
                 
                     <li>
-                        <a href="https://www.npmjs.com/" rel="external nofollow noopener noreferrer" target="_blank">npm</a>
+                        <a href="https://www.npmjs.com/" target="_blank" rel="external nofollow noopener noreferrer">npm</a>
                     </li>
                 
                     <li>
-                        <a href="https://programmers.co.kr/" rel="external nofollow noopener noreferrer" target="_blank">프로그래머스</a>
+                        <a href="https://programmers.co.kr/" target="_blank" rel="external nofollow noopener noreferrer">프로그래머스</a>
                     </li>
                 
                     <li>
-                        <a href="https://www.facebook.com/groups/webfrontend/" rel="external nofollow noopener noreferrer" target="_blank">프론트엔드개발그룹</a>
+                        <a href="https://www.facebook.com/groups/webfrontend/" target="_blank" rel="external nofollow noopener noreferrer">프론트엔드개발그룹</a>
                     </li>
                 
                     <li>
-                        <a href="http://hacosa.com/" rel="external nofollow noopener noreferrer" target="_blank">하드코딩하는사람들</a>
+                        <a href="http://hacosa.com/" target="_blank" rel="external nofollow noopener noreferrer">하드코딩하는사람들</a>
                     </li>
                 
             </ul>
@@ -1781,8 +1721,8 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2019 Kang Heechang<br>
-            Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="http://github.com/ppoffice" rel="external nofollow noopener noreferrer" target="_blank">PPOffice</a>
+            &copy; 2020 Kang Heechang<br>
+            Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="http://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a>
         </div>
     </div>
 </footer>
@@ -1805,25 +1745,47 @@ ga('send', 'pageview');
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
     
     
 
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>

@@ -25,14 +25,11 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.&lt;br&gt;이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.&lt;/p&gt;
-&lt;figure
-        
-      
+      &lt;p&gt;개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.&lt;br&gt;이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;;         &lt;span class=&quot;comment&quot;&gt;// 0.30000000000000004&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; y = &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;;         &lt;span class=&quot;comment&quot;&gt;// 0.010000000000000002&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;아래와 같이 소수 간에 직접 연산이 일어나지 않도록 하여 올바른 값을 얻을 수는 있지만,&lt;br&gt;연산이 많아질수록 매우 복잡해질것이므로 별로 바람직해 보이지는 않는다.&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = (&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) / &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// 0.3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; y = &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; / &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;               &lt;span class=&quot;comment&quot;&gt;// 0.01&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;이를 해결하기 위해 많은 훌륭한 개발자들이 오픈소스를 제공하고 있으며 이를 이용하면 간결하게 처리가 가능하다.&lt;br&gt;&lt;a href=&quot;https://github.com/MikeMcl/bignumber.js/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://github.com/MikeMcl/bignumber.js/&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -52,14 +49,8 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;정의&quot;&gt;&lt;a href=&quot;#정의&quot; class=&quot;headerlink&quot; title=&quot;정의&quot;&gt;&lt;/a&gt;정의&lt;/h2&gt;&lt;p&gt;Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.&lt;/p&gt;
-&lt;h2 id=&quot;종류&quot;&gt;&lt;a href=&quot;#종류&quot;
-        
-      
+      &lt;h2 id=&quot;정의&quot;&gt;&lt;a href=&quot;#정의&quot; class=&quot;headerlink&quot; title=&quot;정의&quot;&gt;&lt;/a&gt;정의&lt;/h2&gt;&lt;p&gt;Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.&lt;/p&gt;
+&lt;h2 id=&quot;종류&quot;&gt;&lt;a href=&quot;#종류&quot; class=&quot;headerlink&quot; title=&quot;종류&quot;&gt;&lt;/a&gt;종류&lt;/h2&gt;&lt;h3 id=&quot;O-1&quot;&gt;&lt;a href=&quot;#O-1&quot; class=&quot;headerlink&quot; title=&quot;O(1)&quot;&gt;&lt;/a&gt;O(1)&lt;/h3&gt;&lt;p&gt;이 수에서는 알고리즘을 처리하는 시간복잡도가 항상 일정합니다.&lt;br&gt;종류나 길이에 관계없이 이미 알려진 배열 위치에서 요소를 반환하는 알고리즘에서 이 현상이 나타납니다.&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; getLast = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;array&lt;/span&gt; =&amp;gt;&lt;/span&gt; array[array.length - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;getLast([&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;c&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;d&#39;&lt;/span&gt;]) &lt;span class=&quot;comment&quot;&gt;// d (1회 반복)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -79,14 +70,9 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
+      &lt;p&gt;공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 일반적인 형태 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;fileName.xls&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Rest API&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; downloadFile = &lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;params, headers&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  axios.post(&lt;span class=&quot;string&quot;&gt;`&lt;span class=&quot;subst&quot;&gt;$&amp;#123;baseUrl&amp;#125;&lt;/span&gt;download`&lt;/span&gt;, params, &amp;#123; headers, &lt;span class=&quot;attr&quot;&gt;responseType&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;blob&#39;&lt;/span&gt; &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .then(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;response&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;// Blob 생성자 함수로 URL 생성하여 할당&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; url = &lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.URL.createObjectURL(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Blob([response.data]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;// &amp;lt;a&amp;gt; 요소 동적 생성&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; link = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;// &amp;lt;a&amp;gt; 요소에 href attribute에 url 할당&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      link.href = url&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;// &amp;lt;a&amp;gt; 요소에 download attribute 와 value 동적 할당&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      link.setAttribute(&lt;span class=&quot;string&quot;&gt;&#39;download&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;fileName.xls&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;// body 요소의 직계 자식으로 삽입 후 클릭&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.body.appendChild(link)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      link.click()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .catch(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;e&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.error(e)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;downloadFile(&lt;span class=&quot;string&quot;&gt;&#39;Insert request body argument&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;Insert request header argument&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -106,13 +92,23 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.&lt;br&gt;&lt;a
-        
-      
+      &lt;p&gt;웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.&lt;br&gt;&lt;a href=&quot;https://lokalise.co/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://lokalise.co/&lt;/a&gt; 에서는 이러한 번거로움을 줄이고자, 번역 작업만 전담할 수 있게 툴을 제공한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;DOCS -&amp;gt; CLI TOOL 에서 OS에 맞는 tgz 형식의 파일을 다운 받아서 압축 해제&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;압축을 해제하면 lokalise.exe 파일이 보일 것이고 다음 폴더에 위치&lt;/p&gt;
+&lt;p&gt;(&lt;strong&gt;Mac&lt;/strong&gt;: /usr/local/bin, &lt;strong&gt;Window&lt;/strong&gt;: /usr/bin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;작업 폴더의 루트에 lokalise 폴더 및 쉘스크립트 파일 생성&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# /lokalise/script.sh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lokalise --token &amp;lt;TOKEN&amp;gt; &lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; &amp;lt;PROJECTID&amp;gt; --&lt;span class=&quot;built_in&quot;&gt;type&lt;/span&gt; json --export_all 1 --unzip_to lokalise --export_empty skip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;package.json에 쉘스크립트 실행 명령어를 추가&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&quot;scripts&quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &quot;lokalise&quot;: &quot;sh ./lokalise/script.sh&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;명령어를 실행하면 프로젝트에 등록된 언어가 폴더 내에 자동으로 업데이트 된다&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
     
     </summary>
     
@@ -132,13 +128,16 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;&lt;p&gt;git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수
-        
-      
+      &lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;&lt;p&gt;git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.&lt;br&gt;(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;다음의 경로에서 파일을 홈 디렉토리(~)에 다운받는다. (Mac OS)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/git/git/blob/master/contrib/completion/git-completion.bash&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://github.com/git/git/blob/master/contrib/completion/git-completion.bash&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;~/.bashrc (혹은 ~/.bash_profile) 파일에 아래의 명령어를 입력한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source ~/git-completion.bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -158,13 +157,10 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;h, j, k, l&lt;/strong&gt; - 좌, 하, 상, 우 커서
-        
-      
+      &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;h, j, k, l&lt;/strong&gt; - 좌, 하, 상, 우 커서 이동&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;i&lt;/strong&gt;: 현재 커서 위치에 Insert 하기&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;w&lt;/strong&gt;: 단어 첫글자로 이동하기&lt;br&gt;&lt;strong&gt;b&lt;/strong&gt;: 백워드 방향으로 단어의 첫글자로 이동하기&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt; - 라인 맨 앞으로 이동&lt;br&gt;&lt;strong&gt;^&lt;/strong&gt; - 문장 맨 앞으로 이동&lt;br&gt;&lt;strong&gt;$&lt;/strong&gt; - 문장 맨 뒤로 이동&lt;/p&gt;
     
     </summary>
     
@@ -184,13 +180,15 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;Angular란&quot;&gt;&lt;a href=&quot;#Angular란&quot; class=&quot;headerlink&quot; title=&quot;Angular란?&quot;&gt;&lt;/a&gt;Angular란?&lt;/h2&gt;&lt;p&gt;구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째
-        
-      
+      &lt;h2 id=&quot;Angular란&quot;&gt;&lt;a href=&quot;#Angular란&quot; class=&quot;headerlink&quot; title=&quot;Angular란?&quot;&gt;&lt;/a&gt;Angular란?&lt;/h2&gt;&lt;p&gt;구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째 버전은 AngularJS이 정식명칭이며, 2번째 버전이 Angular이다). 폴더 구조 셋팅 등 프로젝트 초기에 실행해야 하는 개발환경 셋팅을 모두 도와준다.&lt;/p&gt;
+&lt;p&gt;###Angular의 특장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MVC 개발에서 컴포넌트 기반 개발(CBD, Component Based Development)로 전환되었다.&lt;/li&gt;
+&lt;li&gt;one-way 바인딩을 지원하여 성능 이슈가 향상되었다.&lt;/li&gt;
+&lt;li&gt;주력언어로 TypeScript를 도입하여 대규모 개발에 적합하다.&lt;/li&gt;
+&lt;li&gt;Angular CLI를 통해 개발환경 구축이 간편하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;설치방법&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -210,13 +208,9 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-https-caniuse-com&quot;&gt;&lt;a href=&quot;#1-https-caniuse-com&quot; class=&quot;headerlink&quot; title=&quot;1. https://caniuse.com/&quot;&gt;&lt;/a&gt;1. &lt;a
-        
-      
+      &lt;h2 id=&quot;1-https-caniuse-com&quot;&gt;&lt;a href=&quot;#1-https-caniuse-com&quot; class=&quot;headerlink&quot; title=&quot;1. https://caniuse.com/&quot;&gt;&lt;/a&gt;1. &lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://caniuse.com/&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;HTML5, CSS3, Javascript 등 여러가지 속성과 값에 대한 브라우저 지원 여부를 알려준다. 브라우저가 지원을 안할 경우 Resources 탭을 한 번 확인하자. Polyfill 을 제공하여 사용할 수 있도록 도와주기도 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/7262465/37320401-eaf5105c-26b6-11e8-8096-967ec7596222.png&quot; alt=&quot;css3 sticky 검색에서 polyfill 제공 화면&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-https-www-miketaylr-com-pres-html5-forms2-html&quot;&gt;&lt;a href=&quot;#2-https-www-miketaylr-com-pres-html5-forms2-html&quot; class=&quot;headerlink&quot; title=&quot;2. https://www.miketaylr.com/pres/html5/forms2.html&quot;&gt;&lt;/a&gt;2. &lt;a href=&quot;https://www.miketaylr.com/pres/html5/forms2.html&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://www.miketaylr.com/pres/html5/forms2.html&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;HTML5 의 다양한 폼 컨트롤 요소가 정리되어 있다. IE 의 경우 지원안하는 경우가 많으므로 &lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://caniuse.com/&lt;/a&gt; 에서 확인하고 사용하자.&lt;/p&gt;
     
     </summary>
     
@@ -236,16 +230,12 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ul&gt;
+      &lt;ul&gt;
 &lt;li&gt;참고 : 글쓴이의 주관적인 생각에 의해 작성된 것이므로 자신이 사용하는 방법과 맞지 않을 수도 있습니다. 글 특성상 경어는 생략하도록 하겠습니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해
-        
-      
+&lt;p&gt;요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해 질 수 있는 css 코드도 효과적인 관리가 가능하지만 바람직한 css를 작성하는 기본은 잊지 않아야 한다.&lt;br&gt;그럼 글쓴이의 경험에 의한 바람직한 css 작성 방법에 대해 알아보겠다.&lt;/p&gt;
+&lt;h2 id=&quot;1-내용이-반복되지-않도록-한다&quot;&gt;&lt;a href=&quot;#1-내용이-반복되지-않도록-한다&quot; class=&quot;headerlink&quot; title=&quot;1. 내용이 반복되지 않도록 한다.&quot;&gt;&lt;/a&gt;1. 내용이 반복되지 않도록 한다.&lt;/h2&gt;&lt;p&gt;아래는 국기 아이콘 부분을 IR(Image Replacement) 기법을 이용하여 작성한 코드이다.&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;lang-list&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ico-kr&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;국문&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ico-en&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;English&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ico-ja&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;日本語&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ico-zh&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;中國&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -265,14 +255,8 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;‘a양’과 ‘b군’의 점수를 비교한 후 점수가 높은 쪽에게 승점을 주어 배열로 출력해보자.&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+      &lt;p&gt;‘a양’과 ‘b군’의 점수를 비교한 후 점수가 높은 쪽에게 승점을 주어 배열로 출력해보자.&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;의 점수&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = [&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;b군&#39;의 점수&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; point = [&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;과 &#39;b군&#39;이 획득하게 될 승점을 배열로 선언&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; a)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] &amp;gt; b[i])&amp;#123; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;의 점수가 높다면&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        point[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]++; &lt;span class=&quot;comment&quot;&gt;// 배열로 선언한 &#39;a양&#39;의 승점이 증가&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] &amp;lt; b[i])&amp;#123; &lt;span class=&quot;comment&quot;&gt;// &#39;b군&#39;의 점수가 높다면&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        point[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]++; &lt;span class=&quot;comment&quot;&gt;// 배열로 선언한 &#39;b군&#39;의 승점이 증가&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; point;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -292,13 +276,8 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/7262465/34931014-bb09e9cc-fa0f-11e7-8d86-5ed8af3faa03.png&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/7262465/34931014-bb09e9cc-fa0f-11e7-8d86-5ed8af3faa03.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
     
     </summary>
     
@@ -318,13 +297,10 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;로컬서버 실행하기&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
+      &lt;p&gt;&lt;strong&gt;로컬서버 실행하기&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -o 옵션을 붙이면 브라우저도 오픈&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server -o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;새 글 작성하기&lt;/strong&gt; (source 폴더에 파일이 생성됨)&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# layout: post, page, draft&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new (layout) &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;글 발행하기&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+
     
     </summary>
     
