@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: git | HTML, CSS, Javascript, ETC</title>
+    <title>SameSite Cookie 이슈 | HTML, CSS, Javascript, ETC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="HTML, CSS, Javascript, ETC">
-<meta property="og:url" content="https://hckang80.github.io/tags/git/index.html">
+    <meta name="description" content="20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 None에서 Rax로 변경됨에 따라 크로스 도메인 내에서만 Cookie를 전송하고 사용할 수 있습니다.조금 바꿔서 얘기하면 Open API 등 타 도메인을 통한 통신에서 쿠키를 이용한 처리가 되지 않는다는 것입니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SameSite Cookie 이슈">
+<meta property="og:url" content="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/index.html">
 <meta property="og:site_name" content="HTML, CSS, Javascript, ETC">
+<meta property="og:description" content="20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 None에서 Rax로 변경됨에 따라 크로스 도메인 내에서만 Cookie를 전송하고 사용할 수 있습니다.조금 바꿔서 얘기하면 Open API 등 타 도메인을 통한 통신에서 쿠키를 이용한 처리가 되지 않는다는 것입니다.">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-29T11:50:18.000Z">
+<meta property="article:modified_time" content="2020-03-29T12:12:38.554Z">
 <meta property="article:author" content="Kang Heechang">
 <meta name="twitter:card" content="summary">
     
@@ -213,50 +217,149 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#git</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-SameSite-Cookie-이슈" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/06/18/Git-remember/">Git Remember</a>
+        <h1 class="article-title" itemprop="name">
+            SameSite Cookie 이슈
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/06/18/Git-remember/">
-            <time datetime="2018-06-18T10:44:28.000Z" itemprop="datePublished">2018-06-18</time>
+        <a href="/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/">
+            <time datetime="2020-03-29T11:50:18.000Z" itemprop="datePublished">2020-03-29</time>
         </a>
     </div>
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/etc/">etc</a>
-    </div>
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 <strong>None에서 Rax</strong>로 변경됨에 따라 크로스 도메인 내에서만 Cookie를 전송하고 사용할 수 있습니다.<br>조금 바꿔서 얘기하면 Open API 등 타 도메인을 통한 통신에서 쿠키를 이용한 처리가 되지 않는다는 것입니다.</p>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/git/" rel="tag">git</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/" data-id="ck8d0dgui000014pl5pkd34h8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/11/04/%EB%B6%80%EB%8F%99-%EC%86%8C%EC%88%98%EC%A0%90-%EC%97%B0%EC%82%B0/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">부동 소수점 연산</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
 </section>
             
                 
@@ -390,11 +493,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/';
+        
+        this.page.identifier = 'SameSite-Cookie-이슈';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'tech-blog-7' + '.disqus.com/count.js';
+        s.src = '//' + 'tech-blog-7' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
