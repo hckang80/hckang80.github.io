@@ -19,7 +19,7 @@ customize:
         avatar: css/images/khc.jpg
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
         author: hckang80
-        author_title: 경험을 공유하는 행복한 개발자
+        author_title: 숫자를 좋아하는 개발자
         location: Seoul, Korea
         follow: https://github.com/hckang80/
     highlight: monokai
