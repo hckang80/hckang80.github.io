@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2020-03-29T12:55:21.664Z</updated>
+  <updated>2020-04-16T10:07:45.348Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -21,15 +21,60 @@
     <link href="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/"/>
     <id>https://hckang80.github.io/2020/03/29/SameSite-Cookie-이슈/</id>
     <published>2020-03-29T11:50:18.000Z</published>
-    <updated>2020-03-29T12:55:21.664Z</updated>
+    <updated>2020-04-16T10:07:45.348Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 &lt;b style=&quot;color:#f03e3e&quot;&gt;None에서 Rax&lt;/b&gt;로 변경됨에 따라 크로스 도메인 내에서만 Cookie를 전송하고 사용할 수 있습니다.&lt;br&gt;조금 바꿔서 얘기하면 Open API 등 타 도메인을 통한 통신에서 쿠키를 이용한 처리가 되지 않을 수 있다는 것입니다.&lt;/p&gt;
+      &lt;p&gt;20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 &lt;b style=&quot;color:#f03e3e&quot;&gt;None에서 Rax&lt;/b&gt;로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Request Type&lt;/th&gt;
+&lt;th&gt;Sample Code2&lt;/th&gt;
+&lt;th&gt;Cookies Sent&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Link&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal, Lax&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prerender&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;prerender&amp;quot; href=&amp;quot;..&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal, Lax&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Form GET&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;form method=&amp;quot;GET&amp;quot; action=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal, Lax&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Form POST&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;form method=&amp;quot;POST&amp;quot; action=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iframe&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;iframe src=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AJAX&lt;/td&gt;
+&lt;td&gt;$.get(“…”)&lt;/td&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Image&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From: &lt;a href=&quot;https://www.netsparker.com/blog/web-security/same-site-cookies-by-default/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;https://www.netsparker.com/blog/web-security/same-site-cookies-by-default/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Javascript에서는 아래와 같이 SameSite 속성을 설정하면 기존과 동일한 서비스로 제공이 가능합니다. 다만 여기서 주의할 점은 Secure 속성도 반드시 추가하여야 합니다. 그렇지 않을 경우 브라우저 콘솔 창에서 경고 메시지를 보게 될 것입니다.&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie = &lt;span class=&quot;string&quot;&gt;&#39;cookieName=foo; SameSite=None; Secure&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;마지막으로 &lt;strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=ko&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;EditThisCookie&lt;/a&gt;&lt;/strong&gt;와 같은 크롬 확장 도구에서 쿠키의 값을 임의로 변경해 볼 수 있습니다.&lt;/p&gt;
-&lt;h2 id=&quot;Reference&quot;&gt;&lt;a href=&quot;#Reference&quot; class=&quot;headerlink&quot; title=&quot;Reference&quot;&gt;&lt;/a&gt;Reference&lt;/h2&gt;
     
     </summary>
     
