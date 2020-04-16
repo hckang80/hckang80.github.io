@@ -6,7 +6,7 @@ tags: SameSite, session, cookie
 thumbnail:
 ---
 
-20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 <b style="color:#f03e3e">None에서 Rax</b>로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.
+20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 <b class="color-important">None에서 Rax</b>로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.
 
 Request Type | Sample Code2 | Cookies Sent
 ---- | ---- | ---- | ----
