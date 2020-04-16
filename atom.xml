@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hckang80.github.io/"/>
-  <updated>2020-04-16T10:07:45.348Z</updated>
+  <updated>2020-04-16T10:51:36.231Z</updated>
   <id>https://hckang80.github.io/</id>
   
   <author>
@@ -17,15 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>What is direction RTL</title>
+    <link href="https://hckang80.github.io/2020/04/16/What-is-direction-RTL/"/>
+    <id>https://hckang80.github.io/2020/04/16/What-is-direction-RTL/</id>
+    <published>2020-04-16T10:13:08.000Z</published>
+    <updated>2020-04-16T10:51:36.231Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;웹에서의 rtl은 ‘right to left’의 축약어로써 텍스트의 방향이 우측에서 시작하며 &lt;a href=&quot;https://namu.wiki/w/%EC%9A%B0%EB%A5%B4%EB%91%90%EC%96%B4&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;우르드어&lt;/a&gt;의 경우 이 규약을 따른다.&lt;br&gt;&lt;code&gt;&amp;lt;html dir=&amp;quot;rtl&amp;quot;&amp;gt;&lt;/code&gt;로 속성을 선언하기만 하면 된다.&lt;/p&gt;
+&lt;p&gt;하지만 css에 의해 &lt;code&gt;float&lt;/code&gt;이나 &lt;code&gt;position&lt;/code&gt;된 컨텐츠는 반응하지 않는다. 당연한거 같으니 rtl로 되게끔 하려면 &lt;code&gt;direction: rtl; text-align: right; right: 0;&lt;/code&gt; 등의 스타일 노가다가 필요할 것 같다. 반면에, &lt;code&gt;flex&lt;/code&gt;나 &lt;code&gt;table&lt;/code&gt;로 구성된 컨텐츠는 즉각 rtl로 변경된다.&lt;/p&gt;
+&lt;p&gt;또한 &lt;code&gt;transform: scaleX(-1)&lt;/code&gt;을 주면 좌우가 반전되므로 아이콘의 방향을 변경하기에 유용하다.&lt;br&gt;구글에서 제공하는 &lt;a href=&quot;https://google.github.io/material-design-icons/#icons-in-rtl&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;material-design-icons&lt;/a&gt;에는 자체적으로 이를 지원한다.&lt;br&gt;대표 Carousel 중의 하나인 &lt;a href=&quot;https://swiperjs.com/demos/#RTL_layout&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;swiperjs&lt;/a&gt;에서도 이를 지원하여 적용하기 유용하다.&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="html" scheme="https://hckang80.github.io/categories/html/"/>
+    
+    
+      <category term="direction, rtl, ltr, urdu" scheme="https://hckang80.github.io/tags/direction-rtl-ltr-urdu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SameSite Cookie 이슈</title>
     <link href="https://hckang80.github.io/2020/03/29/SameSite-Cookie-%EC%9D%B4%EC%8A%88/"/>
     <id>https://hckang80.github.io/2020/03/29/SameSite-Cookie-이슈/</id>
     <published>2020-03-29T11:50:18.000Z</published>
-    <updated>2020-04-16T10:07:45.348Z</updated>
+    <updated>2020-04-16T10:21:24.121Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 &lt;b style=&quot;color:#f03e3e&quot;&gt;None에서 Rax&lt;/b&gt;로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.&lt;/p&gt;
+      &lt;p&gt;20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 &lt;b class=&quot;color-important&quot;&gt;None에서 Rax&lt;/b&gt;로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
