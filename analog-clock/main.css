@@ -1,0 +1,105 @@
+html, body {
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 10px;
+  background: #212529;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.clock-wrap {
+  max-width: 500px;
+  min-width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
+}
+.clock-wrap::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.clock-wrap .body {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  padding: 0 0 100%;
+  border-radius: 100%;
+  background: #adb5bd;
+  opacity: 0;
+}
+.clock-wrap .body::before,
+.clock-wrap .body::after,
+.clock-wrap .inner::before,
+.clock-wrap .inner::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #fff;
+}
+.clock-wrap .body::before,
+.clock-wrap .body::after {
+  height: 10px;
+  transform: translateX(-50%);
+}
+.clock-wrap .inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.clock-wrap .inner::before,
+.clock-wrap .inner::after {
+  top: 50%;
+  width: 10px;
+  transform: translateY(-50%);
+}
+.clock-wrap .body::after {
+  bottom: 0;
+}
+.clock-wrap .inner::before {
+  left: 0;
+}
+.clock-wrap .inner::after {
+  right: 0;
+}
+.clock-wrap .inner [class^='the-'] {
+  z-index: 2;
+}
+
+.clock-wrap .the-second-hand,
+.clock-wrap .the-minute-hand,
+.clock-wrap .the-hour-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  border-style: solid;
+  transform-origin: 0 100%;
+}
+.clock-wrap .the-second-hand {
+  top: 5%;
+  border-width: 2px;
+  border-color: #c92a2a;
+}
+.clock-wrap .the-minute-hand {
+  top: 5%;
+  border-width: 4px;
+  border-color: #212529;
+  border-radius: 4px;
+}
+.clock-wrap .the-hour-hand {
+  top: 25%;
+  border-width: 4px;
+  border-color: #212529;
+  border-radius: 4px;
+}
