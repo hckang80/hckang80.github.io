@@ -87,21 +87,19 @@ body {
   transform-origin: 0 100%;
 }
 .clock-wrap .the-second-hand {
-  top: 1%;
-  border-width: .5px;
+  top: 5%;
+  border-width: 2px;
   border-color: #c92a2a;
 }
 .clock-wrap .the-minute-hand {
   top: 5%;
-  border-width: 2px;
+  border-width: 4px;
   border-color: #212529;
-  border-radius: 2px;
-  transform: rotate(40deg) translateX(-50%);
+  border-radius: 4px;
 }
 .clock-wrap .the-hour-hand {
   top: 25%;
-  border-width: 2px;
+  border-width: 4px;
   border-color: #212529;
-  border-radius: 2px;
-  transform: rotate(70deg) translateX(-50%);
+  border-radius: 4px;
 }
