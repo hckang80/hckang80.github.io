@@ -26,7 +26,6 @@
     <summary type="html">
     
       &lt;p&gt;다국어로 웹 서비스 제작시 지원하는 언어에 &lt;a href=&quot;https://namu.wiki/w/%EC%9A%B0%EB%A5%B4%EB%91%90%EC%96%B4&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;우르드어&lt;/a&gt;가 포함되어 있다면 이 주제에 대해 반드시 알 필요가 있다. 여기서 rtl이란 ‘right to left’의 축약어로써 텍스트의 방향이 우측에서 시작하는 것으로써 우르드어의 경우 이 규약을 따른다.&lt;/p&gt;
-&lt;p&gt;서비스에 적용하는 방법은 매우 간단하다. 문서 상단에 &lt;code&gt;&amp;lt;html dir=&amp;quot;rtl&amp;quot;&amp;gt;&lt;/code&gt;로 속성을 선언하기만 하면 된다.&lt;br&gt;하지만 &lt;code&gt;float&lt;/code&gt;이나 &lt;code&gt;position&lt;/code&gt;된 컨텐츠는 반응하지 않는다. 이는 당연한거 같으니 rtl로 되게끔 하려면 &lt;code&gt;direction: rtl; text-align: right; right: 0;&lt;/code&gt; 등의 스타일 노가다가 필요할 것 같다. 필자는 &lt;b class=&quot;color-important&quot;&gt;[dir=”rtl”] Selector&lt;/b&gt;를 이용하여 처리했다. 반면에, &lt;code&gt;flex&lt;/code&gt;나 &lt;code&gt;table&lt;/code&gt;로 구성된 컨텐츠는 즉각 반응한다.&lt;/p&gt;
     
     </summary>
     
@@ -47,52 +46,6 @@
     <summary type="html">
     
       &lt;p&gt;20년 2월 중 릴리즈된 구글의 Chrome 80버전부터는 Cookie의 SameSite 속성 기본 값이 &lt;b class=&quot;color-important&quot;&gt;None에서 Rax&lt;/b&gt;로 변경됨에 따라 iframe 등 SameSite=None에서만 Cookie 전송이 가능한 환경에서는 오류가 발생할 수 있습니다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Request Type&lt;/th&gt;
-&lt;th&gt;Sample Code2&lt;/th&gt;
-&lt;th&gt;Cookies Sent&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Link&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal, Lax&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prerender&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;prerender&amp;quot; href=&amp;quot;..&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal, Lax&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Form GET&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;form method=&amp;quot;GET&amp;quot; action=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal, Lax&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Form POST&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;form method=&amp;quot;POST&amp;quot; action=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;iframe&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;iframe src=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AJAX&lt;/td&gt;
-&lt;td&gt;$.get(“…”)&lt;/td&gt;
-&lt;td&gt;Normal&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Image&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;...&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Normal&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
     
     </summary>
     
@@ -113,7 +66,6 @@
     <summary type="html">
     
       &lt;p&gt;개발을 하다 보면 수를 이용한 연산이 필요한 경우가 종종 있는데, 소수를 이용한 연산에서 항상 정확한 값을 출력하지는 않는다.&lt;br&gt;이는 부동 소수점 연산에 의해 발생한 것이며 다음과 같은 경우에서 확인이 가능하다.&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;;         &lt;span class=&quot;comment&quot;&gt;// 0.30000000000000004&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; y = &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;;         &lt;span class=&quot;comment&quot;&gt;// 0.010000000000000002&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -133,7 +85,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;정의&quot;&gt;&lt;a href=&quot;#정의&quot; class=&quot;headerlink&quot; title=&quot;정의&quot;&gt;&lt;/a&gt;정의&lt;/h2&gt;&lt;p&gt;Big O란 알고리즘을 처리하는 시간복잡도를 표기한 수입니다.&lt;/p&gt;
+      &lt;h2 id=&quot;정의&quot;&gt;&lt;a href=&quot;#정의&quot; class=&quot;headerlink&quot; title=&quot;정의&quot;&gt;&lt;/a&gt;정의&lt;/h2&gt;
     
     </summary>
     
@@ -154,7 +106,6 @@
     <summary type="html">
     
       &lt;p&gt;공개적인 파일의 경우 다운로드를 a 요소로 구현하나, 보안상의 목적 등을 위해 Rest API를 이용하여 다음과 같은 방식으로도 구현이 가능하다.&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 일반적인 형태 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;fileName.xls&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -175,21 +126,6 @@
     <summary type="html">
     
       &lt;p&gt;웹서비스를 만들다 보면 최소 국영문 또는 그 이상의 언어를 지원해야 하는 경우가 종종 있다. 업데이트가 빈번한 경우 그때마다 번역본을 전달받아서 개발자가 적용하는건 여간 귀찮은 작업일뿐더러 비효율적이다.&lt;br&gt;&lt;a href=&quot;https://lokalise.co/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;https://lokalise.co/&lt;/a&gt; 에서는 이러한 번거로움을 줄이고자, 번역 작업만 전담할 수 있게 툴을 제공한다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;DOCS -&amp;gt; CLI TOOL 에서 OS에 맞는 tgz 형식의 파일을 다운 받아서 압축 해제&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;압축을 해제하면 lokalise.exe 파일이 보일 것이고 다음 폴더에 위치&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;Mac&lt;/strong&gt;: /usr/local/bin, &lt;strong&gt;Window&lt;/strong&gt;: /usr/bin)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;작업 폴더의 루트에 lokalise 폴더 및 쉘스크립트 파일 생성&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# /lokalise/script.sh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lokalise --token &amp;lt;TOKEN&amp;gt; &lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; &amp;lt;PROJECTID&amp;gt; --&lt;span class=&quot;built_in&quot;&gt;type&lt;/span&gt; json --export_all 1 --unzip_to lokalise --export_empty skip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;package.json에 쉘스크립트 실행 명령어를 추가&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&quot;scripts&quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &quot;lokalise&quot;: &quot;sh ./lokalise/script.sh&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;명령어를 실행하면 프로젝트에 등록된 언어가 폴더 내에 자동으로 업데이트 된다&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     
@@ -209,7 +145,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;&lt;p&gt;git 명령어를 입력할 때 Tab키를 눌러서 자동완성을 사용할 수 있다.&lt;br&gt;(window의 경우 따로 설정이 필요하지 않으므로 아래의 과정은 생략한다)&lt;/p&gt;
+      &lt;h3 id=&quot;1-자동완성-설정&quot;&gt;&lt;a href=&quot;#1-자동완성-설정&quot; class=&quot;headerlink&quot; title=&quot;1. 자동완성 설정&quot;&gt;&lt;/a&gt;1. 자동완성 설정&lt;/h3&gt;
     
     </summary>
     
@@ -229,7 +165,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;h, j, k, l&lt;/strong&gt; - 좌, 하, 상, 우 커서 이동&lt;/p&gt;
+      &lt;h3 id=&quot;1-Vim&quot;&gt;&lt;a href=&quot;#1-Vim&quot; class=&quot;headerlink&quot; title=&quot;1. Vim&quot;&gt;&lt;/a&gt;1. Vim&lt;/h3&gt;
     
     </summary>
     
@@ -249,7 +185,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Angular란&quot;&gt;&lt;a href=&quot;#Angular란&quot; class=&quot;headerlink&quot; title=&quot;Angular란?&quot;&gt;&lt;/a&gt;Angular란?&lt;/h2&gt;&lt;p&gt;구글에서 만든 오픈 프레임워크로써 angular 시리즈 2번째 버전이다(1번째 버전은 AngularJS이 정식명칭이며, 2번째 버전이 Angular이다). 폴더 구조 셋팅 등 프로젝트 초기에 실행해야 하는 개발환경 셋팅을 모두 도와준다.&lt;/p&gt;
+      &lt;h2 id=&quot;Angular란&quot;&gt;&lt;a href=&quot;#Angular란&quot; class=&quot;headerlink&quot; title=&quot;Angular란?&quot;&gt;&lt;/a&gt;Angular란?&lt;/h2&gt;
     
     </summary>
     
@@ -269,7 +205,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-https-caniuse-com&quot;&gt;&lt;a href=&quot;#1-https-caniuse-com&quot; class=&quot;headerlink&quot; title=&quot;1. https://caniuse.com/&quot;&gt;&lt;/a&gt;1. &lt;a href=&quot;https://caniuse.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;https://caniuse.com/&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;HTML5, CSS3, Javascript 등 여러가지 속성과 값에 대한 브라우저 지원 여부를 알려준다. 브라우저가 지원을 안할 경우 Resources 탭을 한 번 확인하자. Polyfill 을 제공하여 사용할 수 있도록 도와주기도 한다.&lt;/p&gt;
+      &lt;h2 id=&quot;1-https-caniuse-com&quot;&gt;&lt;a href=&quot;#1-https-caniuse-com&quot; class=&quot;headerlink&quot; title=&quot;1. https://caniuse.com/&quot;&gt;&lt;/a&gt;1. &lt;a href=&quot;https://caniuse.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;&gt;https://caniuse.com/&lt;/a&gt;&lt;/h2&gt;
     
     </summary>
     
@@ -292,7 +228,6 @@
       &lt;ul&gt;
 &lt;li&gt;참고 : 글쓴이의 주관적인 생각에 의해 작성된 것이므로 자신이 사용하는 방법과 맞지 않을 수도 있습니다. 글 특성상 경어는 생략하도록 하겠습니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;요즘은 Sass, Less 등 전처리기의 도움으로 자칫 복잡해 질 수 있는 css 코드도 효과적인 관리가 가능하지만 바람직한 css를 작성하는 기본은 잊지 않아야 한다.&lt;br&gt;그럼 글쓴이의 경험에 의한 바람직한 css 작성 방법에 대해 알아보겠다.&lt;/p&gt;
     
     </summary>
     
@@ -313,7 +248,6 @@
     <summary type="html">
     
       &lt;p&gt;‘a양’과 ‘b군’의 점수를 비교한 후 점수가 높은 쪽에게 승점을 주어 배열로 출력해보자.&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;의 점수&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = [&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;b군&#39;의 점수&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; point = [&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;과 &#39;b군&#39;이 획득하게 될 승점을 배열로 선언&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; a)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] &amp;gt; b[i])&amp;#123; &lt;span class=&quot;comment&quot;&gt;// &#39;a양&#39;의 점수가 높다면&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        point[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]++; &lt;span class=&quot;comment&quot;&gt;// 배열로 선언한 &#39;a양&#39;의 승점이 증가&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] &amp;lt; b[i])&amp;#123; &lt;span class=&quot;comment&quot;&gt;// &#39;b군&#39;의 점수가 높다면&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        point[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]++; &lt;span class=&quot;comment&quot;&gt;// 배열로 선언한 &#39;b군&#39;의 승점이 증가&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; point;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -334,7 +268,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/7262465/34931014-bb09e9cc-fa0f-11e7-8d86-5ed8af3faa03.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
     
     </summary>
     
@@ -355,7 +288,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;로컬서버 실행하기&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -o 옵션을 붙이면 브라우저도 오픈&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server -o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;새 글 작성하기&lt;/strong&gt; (source 폴더에 파일이 생성됨)&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# layout: post, page, draft&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new (layout) &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
