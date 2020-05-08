@@ -839,6 +839,14 @@ code {
 .article-inner {
   overflow: hidden;
 }
+.article-inner a[target="_blank"]::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+  background: url("/css/images/icon-new-window.svg") no-repeat 0 0/100%;
+}
 .article-banner {
   width: 100%;
   height: auto;
@@ -1729,6 +1737,9 @@ ol.toc {
 #footer-info {
   line-height: 1.6em;
   font-size: 0.85em;
+}
+.color-important {
+  color: #f03e3e;
 }
 @media screen and (min-width: 1200px) {
   #sidebar {
