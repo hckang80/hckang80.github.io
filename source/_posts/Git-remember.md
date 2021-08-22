@@ -67,7 +67,7 @@ $ git rebase -i HEAD~10
 # 또는 메세지를 변경하려면 pick을 edit로 변경 후 저장
 $ git commit --amend
 # 메세지 변경
-$ git commit --continue
+$ git rebase --continue
 ```
 
 #### 2-3. Stash
