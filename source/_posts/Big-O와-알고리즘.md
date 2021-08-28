@@ -89,7 +89,7 @@ const fibonacci = num => {
     a = temp
     num--
   }
-  return a
+  return b
 }
 
 fibonacci(12) // 89
