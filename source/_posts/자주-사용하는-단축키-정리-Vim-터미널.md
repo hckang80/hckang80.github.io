@@ -2,7 +2,7 @@
 title: '자주 사용하는 단축키 정리(Vim, 터미널)'
 date: 2018-05-26 20:48:26
 categories: etc
-tags: 단축키, 터미널, vim
+tags: [단축키, 터미널, vim]
 thumbnail:
 ---
 

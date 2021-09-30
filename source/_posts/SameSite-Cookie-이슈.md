@@ -2,7 +2,7 @@
 title: SameSite Cookie 이슈
 date: 2020-03-29 20:50:18
 categories: etc
-tags: SameSite, session, cookie
+tags: [sameSite, session, cookie]
 thumbnail:
 ---
 

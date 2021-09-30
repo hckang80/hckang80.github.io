@@ -2,7 +2,7 @@
 title: Hexo 기본 사용법
 date: 2018-01-14 14:16:50
 categories: etc
-tags: hexo
+tags: [hexo, blog]
 thumbnail:
 ---
 

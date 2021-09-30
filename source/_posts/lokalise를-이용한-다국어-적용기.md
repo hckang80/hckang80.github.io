@@ -2,7 +2,7 @@
 title: lokalise를 이용한 다국어 적용 방법
 date: 2018-09-25 17:01:18
 categories: etc
-tags: lokalise, i18n, 다국어
+tags: [lokalise, i18n, 다국어]
 thumbnail:
 ---
 

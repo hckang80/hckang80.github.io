@@ -2,7 +2,7 @@
 title: What is direction RTL
 date: 2020-04-16 19:13:08
 categories: html
-tags: direction, rtl, ltr, urdu
+tags: [direction, rtl, ltr, urdu]
 thumbnail:
 ---
 

@@ -2,7 +2,7 @@
 title: Big O와 알고리즘
 date: 2018-10-31 23:26:50
 categories: etc
-tags: algorithm, Big O
+tags: [algorithm, big o]
 thumbnail:
 ---
 

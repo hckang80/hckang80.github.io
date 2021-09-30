@@ -2,7 +2,7 @@
 title: 바람직한 CSS 작성 방법(지극히 주관적)
 date: 2018-01-25 15:05:26
 categories: CSS
-tags: CSS, Desirable, Simple, 바람직한, 간결한
+tags: css
 thumbnail: https://user-images.githubusercontent.com/7262465/35373886-ed8d9d9a-01e3-11e8-9ba9-714970d515a4.png
 ---
 

@@ -2,7 +2,7 @@
 title: axios로 파일 다운로드 구현하기
 date: 2018-10-14 22:50:18
 categories: javascript
-tags: axios, file download
+tags: [axios, file download]
 thumbnail:
 ---
 
