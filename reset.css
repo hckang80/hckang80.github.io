@@ -19,8 +19,10 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
+dd,
+menu {
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -71,6 +73,7 @@ i {
 
 button {
   all: unset;
+  box-sizing: border-box;
 }
 
 button:focus-visible {
