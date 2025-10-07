@@ -16,8 +16,8 @@
       /* 커스텀 슬라이더 스타일링 (Tailwind로는 어려운 세부 스타일) */
       input[type='range']::-webkit-slider-thumb {
         -webkit-appearance: none;
-        height: 20px;
-        width: 20px;
+        height: 40px;
+        width: 40px;
         border-radius: 50%;
         background: #3b82f6; /* Blue-500 */
         cursor: pointer;
@@ -75,7 +75,7 @@
                 <input type="range" id="slider-${index}" 
                        min="0" max="20" value="${value}" 
                        data-index="${index}" 
-                       class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg">
+                       class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg">
             `;
         slidersContainer.appendChild(wrapper);
 
