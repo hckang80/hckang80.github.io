@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azul tiles counter</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter 폰트 설정 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a; /* Slate-900 Dark Background */
+      }
+      /* 커스텀 슬라이더 스타일링 (Tailwind로는 어려운 세부 스타일) */
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #3b82f6; /* Blue-500 */
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+        margin-top: -8px; /* 트랙 중앙에 오도록 조정 */
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div id="app" class="w-full max-w-2xl bg-white shadow-2xl rounded-xl p-6">
+      <!-- 헤더 -->
+      <h1 class="text-3xl font-bold text-gray-800 mb-8">Azul tiles counter</h1>
+
+      <!-- 슬라이더 컨테이너 -->
+      <div id="sliders-container" class="space-y-6">
+        <!-- 슬라이더는 JavaScript를 통해 동적으로 생성됩니다 -->
+      </div>
+
+      <!-- 리셋 버튼 -->
+      <button
+        id="resetButton"
+        class="mt-8 w-full px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition duration-150 ease-in-out transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+      >
+        Reset
+      </button>
+    </div>
+
+    <script>
+      // 전역 상수
+      const SLIDER_COUNT = 5;
+      const DEFAULT_VALUE = 20;
+      const STORAGE_KEY = 'sliderValues';
+      const slidersContainer = document.getElementById('sliders-container');
+      const resetButton = document.getElementById('resetButton');
+
+      /**
+       * 슬라이더 요소를 생성하고 DOM에 추가합니다.
+       * @param {number} index - 슬라이더의 순서 (0부터 시작)
+       * @param {number} value - 슬라이더의 초기값
+       */
+      function createSliderElement(index, value) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'slider-item';
+
+        // 슬라이더 이름
+        const labelText = ['blue', 'yellow', 'red', 'black', 'cyan'];
+
+        wrapper.innerHTML = `
+                <div class="flex justify-between items-center mb-2">
+                    <label for="slider-${index}" class="text-gray-700 font-medium text-sm">
+                      <img src="./images/${labelText[index]}.svg" alt="${labelText[index]}" width="40" height="40" />
+                    </label>
+                    <span id="value-${index}" class="text-xl font-bold text-blue-600">${value}</span>
+                </div>
+                <input type="range" id="slider-${index}" 
+                       min="0" max="20" value="${value}" 
+                       data-index="${index}" 
+                       class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg">
+            `;
+        slidersContainer.appendChild(wrapper);
+
+        // 이벤트 리스너를 직접 추가하여 성능 최적화
+        const rangeInput = wrapper.querySelector(`#slider-${index}`);
+        const valueDisplay = wrapper.querySelector(`#value-${index}`);
+
+        rangeInput.addEventListener('input', (event) => {
+          // 실시간으로 표시되는 값을 업데이트
+          valueDisplay.textContent = event.target.value;
+          // 세션 스토리지에 값을 저장
+          saveSliderValues();
+        });
+      }
+
+      /**
+       * 세션 스토리지에서 저장된 값을 불러옵니다.
+       * 저장된 값이 없거나 형식이 잘못된 경우, 초기값 배열을 반환합니다.
+       * @returns {number[]} 5개의 슬라이더 값 배열
+       */
+      function loadSliderValues() {
+        try {
+          const storedData = sessionStorage.getItem(STORAGE_KEY);
+          if (storedData) {
+            const values = JSON.parse(storedData);
+            // 배열인지, 길이가 5인지, 모든 요소가 숫자인지 확인
+            if (
+              Array.isArray(values) &&
+              values.length === SLIDER_COUNT &&
+              values.every((v) => typeof v === 'number' && v >= 0 && v <= 20)
+            ) {
+              return values;
+            }
+          }
+        } catch (error) {
+          console.error('Error loading or parsing sessionStorage:', error);
+          // 오류 발생 시 기본값 반환
+        }
+        // 초기값 배열 반환 (모두 20)
+        return Array(SLIDER_COUNT).fill(DEFAULT_VALUE);
+      }
+
+      /**
+       * 현재 슬라이더의 모든 값을 세션 스토리지에 저장합니다.
+       */
+      function saveSliderValues() {
+        const currentValues = [];
+        for (let i = 0; i < SLIDER_COUNT; i++) {
+          const inputElement = document.getElementById(`slider-${i}`);
+          if (inputElement) {
+            // input의 value는 항상 문자열이므로 숫자로 변환
+            currentValues.push(parseInt(inputElement.value, 10));
+          }
+        }
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(currentValues));
+      }
+
+      /**
+       * 모든 슬라이더와 디스플레이 값을 업데이트합니다.
+       * @param {number[]} values - 슬라이더에 적용할 5개의 값 배열
+       */
+      function updateAllSliders(values) {
+        values.forEach((value, index) => {
+          const inputElement = document.getElementById(`slider-${index}`);
+          const valueDisplay = document.getElementById(`value-${index}`);
+
+          if (inputElement && valueDisplay) {
+            inputElement.value = value;
+            valueDisplay.textContent = value;
+          }
+        });
+        // DOM 업데이트 후, 세션 스토리지에도 저장
+        saveSliderValues();
+      }
+
+      /**
+       * 모든 슬라이더를 초기값(20)으로 설정하고 세션 스토리지에 저장합니다.
+       */
+      function resetSliders() {
+        // 모든 값을 초기값 20으로 설정한 배열 생성
+        const initialValues = Array(SLIDER_COUNT).fill(DEFAULT_VALUE);
+        updateAllSliders(initialValues);
+      }
+
+      /**
+       * 애플리케이션 초기화 함수
+       */
+      function initApp() {
+        // 1. DOM에 슬라이더 요소 생성
+        const savedValues = loadSliderValues();
+
+        // 컨테이너 초기화
+        slidersContainer.innerHTML = '';
+
+        // 슬라이더 요소 생성 및 초기값 설정
+        for (let i = 0; i < SLIDER_COUNT; i++) {
+          // 저장된 값이 있다면 해당 값을 사용하고, 없다면 loadSliderValues에서 반환된 기본값(20) 사용
+          const initialValue = savedValues[i] !== undefined ? savedValues[i] : DEFAULT_VALUE;
+          createSliderElement(i, initialValue);
+        }
+
+        // 2. 리셋 버튼 이벤트 리스너 설정
+        resetButton.addEventListener('click', resetSliders);
+
+        // 3. 초기 로드 시 값 저장 (최초 접속 시 기본값 20으로 세션 스토리지 초기화)
+        saveSliderValues();
+      }
+
+      // DOM 로드 완료 후 앱 초기화
+      window.addEventListener('load', initApp);
+    </script>
+  </body>
+</html>
