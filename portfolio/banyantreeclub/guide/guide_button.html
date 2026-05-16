@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 한국학술지인용색인 </title>
+	<link rel="stylesheet" type="text/css" href="./css/guide.css" />
+	<link rel="stylesheet" type="text/css" href="../BanyanTree/web/common/css/common.css" />
+</head>
+
+<body>
+<div class="coding_guide">
+	<h1>BUTTON</h1>
+
+	<h2>링크가 필요한 경우</h2>
+	<div class="btn_wrap">
+		<a href="#" class="btn_css"><span>확인</span></a>
+		<a href="#" class="btn_css b_gray"><span>취소</span></a>
+		<a class="btn_css b_none"><span>비활성</span></a>
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;div class="btn_wrap"&gt;
+	&lt;a href="#" class="<strong class="t_point">btn_css</strong>"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/a&gt;
+	&lt;a href="#" class="btn_css b_gray"&gt;&lt;span&gt;취소&lt;/span&gt;&lt;/a&gt;
+	&lt;a class="btn_css b_none"&gt;&lt;span&gt;비활성&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>	
+	</div>
+
+	<h2>링크가 필요하지 않은 경우(버튼)</h2>
+	<div class="btn_wrap">
+		<button class="btn_css" type="button"><span>버튼</span></button>
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;div class="btn_wrap"&gt;
+	&lt;<strong class="t_point">button</strong> class="btn_css" <strong class="t_point">type="button"</strong>&gt;&lt;span&gt;버튼&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+</pre>	
+	</div>
+
+	<h2>폼 전송이 필요한 경우</h2>
+	<button class="btn_css" type="submit"><span>검색</span></button>
+	<div class="d_desc">
+<pre>
+&lt;button class="btn_css" <strong class="t_point">type="submit"</strong>&gt;&lt;span&gt;검색&lt;/span&gt;&lt;/button&gt;
+</pre>	
+	</div>
+
+	<h2>가운데 정렬</h2>
+	<div class="btn_center">
+		<a href="#" class="btn_css b_outline"><span>목록</span></a>
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;div class="<strong class="t_point">btn_center</strong>"&gt;
+	&lt;a href="#" class="btn_css b_outline"&gt;&lt;span&gt;목록&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>	
+	</div>
+
+	<h2>우측 정렬</h2>
+	<div class="btn_wrap">
+		<div class="btn_right">
+			<a href="#" class="btn_css b_outline"><span>목록</span></a>
+		</div>
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;div class="<strong class="t_point">btn_wrap</strong>"&gt;
+	&lt;div class="<strong class="t_point">btn_right</strong>"&gt;
+		&lt;a href="#" class="btn_css b_outline"&gt;&lt;span&gt;목록&lt;/span&gt;&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>	
+	</div>
+
+	<h2>양쪽 정렬</h2>
+	<div class="btn_wrap">
+		<div class="btn_left">
+			<a href="#" class="btn_css b_outline"><span>목록</span></a>
+		</div>
+		<div class="btn_right">
+			<a href="#" class="btn_css"><span>결제취소</span></a>
+		</div>
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;div class="<strong class="t_point">btn_wrap</strong>"&gt;
+	&lt;div class="<strong class="t_point">btn_left</strong>"&gt;
+		&lt;a href="#" class="btn_css b_outline"&gt;&lt;span&gt;목록&lt;/span&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="<strong class="t_point">btn_right</strong>"&gt;
+		&lt;a href="#" class="btn_css"&gt;&lt;span&gt;결제취소&lt;/span&gt;&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>	
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../BanyanTree/web/common/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../BanyanTree/web/common/js/common.js"></script>
+</body>
+</html>

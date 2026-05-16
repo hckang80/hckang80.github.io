@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 한국학술지인용색인 </title>
+	<link rel="stylesheet" type="text/css" href="./css/guide.css" />
+	<link rel="stylesheet" type="text/css" href="../BanyanTree/web/common/css/common.css" />
+</head>
+
+<body>
+<div class="coding_guide">
+	<h1>웹접근성</h1>
+
+	<h2>입력서식 및 셀렉트에 <em class="t_point">title</em>이 반드시 필요합니다.</h2>
+	<table class="layout">
+		<colgroup>
+			<col style="width:10%" />
+			<col />
+		</colgroup>
+		<tr>
+			<td class="th">이름</th>
+			<td><input type="text" title="이름 입력" /></td>
+		</tr>
+		<tr>
+			<td class="th">휴대폰</th>
+			<td>
+				<select title="휴대폰 앞자리 선택">
+					<option>010</option>
+				 </select> -
+				<input type="text" title="휴대폰 가운데자리 입력" /> -
+				<input type="text" title="휴대폰 뒷자리 입력" />
+			</td>
+		</tr>
+		<tr>
+			<td class="th">내용</th>
+			<td><textarea rows="100" cols="100" style="width:50%;height:100px;" title="내용 입력"></textarea></td>
+		</tr>
+	</table>
+	<div class="d_desc">
+<pre>
+&lt;table class="layout"&gt;
+	&lt;colgroup&gt;
+		&lt;col style="width:10%" /&gt;
+		&lt;col /&gt;
+	&lt;/colgroup&gt;
+	&lt;tr&gt;
+		&lt;td class="th"&gt;이름&lt;/th&gt;
+		&lt;td&gt;&lt;input type="text" <em class="t_point">title="이름 입력"</em> /&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="th"&gt;휴대폰&lt;/th&gt;
+		&lt;td&gt;
+			&lt;select <em class="t_point">title="휴대폰 앞자리 선택"</em>&gt;
+				&lt;option&gt;010&lt;/option&gt;
+			 &lt;/select&gt; -
+			&lt;input type="text" <em class="t_point">title="휴대폰 가운데자리 입력"</em> /&gt; -
+			&lt;input type="text" <em class="t_point">title="휴대폰 뒷자리 입력"</em> /&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="th"&gt;내용&lt;/th&gt;
+		&lt;td&gt;&lt;textarea rows="100" cols="100" style="width:50%;height:100px;" <em class="t_point">title="내용 입력"</em>&gt;&lt;/textarea&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+	</div>
+	
+	<h2>라디오 및 체크박스는 &lt;label&gt;과 반드시 짝지어야하며 네임은 라디오에만 넣습니다</h2>
+	<ul class="form_left">
+		<li><input type="radio" id="la_male" name="la_gender" /> <label for="la_male">남자</label></li>
+		<li><input type="radio" id="la_female" name="la_gender" /> <label for="la_female">여자</label></li>
+	</ul>
+	<div class="d_desc">
+<pre>
+&lt;ul class="form_left"&gt;
+	&lt;li&gt;&lt;input type="radio" <em class="t_point">id="la_male"</em> name="la_gender" /&gt; &lt;label <em class="t_point">for="la_male"</em>&gt;남자&lt;/label&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;input type="radio" <em class="t_point">id="la_female"</em> name="la_gender" /&gt; &lt;label <em class="t_point">for="la_female"</em>&gt;여자&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+	</div>	
+
+	<h2>데이터형식의 테이블에는 <em class="t_point">&lt;th&gt;, scope, &lt;caption&gt;</em>이 반드시 필요합니다.</h2>
+	<p class="dtable_txt"><strong>이 논문에 <em class="t_strong">참고문헌이 2건</em> 있습니다.</strong></p>
+	<table class="dtable">
+		<caption>논문 피인용 목록</caption>
+		<colgroup>
+			<col style="width:6%;" />
+			<col style="width:9%;" />
+			<col style="width:9%;" />
+			<col />
+			<col style="width:20%;" />
+			<col style="width:8%;" />
+			<col style="width:9%;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">저자명</th>
+				<th scope="col">발행일</th>
+				<th scope="col">학술지명</th>
+				<th scope="col">발행기관</th>
+				<th scope="col">권(호)</th>
+				<th scope="col">페이지</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>서정미</td>
+				<td>2010.01</td>
+				<td class="al_left">웹GUI에서 시각 메타포 디자인이 사용자 감성에 미치는 영향</td>
+				<td>한국영상학회논문집</td>
+				<td>10(1)</td>
+				<td>9 ~ 498 </td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- page -->
+	<div class="pagenate">
+		<a href="#"><img src="../BanyanTree/web/common/images/btn_prev.png" alt="이전목록" /></a>
+		<ol>
+			<li><a href="#">1</a></li>
+			<li>2</li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li><a href="#">9</a></li>
+			<li><a href="#">10</a></li>
+		</ol>
+		<a href="#"><img src="../BanyanTree/web/common/images/btn_next.png" alt="다음목록" /></a>
+	</div>
+	<!-- //page -->
+	<div class="d_desc">
+<pre>
+&lt;table class="dtable"&gt;
+	<em class="t_point">&lt;caption&gt;논문 피인용 목록&lt;/caption&gt;</em>
+	&lt;colgroup&gt;
+		&lt;col style="width:6%;" /&gt;
+		&lt;col style="width:9%;" /&gt;
+		&lt;col style="width:9%;" /&gt;
+		&lt;col /&gt;
+		&lt;col style="width:20%;" /&gt;
+		&lt;col style="width:8%;" /&gt;
+		&lt;col style="width:9%;" /&gt;
+	&lt;/colgroup&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th <em class="t_point">scope="col"</em>&gt;NO&lt;/th&gt;
+			&lt;th scope="col"&gt;저자명&lt;/th&gt;
+			&lt;th scope="col"&gt;발행일&lt;/th&gt;
+			&lt;th scope="col"&gt;학술지명&lt;/th&gt;
+			&lt;th scope="col"&gt;발행기관&lt;/th&gt;
+			&lt;th scope="col"&gt;권(호)&lt;/th&gt;
+			&lt;th scope="col"&gt;페이지&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;서정미&lt;/td&gt;
+			&lt;td&gt;2010.01&lt;/td&gt;
+			&lt;td class="al_left"&gt;웹GUI에서 시각 메타포 디자인이 사용자 감성에 미치는 영향&lt;/td&gt;
+			&lt;td&gt;한국영상학회논문집&lt;/td&gt;
+			&lt;td&gt;10(1)&lt;/td&gt;
+			&lt;td&gt;9 ~ 498 &lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- page --&gt;
+&lt;div class="pagenate"&gt;
+	&lt;a href="#"&gt;&lt;img src="../common/images/btn_prev.png" alt="이전목록" /&gt;&lt;/a&gt;
+	&lt;ol&gt;
+		&lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;2&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;7&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;8&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;9&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;10&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;a href="#"&gt;&lt;img src="../common/images/btn_next.png" alt="다음목록" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //page --&gt;
+</pre>	
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../BanyanTree/web/common/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../BanyanTree/web/common/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body{background-image:none !important;}
+h1,h2,h3,h4,h5,h6{font-weight:bold !important;}
+.coding_guide	{margin:0 auto;width:960px;padding:20px;background:#444;}
+.coding_guide	h1 {margin-bottom:15px; padding:5px 0 10px 10px; border:1px solid #535353; background:#414141; color:white; font-size:18px;font-family:arial}
+.coding_guide	h2	{margin:20px 0 10px; color:#fff; font-size:16px;}
+.coding_guide	.guide_wrap	{width:730px;margin:0 0 10px 20px;}
+.d_desc {overflow:auto;margin:20px 0; padding:9px; border:1px dashed #535353; background:#414141; font-size:12px; line-height:15px;}
+.t_red{color:#f00;}

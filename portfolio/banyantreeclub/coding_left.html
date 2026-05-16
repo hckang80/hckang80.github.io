@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> 프로젝트 코딩진행표 </title>
+<style type="text/css">
+*, body	{margin:0; padding:0; font:normal 11px "굴림", applegothic, sans-serif; letter-spacing:-1px;}
+img {border:0 none; vertical-align:middle}
+h1 {margin-bottom:10px; padding:7px; border-bottom:1px solid #e9e9e9; background:#3b3b3b; color:#234888; font:bold 18px 돋움; letter-spacing:0px;}
+h2 {padding:2px; color:#999; font:normal 12px "굴림"}
+ol {list-style:decimal; list-style-position: inside; padding-left:2px}
+li {margin-left:0; padding:2px 0;}
+li span {margin-left: -5px; font:normal 11px "돋움"}
+.dtree {margin-top:10px; color:#999; font:normal 11px "굴림"; white-space:nowrap;}
+.dtree p {text-align:right}
+.dtree a {color:#999; text-decoration:none;}
+.dtree a.node, .dtree a.nodeSel {padding: 1px 2px 1px 2px; white-space:nowrap;}
+.dtree a.nodeSel {background-color: #f0ff00;}
+.dtree .clip {overflow: hidden;}
+.t_ing {color:#999}
+.t_app {color:#0042ff}
+.t_confirm {color:#000}
+.t_modify {color:#ff0000}
+.t_capp {color:#9600ff}
+</style>
+<script type="text/javascript" src="./guide/dtree.js"></script>
+<script type="text/javascript">
+	//document.domain = "skt.com";		//도메인을 세팅해주세요
+</script>
+</head>
+<body>
+
+<h1><img src="./BanyanTree/web/common/images/h1_logo.png" alt="BANYANTREE" /></h1>
+<h2>프로세스</h2>
+<ol>
+	<li><span class="t_ing">코딩작업진행중</span></li>
+	<li><span class="t_app">검수요청</span></li>
+	<li><span class="t_confirm">검수완료->개발전달</span></li>
+	<li><span class="t_modify">개발전달후수정</span></li>
+	<!--
+	<li><span class="t_capp">현업 검수 -> 개발전달</span></li>
+	-->
+</ol>
+
+<!-- 템플릿, 검수요청, 검수완료, 수정 -->
+<div class="dtree">
+
+	<script type="text/javascript">
+		//<![CDATA[
+
+		g = new dTree('g');
+
+		g.add(0,-1,'WSG');
+
+		g.add(1,0,'프로젝트사전협의사항');
+		g.add(101,1,'웹접근성','./guide/rules_accessibility.html','','mainFrame');
+		g.add(102,1,'이미지','./guide/rules_image.html','','mainFrame');
+		//g.add(11,1,'프로젝트사전협의사항','./guide/with_back_dev.html','템플릿','mainFrame');
+		//g.add(102,1,'Back-end 개발체크리스트','./guide/checklist_dev.html','템플릿','mainFrame');
+		//g.add(103,1,'코딩일정','https://www.google.com/calendar/embed?src=rq3h79i2tc1rft06qsfg36m60s%40group.calendar.google.com&ctz=Asia/Seoul','템플릿','_blank');
+
+		g.add(2,0,'Style Guide');
+		g.add(201,2,'폰트','./guide/guide_font.html','','mainFrame');
+		g.add(202,2,'테이블','./guide/guide_table.html','','mainFrame');
+		g.add(204,2,'탭메뉴','./guide/guide_tab.html','','mainFrame');
+		g.add(205,2,'버튼','./guide/guide_button.html','','mainFrame');
+
+		g.add(3,0,'Layout Guide');
+		g.add(301,3,'서브 레이아웃','./guide/guide_sublayout.html','','mainFrame');
+		g.add(302,3,'로컬 네비게이션','./guide/guide_lnb.html','검수요청','mainFrame');
+
+		document.write(g);
+
+		//]]>
+	</script>
+
+	<p><a href="javascript: d.openAll();"><img src="./guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: d.closeAll();"><img src="./guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+
+	<script type="text/javascript">
+		//<![CDATA[
+
+		d = new dTree('d');
+
+		d.add(0,-1,'project'); //프로젝트명
+
+		d.add(20,0,'메인','./BanyanTree/web/index.html','검수요청','mainFrame');
+
+		d.add(1,0,'About Banyan Tree');
+		d.add(1.01,1.0,'Brand Story','./BanyanTree/web/01_about/ab01.html','검수요청','mainFrame');
+		d.add(1.02,1.0,'The Hotel Rooms & Suites');
+		d.add(1.021,1.02,'Deluxe Room & Premier Room','./BanyanTree/web/01_about/ab021.html','검수요청','mainFrame');
+		d.add(1.022,1.02,'Deluxe Suite & Premier Suite','./BanyanTree/web/01_about/ab022.html','검수요청','mainFrame');
+		d.add(1.023,1.02,'Presidential Sutie','./BanyanTree/web/01_about/ab023.html','검수요청','mainFrame');
+		d.add(1.03,1.0,'The Club Rooms & Suites','./BanyanTree/web/01_about/ab03.html','검수요청','mainFrame');
+		d.add(1.04,1.0,'Spa & Gallery');
+		d.add(1.041,1.04,'Banyan Tree Spa','./BanyanTree/web/01_about/ab031.html','검수요청','mainFrame');	 
+		d.add(1.04011,1.04,'Bayan Tree Gallery','./BanyanTree/web/01_about/ab04011.html','검수요청','mainFrame');
+		d.add(1.05,1.0,'CSR','./BanyanTree/web/01_about/ab05.html','검수요청','mainFrame');
+		d.add(1.051,1.0,'Photo & Video - 목록','./BanyanTree/web/01_about/ab051.html','검수요청','mainFrame');
+		d.add(1.052,1.0,'Photo & Video - 상세','./BanyanTree/web/01_about/ab052.html','검수요청','mainFrame');
+		d.add(1.06,1.0,'Banyan Tree Guide Map');
+		d.add(1.06001,1.06,'Banyan Tree Guide Map','./BanyanTree/web/01_about/ab06001.html','검수요청','mainFrame');
+		d.add(1.06002,1.06,'The Hotel','./BanyanTree/web/01_about/ab06002.html','검수요청','mainFrame');
+		d.add(1.06003,1.06,'The Club','./BanyanTree/web/01_about/ab06003.html','검수요청','mainFrame');
+		d.add(1.06004,1.06,'The Festa','./BanyanTree/web/01_about/ab06004.html','검수요청','mainFrame');
+		d.add(1.06005,1.06,'Outdoor Facilities','./BanyanTree/web/01_about/ab06005.html','검수요청','mainFrame');
+
+		d.add(2,0,'Dining & Entertainment');
+		d.add(2.01,2.0,'Granum Dining Lounge','./BanyanTree/web/02_dining/de01.html','검수요청','mainFrame');
+		d.add(2.02,2.0,'The Festa Bistro & Bar','./BanyanTree/web/02_dining/de02.html','검수요청','mainFrame');
+		d.add(2.03,2.0,"The Club member's  Restaurant",'./BanyanTree/web/02_dining/de03.html','검수요청','mainFrame');
+		d.add(2.04,2.0,'Oasis Restaurant','./BanyanTree/web/02_dining/de04.html','검수요청','mainFrame');
+		d.add(2.05,2.0,'Moon Bar','./BanyanTree/web/02_dining/de05.html','검수요청','mainFrame');
+		d.add(2.06,2.0,'Aqua Bar','./BanyanTree/web/02_dining/de06.html','검수요청','mainFrame');
+		d.add(2.07,2.0,"The Member's lounge",'./BanyanTree/web/02_dining/de07.html','검수요청','mainFrame');
+
+		d.add(3,0,'Recreation');
+		d.add(3.01,3.0,'The Oasis');
+		d.add(3.01001,3.01,'Summer Season','./BanyanTree/web/03_recreation/rc01001.html','','mainFrame');
+		d.add(3.01008,3.01,'Winter Season','./BanyanTree/web/03_recreation/rc01008.html','','mainFrame');
+		d.add(3.02,3.0,'Fitness  Club','./BanyanTree/web/03_recreation/rc02.html','','mainFrame');
+		d.add(3.03,3.0,'Indoor Swimming Pool','./BanyanTree/web/03_recreation/rc03.html','','mainFrame');
+		d.add(3.04,3.0,'Sauna','./BanyanTree/web/03_recreation/rc04.html','','mainFrame');
+		d.add(3.05,3.0,'Kids Club','./BanyanTree/web/03_recreation/rc05.html','','mainFrame');
+		d.add(3.052,3.05,'Reservation - 예약정보입력','./BanyanTree/web/03_recreation/rc052.html','','mainFrame');
+		d.add(3.053,3.05,'Reservation - 입력정보 확인','./BanyanTree/web/03_recreation/rc053.html','','mainFrame');
+		d.add(3.054,3.05,'Reservation - 예약완료','./BanyanTree/web/03_recreation/rc054.html','','mainFrame');
+		d.add(3.06,3.0,'Troon Golf','./BanyanTree/web/03_recreation/rc06.html','','mainFrame');
+		d.add(3.07,3.0,'Tennis Court','./BanyanTree/web/03_recreation/rc07.html','','mainFrame');
+		d.add(3.08,3.0,'Futsal Field','./BanyanTree/web/03_recreation/rc08.html','','mainFrame');
+		d.add(3.09,3.0,'Basketball Court','./BanyanTree/web/03_recreation/rc09.html','','mainFrame');
+
+		d.add(4,0,'Banquet & Wedding');
+		d.add(4.01,4.0,'Facilities');
+		d.add(4.01001,4.01,'Crystal Ballroom','./BanyanTree/web/04_banquet/bw01001.html','','mainFrame');
+		d.add(4.01002,4.01,'Boardroom','./BanyanTree/web/04_banquet/bw01002.html','','mainFrame');
+		d.add(4.01003,4.01,'Namsan Terrace & Celeste','./BanyanTree/web/04_banquet/bw01003.html','','mainFrame');
+		d.add(4.01004,4.01,'Mori N','./BanyanTree/web/04_banquet/bw01004.html','','mainFrame');
+		d.add(4.02,4.0,'Wedding','./BanyanTree/web/04_banquet/bw02.html','','mainFrame');
+		d.add(4.02002,4.0,'Wedding - 멤버십 구분','./BanyanTree/web/04_banquet/bw02002.html','','mainFrame');
+		d.add(4.02003,4.0,'Wedding - 신청항목입력','./BanyanTree/web/04_banquet/bw02003.html','','mainFrame');
+		d.add(4.02004,4.0,'Wedding - 신청정보확인','./BanyanTree/web/04_banquet/bw02004.html','','mainFrame');
+		d.add(4.02005,4.0,'Wedding - 신청완료','./BanyanTree/web/04_banquet/bw02005.html','','mainFrame');
+		d.add(4.03,4.0,'Family Party','./BanyanTree/web/04_banquet/bw03.html','','mainFrame');
+		d.add(4.031,4.0,'Family Party - 멤버십 구분','./BanyanTree/web/04_banquet/bw031.html','','mainFrame');
+		d.add(4.032,4.0,'Family Party - 신청항목입력','./BanyanTree/web/04_banquet/bw032.html','','mainFrame');
+		d.add(4.033,4.0,'Family Party - 신청정보확인','./BanyanTree/web/04_banquet/bw033.html','','mainFrame');
+		d.add(4.034,4.0,'Family Party - 신청완료','./BanyanTree/web/04_banquet/bw034.html','','mainFrame');
+		d.add(4.04,4.0,'Corporate Event','./BanyanTree/web/04_banquet/bw04.html','','mainFrame');
+		d.add(4.04001,4.0,'Corporate Event - 멤버십 구분','./BanyanTree/web/04_banquet/bw04001.html','','mainFrame');
+		d.add(4.04002,4.0,'Corporate Event - 신청항목입력','./BanyanTree/web/04_banquet/bw04002.html','','mainFrame');
+		d.add(4.04003,4.0,'Corporate Event - 신청정보확인','./BanyanTree/web/04_banquet/bw04003.html','','mainFrame');
+		d.add(4.04004,4.0,'Corporate Event - 신청완료','./BanyanTree/web/04_banquet/bw04004.html','','mainFrame');
+
+		d.add(5,0,'Promotions');
+		d.add(5.01,5.0,'Hotel Promotions');
+		d.add(5.01001,5.01,'Hotel Promotions - 목록','./BanyanTree/web/05_promotions/pm01001.html','','mainFrame');
+		d.add(5.01002,5.01,'Hotel Promotions - 상세','./BanyanTree/web/05_promotions/pm01002.html','','mainFrame');
+		d.add(5.01003,5.01,'Hotel Promotions - 검색결과없음','./BanyanTree/web/05_promotions/pm01003.html','','mainFrame');
+		d.add(5.02,5.0,'Member Promotions');
+		d.add(5.021,5.02,'Member Promotions - 목록','./BanyanTree/web/05_promotions/pm021.html','','mainFrame');
+		d.add(5.022,5.02,'Member Promotions - 상세','./BanyanTree/web/05_promotions/pm022.html','','mainFrame');
+		d.add(5.026,5.02,'Reservation - 예약정보입력','./BanyanTree/web/05_promotions/pm026.html','','mainFrame');
+		d.add(5.03,5.0,'Dining Promotions');
+		d.add(5.03001,5.03,'Dining Promotions - 목록','./BanyanTree/web/05_promotions/pm03001.html','','mainFrame');
+		d.add(5.03002,5.03,'Dining Promotions - 상세','./BanyanTree/web/05_promotions/pm03002.html','','mainFrame');
+		d.add(5.04,5.0,'Gift & Boucher');
+		d.add(5.04001,5.03,'Gift & Boucher - 목록','./BanyanTree/web/05_promotions/pm04001.html','','mainFrame');
+		d.add(5.04002,5.03,'Gift & Boucher - 상세','./BanyanTree/web/05_promotions/pm04002.html','','mainFrame');
+		d.add(5.043,5.04,'Reservation - 구매정보 입력','./BanyanTree/web/05_promotions/pm043.html','','mainFrame');
+		d.add(5.044,5.04,'Reservation - 입력정보 확인','./BanyanTree/web/05_promotions/pm044.html','','mainFrame');
+		d.add(5.045,5.04,'Reservation - 결제완료','./BanyanTree/web/05_promotions/pm045.html','','mainFrame');
+		
+
+		d.add(6,0,'Club Membership');
+		d.add(6.01,6.0,'Overview','./BanyanTree/web/06_club/cm01.html','','mainFrame');
+		d.add(6.02,6.0,'Benefit');
+		d.add(6.02001,6.02,'Discount Policy','./BanyanTree/web/06_club/cm021.html','','mainFrame');
+		d.add(6.02002,6.02,'Strategic Partnership','./BanyanTree/web/06_club/cm02002.html','','mainFrame');
+		d.add(6.03,6.0,'Application','./BanyanTree/web/06_club/cm03.html','','mainFrame');
+		d.add(6.041,6.0,'Notice Board - 목록','./BanyanTree/web/06_club/cm041.html','','mainFrame');
+		d.add(6.042,6.0,'Notice Board - 상세','./BanyanTree/web/06_club/cm042.html','','mainFrame');
+		d.add(6.051,6.0,"Member's voice - 목록",'./BanyanTree/web/06_club/cm051.html','','mainFrame');
+		d.add(6.052,6.0,"Member's voice - 상세",'./BanyanTree/web/06_club/cm052.html','','mainFrame');
+		d.add(6.06,6.0,'Newsletter','./BanyanTree/web/06_club/cm06.html','','mainFrame');
+		d.add(6.07,6.0,'Download for document - 목록','./BanyanTree/web/06_club/cm07.html','','mainFrame');
+		d.add(6.071,6.0,'Download for document - 보기','./BanyanTree/web/06_club/cm071.html','','mainFrame');
+
+		d.add(7,0,'Membership');
+		d.add(7.01,7.0,'Log in','./BanyanTree/web/07_members/mb01.html','','mainFrame');
+		d.add(7.02,7.0,'개인정보취급방침','./BanyanTree/web/07_members/mb02.html','','mainFrame');
+		d.add(7.03,7.0,'예약환불규정','./BanyanTree/web/07_members/mb03.html','','mainFrame');
+		d.add(7.04,7.0,'이용약관','./BanyanTree/web/07_members/mb04.html','','mainFrame');
+		d.add(7.020,7.0,'예약/결제내역 관리 - 목록','./BanyanTree/web/07_members/mb020.html','','mainFrame');
+		d.add(7.021,7.0,'예약/결제내역 관리 - 상세','./BanyanTree/web/07_members/mb021.html','','mainFrame');
+		d.add(7.022,7.0,'예약/결제내역 관리 - 수정','./BanyanTree/web/07_members/mb022.html','','mainFrame');
+		d.add(7.023,7.0,'예약/결제내역 관리 - 수정완료','./BanyanTree/web/07_members/mb023.html','','mainFrame');
+		d.add(7.024,7.0,'예약/결제내역 관리 - 예약취소완료','./BanyanTree/web/07_members/mb024.html','','mainFrame');
+		d.add(7.031,7.0,'예약/결제내역 관리 - 예약/결제정보','./BanyanTree/web/07_members/mb031.html','','mainFrame');
+		d.add(7.042,7.0,'예약/결제내역 관리 - 결제취소완료','./BanyanTree/web/07_members/mb042.html','','mainFrame');
+		d.add(7.05,7.0,'비회원 예약/결제관리','./BanyanTree/web/07_members/mb05.html','','mainFrame');
+
+		d.add(8,0,'My Page');
+		d.add(8.01,8.0,'예약/결제내역 관리');
+		//d.add(8.01001,8.01,'Accommodations - 목록','./BanyanTree/web/08_mypage/mp01001.html','','mainFrame');
+		//d.add(8.01002,8.01,'Accommodations - 상세(예약신청완료)','./BanyanTree/web/08_mypage/mp01002.html','','mainFrame');
+		d.add(8.01003,8.01,'Accommodations - 상세(결제완료)','./BanyanTree/web/08_mypage/mp01003.html','','mainFrame');
+		d.add(8.01004,8.01,'Accommodations - 상세(예약취소완료)','./BanyanTree/web/08_mypage/mp01004.html','','mainFrame');
+		//d.add(8.01005,8.01,'Accommodations - 예약정보수정','./BanyanTree/web/08_mypage/mp01005.html','','mainFrame');
+		//d.add(8.01006,8.01,'Accommodations - 예약정보수정완료','./BanyanTree/web/08_mypage/mp01006.html','','mainFrame');
+		//d.add(8.01007,8.01,'Accommodations - 결제취소완료','./BanyanTree/web/08_mypage/mp01007.html','','mainFrame');
+		d.add(8.01008,8.01,'Promotions - 목록','./BanyanTree/web/08_mypage/mp01008.html','','mainFrame');
+		d.add(8.01009,8.01,'Accommodations - 상세(예약신청완료)','./BanyanTree/web/08_mypage/mp01009.html','','mainFrame');
+		d.add(8.01010,8.01,'Accommodations - 예약정보수정','./BanyanTree/web/08_mypage/mp01010.html','','mainFrame');
+		d.add(8.01011,8.01,'Accommodations - 예약수정완료','./BanyanTree/web/08_mypage/mp01011.html','','mainFrame');
+		d.add(8.01012,8.01,'Gift & Boucher - 목록','./BanyanTree/web/08_mypage/mp01012.html','','mainFrame');
+		//d.add(8.01013,8.01,'Gift & Boucher - 상세(결제완료)','./BanyanTree/web/08_mypage/mp01013.html','','mainFrame');
+		//d.add(8.01014,8.01,'Gift & Boucher - 결제취소완료','./BanyanTree/web/08_mypage/mp01014.html','','mainFrame');
+		d.add(8.02,8.0,'컨설팅 신청 내역 관리');
+		d.add(8.02001,8.02,'컨설팅 신청 내역 관리 - 목록','./BanyanTree/web/08_mypage/mp02001.html','','mainFrame');
+		d.add(8.02002,8.02,'컨설팅 신청 내역 관리 - 상세(컨설팅상담신청)','./BanyanTree/web/08_mypage/mp02002.html','','mainFrame');
+		d.add(8.02003,8.02,'컨설팅 신청 내역 관리 - 상세(신청취소)','./BanyanTree/web/08_mypage/mp02003.html','','mainFrame');
+		d.add(8.02004,8.02,'컨설팅 신청 내역 관리 - 컨설팅 상담취소완료','./BanyanTree/web/08_mypage/mp02004.html','','mainFrame');
+		d.add(8.03,8.0,'내 정보확인');
+		d.add(8.03001,8.03,'비밀번호확인','./BanyanTree/web/08_mypage/mp03001.html','','mainFrame');
+		d.add(8.03002,8.03,'정보확인','./BanyanTree/web/08_mypage/mp03002.html','','mainFrame');
+		d.add(8.04,8.0,'비밀번호 변경');
+
+
+		d.add(10,0,'기타');
+		d.add(10.01001,10.0,'클럽멤버 온라인 회원등록 - 1단계 본인인증','./BanyanTree/web/10_etc/ec01001.html','','mainFrame');
+		d.add(10.01002,10.0,'클럽멤버 온라인 회원등록 - 2단계 약관동의','./BanyanTree/web/10_etc/ec01002.html','','mainFrame');
+		d.add(10.01003,10.0,'클럽멤버 온라인 회원등록 - 3단계 등록완료','./BanyanTree/web/10_etc/ec01003.html','','mainFrame');
+		d.add(10.03,10.0,'Location','./BanyanTree/web/10_etc/ec03.html','','mainFrame');
+		d.add(10.04,10.0,'Contact Us','./BanyanTree/web/10_etc/ec04.html','','mainFrame');
+		d.add(10.05,10.0,'Site Map','./BanyanTree/web/10_etc/ec05.html','','mainFrame');
+
+		document.write(d);
+
+		//]]>
+
+		// targetName:width=1000,height=700,scrollbars=yes
+	</script>
+
+</div>
+
+</body>
+</html>

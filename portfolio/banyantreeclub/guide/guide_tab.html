@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 한국학술지인용색인 </title>
+	<link rel="stylesheet" type="text/css" href="./css/guide.css" />
+	<link rel="stylesheet" type="text/css" href="../BanyanTree/web/common/css/common.css" />
+</head>
+
+<body>
+<div class="coding_guide">
+	<h1>TAB</h1>
+
+	<h2>탭메뉴 동작 O</h2>
+	<ul class="tab">
+		<li class="on"><a href="#tab1">탭메뉴1</a></li>
+		<li><a href="#tab2">탭메뉴2</a></li>
+		<li><a href="#tab3">탭메뉴3</a></li>
+	</ul>
+
+	<div class="tab_cont on" id="tab1">
+		<h4 class="none">탭메뉴1</h4>
+		내용111
+	</div>
+
+	<div class="tab_cont" id="tab2">
+		<h4 class="none">탭메뉴2</h4>
+		내용222
+	</div>
+
+	<div class="tab_cont" id="tab3">
+		<h4 class="none">탭메뉴3</h4>
+		내용333
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;ul class="tab"&gt;
+	&lt;li class="on"&gt;&lt;a href="<strong class="t_point">#tab1</strong>"&gt;탭메뉴1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="<strong class="t_point">#tab2</strong>"&gt;탭메뉴2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="<strong class="t_point">#tab3</strong>"&gt;탭메뉴3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab_cont on" <strong class="t_point">id="tab1"</strong>&gt;
+	&lt;h4 class="none"&gt;탭메뉴1&lt;/h4&gt;
+	내용111
+&lt;/div&gt;
+
+&lt;div class="tab_cont" <strong class="t_point">id="tab2"</strong>&gt;
+	&lt;h4 class="none"&gt;탭메뉴2&lt;/h4&gt;
+	내용222
+&lt;/div&gt;
+
+&lt;div class="tab_cont" <strong class="t_point">id="tab3"</strong>&gt;
+	&lt;h4 class="none"&gt;탭메뉴3&lt;/h4&gt;
+	내용333
+&lt;/div&gt;
+</pre>	
+	</div>
+
+	<h2>탭메뉴 동작 X</h2>
+	<ul class="tab">
+		<li class="on"><a href="#">탭메뉴1</a></li>
+		<li><a href="#">탭메뉴2</a></li>
+		<li><a href="#">탭메뉴3</a></li>
+	</ul>
+
+	<div class="tab_cont on">
+		개발에서 내용 뿌림
+	</div>
+	<div class="d_desc">
+<pre>
+&lt;ul class="tab"&gt;
+	&lt;li class="on"&gt;&lt;a href="#"&gt;탭메뉴1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;탭메뉴2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;탭메뉴3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab_cont on"&gt;
+	개발에서 내용 뿌림
+&lt;/div&gt;
+</pre>	
+	</div>
+</div>
+
+<script type="text/javascript" src="../BanyanTree/web/common/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../BanyanTree/web/common/js/common.js"></script>
+</body>
+</html>
